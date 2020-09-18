@@ -19,3 +19,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Fixed
 - Round clicks in ads conversion
 
+## [1.2.1] - 2021-07-20
+### Added
+- PHP 8.0 support
+- Composer 2.0 support
+- Symfony 5.0 support
+- PSR12 formatting
+
+## [1.2.0] - 2018-10-10
+### Added
+- Function `get_log`
+
+## [1.1.0] - 2018-09-24
+### Added
+- Transaction `
