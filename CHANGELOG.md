@@ -32,4 +32,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.1.0] - 2018-09-24
 ### Added
-- Transaction `
+- Transaction `change_account_key`, `change_node_key`, `create_account`, `create_node`
+
+### Changed
+- Function `getAccounts` takes nodeId as hex instead of int
+- Fix duplicated code in transaction address getters
+- 
