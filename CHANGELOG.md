@@ -54,4 +54,16 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   - getBlockIds,
   - getBroadcast,
   - getMe,
+  - getMessage,
+  - getMessageIds,
+  - getTransaction.
+- Support for basic transactions:
+  - broadcast,
+  - sendMany,
+  - sendOne.
+- Readme
+- License
+- Changelog
+- Contributing
  
+[Unreleased]: https://github.com/adshares
