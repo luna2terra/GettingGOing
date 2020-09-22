@@ -43,4 +43,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [1.0.1] - 2018-08-22
 ### Added
-- Getters sender/target address to transacti
+- Getters sender/target address to transaction entities where applicable.
+
+## [1.0.0] - 2018-08-01
+### Added
+- Support for all block explorer commands:
+  - getAccount,
+  - getAccounts,
+  - getBlock,
+  - getBlockIds,
+  - getBroadcast,
+  - getMe,
+ 
