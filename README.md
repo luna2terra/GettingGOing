@@ -14,4 +14,9 @@
 
 <br>
 
-ADS PHP Client is an object-oriented **PHP 7.4/8.0** client for the [ADS blockchain](https://github.com/adshares/a
+ADS PHP Client is an object-oriented **PHP 7.4/8.0** client for the [ADS blockchain](https://github.com/adshares/ads) API.
+
+This library depends on [Symfony Process](http://symfony.com/doc/current/components/process.html).
+
+
+[![Quality Status](https://sonarcloud.io/api/project_badges/measure?project=adshares-ads-php-client&metric=alert_status)](htt
