@@ -4,4 +4,7 @@
   </a>
   <h3 align="center"><small>ADS PHP Client</small></h3>
   <p align="center">
-    <a
+    <a href="https://github.com/adshares/ads-php-client/issues/new?template=bug_report.md&labels=Bug">Report bug</a>
+    ·
+    <a href="https://github.com/adshares/ads-php-client/issues/new?template=feature_request.md&labels=New%20Feature">Request feature</a>
+    
