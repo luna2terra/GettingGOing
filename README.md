@@ -7,4 +7,11 @@
     <a href="https://github.com/adshares/ads-php-client/issues/new?template=bug_report.md&labels=Bug">Report bug</a>
     ·
     <a href="https://github.com/adshares/ads-php-client/issues/new?template=feature_request.md&labels=New%20Feature">Request feature</a>
-    
+    ·
+    <a href="https://docs.adshares.net/ads-php-client/index.html">Docs</a>
+  </p>
+</div>
+
+<br>
+
+ADS PHP Client is an object-oriented **PHP 7.4/8.0** client for the [ADS blockchain](https://github.com/adshares/a
