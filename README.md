@@ -47,4 +47,13 @@ $port = 6511;
 $client = new AdsClient(new CliDriver($address, $secret, $host, $port));
 ```
 
-Then you can call ADS commands, for example, to get t
+Then you can call ADS commands, for example, to get the current status of the user:
+
+```
+$response = $client->getMe();
+```
+
+### Documentation
+
+- [Installation](https://docs.adshares.net/ads-php-client/installation.html)
+- [Usage](https://docs.adshares.net/ads-php-client/u
