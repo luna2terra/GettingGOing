@@ -65,4 +65,10 @@ Please follow our [Contributing Guidelines](docs/CONTRIBUTING.md)
 
 ### Versioning
 
-We use [SemVer](http://semver.org/) for
+We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/adshares/ads-php-client/tags). 
+
+
+## Authors
+
+- **[Paweł Podkalicki](https://github.com/PawelPodkalicki)** - _main programmer_
+- **[Mac
