@@ -56,4 +56,13 @@ $response = $client->getMe();
 ### Documentation
 
 - [Installation](https://docs.adshares.net/ads-php-client/installation.html)
-- [Usage](https://docs.adshares.net/ads-php-client/u
+- [Usage](https://docs.adshares.net/ads-php-client/usage.html)
+- [Tests](https://docs.adshares.net/ads-php-client/tests.html)
+
+### Contributing
+
+Please follow our [Contributing Guidelines](docs/CONTRIBUTING.md)
+
+### Versioning
+
+We use [SemVer](http://semver.org/) for
