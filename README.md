@@ -34,4 +34,10 @@ Several quick start options are available:
 - [Download the latest release](https://github.com/adshares/ads-php-client/releases/latest)
 - Clone the repo: `git clone https://github.com/adshares/ads-php-client.git`
 
-To connect to the node, you 
+To connect to the node, you will need to provide an account address and a secret key.
+Usually you will also need to specify a host name and a port.
+Once you know the proper parameters, you should be able to connect like this:
+
+```
+$address = 'FFFF-00000001-AAAA';
+$secret = 'EFD0380D9B298
