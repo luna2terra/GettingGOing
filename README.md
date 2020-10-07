@@ -40,4 +40,11 @@ Once you know the proper parameters, you should be able to connect like this:
 
 ```
 $address = 'FFFF-00000001-AAAA';
-$secret = 'EFD0380D9B298
+$secret = 'EFD0380D9B29829AE9F30F41E85D6C09A97220E6CF76FE8C1B479A34A38D12EC';
+$host = '127.0.0.1';
+$port = 6511;
+
+$client = new AdsClient(new CliDriver($address, $secret, $host, $port));
+```
+
+Then you can call ADS commands, for example, to get t
