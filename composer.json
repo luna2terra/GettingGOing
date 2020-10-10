@@ -1,0 +1,8 @@
+{
+    "name": "adshares/ads-client",
+    "description": "PHP client for the ADS blockchain",
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "keywords": [
+        "adshares",
+        "ad
