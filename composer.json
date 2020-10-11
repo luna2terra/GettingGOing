@@ -5,4 +5,11 @@
     "license": "GPL-3.0-or-later",
     "keywords": [
         "adshares",
-        "ad
+        "ads",
+        "php",
+        "esc",
+        "blockchain"
+    ],
+    "homepage": "https://github.com/adshares/ads-php-client",
+    "support": {
+        "issues": "https://github.com/adshares/ads-php-client/issues",
