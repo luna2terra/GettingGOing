@@ -13,3 +13,13 @@
     "homepage": "https://github.com/adshares/ads-php-client",
     "support": {
         "issues": "https://github.com/adshares/ads-php-client/issues",
+        "source": "https://github.com/adshares/ads-php-client"
+    },
+    "authors": [
+        {
+            "name": "Adshares",
+            "homepage": "https://adshares.pl"
+        },
+        {
+            "name": "Contributors",
+      
