@@ -41,4 +41,14 @@
     },
     "autoload": {
         "psr-4": {
-            "
+            "Adshares\\Ads\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Adshares\\Ads\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "qa-check": [
+            "parallel-lint -
