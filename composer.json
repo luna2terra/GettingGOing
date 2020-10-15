@@ -51,4 +51,9 @@
     },
     "scripts": {
         "qa-check": [
-            "parallel-lint -
+            "parallel-lint --no-colors --blame --exclude vendor .",
+            "phpcs -s",
+            "phpstan --no-ansi --no-progress"
+        ],
+        "test": "phpunit --testsuite Unit",
+        "test-coverage": "XDEBUG_MODE=coverage phpunit --testsuit
