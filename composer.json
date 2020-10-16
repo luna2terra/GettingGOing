@@ -56,4 +56,9 @@
             "phpstan --no-ansi --no-progress"
         ],
         "test": "phpunit --testsuite Unit",
-        "test-coverage": "XDEBUG_MODE=coverage phpunit --testsuit
+        "test-coverage": "XDEBUG_MODE=coverage phpunit --testsuite Unit --coverage-text",
+        "test-ci": "@test-coverage --coverage-clover ./var/phpunit/coverage.xml --log-junit ./var/phpunit/logfile.xml"
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master
