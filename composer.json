@@ -61,4 +61,12 @@
     },
     "extra": {
         "branch-alias": {
-            "dev-master
+            "dev-master": "1.2.x-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "allow-plugins": {
+            "dealerdirect/phpcodesniffer-composer-installer": true
+       
