@@ -2455,3 +2455,6 @@
         "php": "^7.4|^8.0",
         "ext-json": "*"
     },
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}
