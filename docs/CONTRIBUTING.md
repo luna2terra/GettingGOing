@@ -15,4 +15,10 @@ reports list ([security@adshares.net](mailto:security@adshares.net)).
 
 ## Submitting a Patch
 
-When contributing to this repository, please first discuss the change yo
+When contributing to this repository, please first discuss the change you wish
+to make via [issue][issues], [telegram], [e-mail][tech_email], or any other
+method with the owners of this repository before making a change.
+
+To submit the patch open a new [GitHub pull request][pr].
+
+Some things that will increase
