@@ -21,4 +21,9 @@ method with the owners of this repository before making a change.
 
 To submit the patch open a new [GitHub pull request][pr].
 
-Some things that will increase
+Some things that will increase the chance that your pull request is accepted:
+
+- Write tests.
+- Follow [PSR2 coding style guide][style].
+- Write a [good commit message][commit].
+- Ensure the PR description clearly describes the problem and solut
