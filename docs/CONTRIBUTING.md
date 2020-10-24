@@ -30,4 +30,9 @@ Some things that will increase the chance that your pull request is accepted:
 - Include the relevant issue number if applicable.
 
 [bug list]: https://github.com/adshares/ads-php-client/labels/Bug
-[bug report template]: https://github.com/adshares/ads-php-client/issues/new?template=
+[bug report template]: https://github.com/adshares/ads-php-client/issues/new?template=bug_report.md&labels=Bug
+[issues]: https://github.com/adshares/ads-php-client/issues
+[telegram]: https://t.me/adshares
+[tech_email]: mailto:tech@adshares.net
+[pr]: https://github.com/adshares/ads-php-client/compare/
+[style]: https://www.php-fig.or
