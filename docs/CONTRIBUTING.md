@@ -35,4 +35,6 @@ Some things that will increase the chance that your pull request is accepted:
 [telegram]: https://t.me/adshares
 [tech_email]: mailto:tech@adshares.net
 [pr]: https://github.com/adshares/ads-php-client/compare/
-[style]: https://www.php-fig.or
+[style]: https://www.php-fig.org/psr/psr-2/
+[commit]: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+
