@@ -7,4 +7,11 @@
     <arg name="cache" value=".phpcs-cache"/>
     <arg name="colors"/>
     <arg name="extensions" value="php"/>
-    <config name="testVersion" value=
+    <config name="testVersion" value="7.4-"/>
+
+    <rule ref="PHPCompatibility"/>
+    <rule ref="PSR12"/>
+
+    <file>src/</file>
+    <file>tests/</file>
+</ruleset>
