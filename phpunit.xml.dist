@@ -15,4 +15,12 @@
         <env name="ADS_HOST" value="t01.e11.click"/>
         <env name="ADS_PORT" value="9001"/>
     </php>
-    <testsuites
+    <testsuites>
+        <testsuite name="Unit">
+            <directory>tests/Unit</directory>
+        </testsuite>
+        <testsuite name="E2E">
+            <directory>tests/E2E</directory>
+        </testsuite>
+    </testsuites>
+    <coverage
