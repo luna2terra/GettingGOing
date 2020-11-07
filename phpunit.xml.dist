@@ -23,4 +23,9 @@
             <directory>tests/E2E</directory>
         </testsuite>
     </testsuites>
-    <coverage
+    <coverage processUncoveredFiles="true">
+        <include>
+            <directory suffix=".php">./src</directory>
+        </include>
+    </coverage>
+</phpunit>
