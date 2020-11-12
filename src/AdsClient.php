@@ -23,4 +23,9 @@ namespace Adshares\Ads;
 
 use Adshares\Ads\Command\AbstractTransactionCommand;
 use Adshares\Ads\Command\ChangeAccountKeyCommand;
-use Ad
+use Adshares\Ads\Command\ChangeNodeKeyCommand;
+use Adshares\Ads\Command\CreateAccountCommand;
+use Adshares\Ads\Command\GetAccountCommand;
+use Adshares\Ads\Command\GetAccountsCommand;
+use Adshares\Ads\Command\GetBlockCommand;
+use Adshares\Ads\
