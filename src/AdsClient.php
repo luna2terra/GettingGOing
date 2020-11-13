@@ -28,4 +28,9 @@ use Adshares\Ads\Command\CreateAccountCommand;
 use Adshares\Ads\Command\GetAccountCommand;
 use Adshares\Ads\Command\GetAccountsCommand;
 use Adshares\Ads\Command\GetBlockCommand;
-use Adshares\Ads\
+use Adshares\Ads\Command\GetBlockIdsCommand;
+use Adshares\Ads\Command\GetBroadcastCommand;
+use Adshares\Ads\Command\GetLogCommand;
+use Adshares\Ads\Command\GetMeCommand;
+use Adshares\Ads\Command\GetMessageCommand;
+use Adshares\Ads\Command\GetMes
