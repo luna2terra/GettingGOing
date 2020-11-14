@@ -38,4 +38,8 @@ use Adshares\Ads\Command\GetTransactionCommand;
 use Adshares\Ads\Driver\DriverInterface;
 use Adshares\Ads\Entity\EntityFactory;
 use Adshares\Ads\Exception\CommandException;
-use Adshares\Ads\
+use Adshares\Ads\Response\ChangeAccountKeyResponse;
+use Adshares\Ads\Response\ChangeNodeKeyResponse;
+use Adshares\Ads\Response\CreateAccountResponse;
+use Adshares\Ads\Response\GetAccountResponse;
+use Adshares\Ads\Response\GetA
