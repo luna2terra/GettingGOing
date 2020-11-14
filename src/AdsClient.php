@@ -33,4 +33,9 @@ use Adshares\Ads\Command\GetBroadcastCommand;
 use Adshares\Ads\Command\GetLogCommand;
 use Adshares\Ads\Command\GetMeCommand;
 use Adshares\Ads\Command\GetMessageCommand;
-use Adshares\Ads\Command\GetMes
+use Adshares\Ads\Command\GetMessageIdsCommand;
+use Adshares\Ads\Command\GetTransactionCommand;
+use Adshares\Ads\Driver\DriverInterface;
+use Adshares\Ads\Entity\EntityFactory;
+use Adshares\Ads\Exception\CommandException;
+use Adshares\Ads\
