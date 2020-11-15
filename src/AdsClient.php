@@ -42,4 +42,9 @@ use Adshares\Ads\Response\ChangeAccountKeyResponse;
 use Adshares\Ads\Response\ChangeNodeKeyResponse;
 use Adshares\Ads\Response\CreateAccountResponse;
 use Adshares\Ads\Response\GetAccountResponse;
-use Adshares\Ads\Response\GetA
+use Adshares\Ads\Response\GetAccountsResponse;
+use Adshares\Ads\Response\GetBlockResponse;
+use Adshares\Ads\Response\GetBlockIdsResponse;
+use Adshares\Ads\Response\GetBroadcastResponse;
+use Adshares\Ads\Response\GetLogResponse;
+use Adshares\Ads\Response\GetMessageIdsResp
