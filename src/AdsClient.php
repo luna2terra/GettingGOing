@@ -47,4 +47,10 @@ use Adshares\Ads\Response\GetBlockResponse;
 use Adshares\Ads\Response\GetBlockIdsResponse;
 use Adshares\Ads\Response\GetBroadcastResponse;
 use Adshares\Ads\Response\GetLogResponse;
-use Adshares\Ads\Response\GetMessageIdsResp
+use Adshares\Ads\Response\GetMessageIdsResponse;
+use Adshares\Ads\Response\GetMessageResponse;
+use Adshares\Ads\Response\GetTransactionResponse;
+use Adshares\Ads\Response\TransactionResponse;
+use DateTimeInterface;
+use Psr\Log\LoggerAwareInterface;
+use Psr\Log\Lo
