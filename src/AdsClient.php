@@ -53,4 +53,16 @@ use Adshares\Ads\Response\GetTransactionResponse;
 use Adshares\Ads\Response\TransactionResponse;
 use DateTimeInterface;
 use Psr\Log\LoggerAwareInterface;
-use Psr\Log\Lo
+use Psr\Log\LoggerAwareTrait;
+use Psr\Log\LoggerInterface;
+use Psr\Log\NullLogger;
+
+/**
+ * Wrapper class used to interact with ADS wallet client.
+ */
+class AdsClient implements LoggerAwareInterface
+{
+    use LoggerAwareTrait;
+
+    /**
+     * @var 
