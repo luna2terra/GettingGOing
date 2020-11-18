@@ -65,4 +65,14 @@ class AdsClient implements LoggerAwareInterface
     use LoggerAwareTrait;
 
     /**
-     * @var 
+     * @var DriverInterface
+     */
+    protected $driver;
+
+    /**
+     * AdsClient constructor.
+     *
+     * @param DriverInterface      $driver
+     * @param LoggerInterface|null $logger
+     */
+    public function __construct(DriverInterface
