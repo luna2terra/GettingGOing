@@ -75,4 +75,13 @@ class AdsClient implements LoggerAwareInterface
      * @param DriverInterface      $driver
      * @param LoggerInterface|null $logger
      */
-    public function __construct(DriverInterface
+    public function __construct(DriverInterface $driver, LoggerInterface $logger = null)
+    {
+        $this->driver = $driver;
+        if (null === $logger) {
+            $logger = new NullLogger();
+        }
+        $this->logger = $logger;
+    }
+
+   
