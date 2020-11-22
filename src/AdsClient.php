@@ -84,4 +84,15 @@ class AdsClient implements LoggerAwareInterface
         $this->logger = $logger;
     }
 
-   
+    /**
+     * Sets response entities map.
+     *
+     * @param string[] $map
+     */
+    public static function setEntityMap(array $map): void
+    {
+        EntityFactory::setEntityMap($map);
+    }
+
+    /**
+     * Fills last account 
