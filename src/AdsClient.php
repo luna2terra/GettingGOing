@@ -95,4 +95,9 @@ class AdsClient implements LoggerAwareInterface
     }
 
     /**
-     * Fills last account 
+     * Fills last account hash and message id in request. Function needs to be called before transaction.
+     * Otherwise above parameters should be passed explicitly.
+     *
+     * @param AbstractTransactionCommand $transaction
+     *
+  
