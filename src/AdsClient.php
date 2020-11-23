@@ -104,4 +104,11 @@ class AdsClient implements LoggerAwareInterface
      *
      * @throws CommandException
      */
-    private function prepareTransaction(AbstractTransactionCommand $transact
+    private function prepareTransaction(AbstractTransactionCommand $transaction, bool $force = false): void
+    {
+        if (!$force && (null !== $transaction->getLastMsid()) && (null !== $transaction->getLastHash())) {
+            return;
+        }
+
+        $sender = $transaction->getSender();
+        if (null 
