@@ -100,4 +100,8 @@ class AdsClient implements LoggerAwareInterface
      *
      * @param AbstractTransactionCommand $transaction
      *
-  
+     * @param bool                       $force       force set msid and hash
+     *
+     * @throws CommandException
+     */
+    private function prepareTransaction(AbstractTransactionCommand $transact
