@@ -111,4 +111,10 @@ class AdsClient implements LoggerAwareInterface
         }
 
         $sender = $transaction->getSender();
-        if (null 
+        if (null !== $sender) {
+            $resp = $this->getAccount($sender);
+        } else {
+            $resp = $this->getMe();
+        }
+        $transaction->setLastMsid($resp->getAccount()->getMsid());
+        $transaction->setLastHash($resp
