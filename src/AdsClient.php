@@ -117,4 +117,11 @@ class AdsClient implements LoggerAwareInterface
             $resp = $this->getMe();
         }
         $transaction->setLastMsid($resp->getAccount()->getMsid());
-        $transaction->setLastHash($resp
+        $transaction->setLastHash($resp->getAccount()->getHash());
+    }
+
+    /**
+     * Executes `change_account_key` transaction.
+     *
+     * @param  ChangeAccountKeyCommand $command
+     * @param  bool                    $isDryRun if true, transaction won't be 
