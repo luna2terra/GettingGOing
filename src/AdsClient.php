@@ -129,4 +129,11 @@ class AdsClient implements LoggerAwareInterface
      */
     public function changeAccountKey(ChangeAccountKeyCommand $command, bool $isDryRun = false): ChangeAccountKeyResponse
     {
-        $t
+        $this->prepareTransaction($command);
+        $response = $this->driver->executeTransaction($command, $isDryRun);
+
+        return new ChangeAccountKeyResponse($response->getRawData());
+    }
+
+    /**
+     * Executes `
