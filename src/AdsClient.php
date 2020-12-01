@@ -124,4 +124,9 @@ class AdsClient implements LoggerAwareInterface
      * Executes `change_account_key` transaction.
      *
      * @param  ChangeAccountKeyCommand $command
-     * @param  bool                    $isDryRun if true, transaction won't be 
+     * @param  bool                    $isDryRun if true, transaction won't be send to network
+     * @return ChangeAccountKeyResponse
+     */
+    public function changeAccountKey(ChangeAccountKeyCommand $command, bool $isDryRun = false): ChangeAccountKeyResponse
+    {
+        $t
