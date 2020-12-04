@@ -183,4 +183,8 @@ class AdsClient implements LoggerAwareInterface
     }
 
     /**
-     * Returns account list 
+     * Returns account list for node.
+     *
+     * @param string      $nodeId  node id (hex)
+     * @param null|string $blockId block id, time in Unix Epoch seconds as hexadecimal string.
+     *                             If null, last block will
