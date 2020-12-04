@@ -166,4 +166,12 @@ class AdsClient implements LoggerAwareInterface
     }
 
     /**
-     * Returns accoun
+     * Returns account data.
+     *
+     * @param string $address account address
+     *
+     * @return GetAccountResponse
+     *
+     * @throws CommandException
+     */
+    public function getAccount(string $address): GetAccountResponse
