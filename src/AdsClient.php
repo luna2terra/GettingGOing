@@ -154,4 +154,9 @@ class AdsClient implements LoggerAwareInterface
      * Executes `create_account` transaction.
      *
      * @param  CreateAccountCommand $command
-     * @param  bool              
+     * @param  bool                 $isDryRun if true, transaction won't be send to network
+     * @return CreateAccountResponse
+     */
+    public function createAccount(CreateAccountCommand $command, bool $isDryRun = false): CreateAccountResponse
+    {
+        $this->p
