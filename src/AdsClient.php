@@ -187,4 +187,12 @@ class AdsClient implements LoggerAwareInterface
      *
      * @param string      $nodeId  node id (hex)
      * @param null|string $blockId block id, time in Unix Epoch seconds as hexadecimal string.
-     *                             If null, last block will
+     *                             If null, last block will be taken.
+     *
+     * @return GetAccountsResponse
+     *
+     * @throws CommandException
+     */
+    public function getAccounts(string $nodeId, ?string $blockId = null): GetAccountsResponse
+    {
+        $node = (int)hexdec
