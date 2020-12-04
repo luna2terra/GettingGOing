@@ -175,3 +175,12 @@ class AdsClient implements LoggerAwareInterface
      * @throws CommandException
      */
     public function getAccount(string $address): GetAccountResponse
+    {
+        $command = new GetAccountCommand($address);
+        $response = $this->driver->executeCommand($command);
+
+        return new GetAccountResponse($response->getRawData());
+    }
+
+    /**
+     * Returns account list 
