@@ -141,4 +141,8 @@ class AdsClient implements LoggerAwareInterface
      * @param  ChangeNodeKeyCommand $command
      * @param  bool                 $isDryRun if true, transaction won't be send to network
      * @return ChangeNodeKeyResponse
-    
+     */
+    public function changeNodeKey(ChangeNodeKeyCommand $command, bool $isDryRun = false): ChangeNodeKeyResponse
+    {
+        $this->prepareTransaction($command);
+        $response = $this->driver->executeTransaction($comman
