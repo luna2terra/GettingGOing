@@ -159,4 +159,11 @@ class AdsClient implements LoggerAwareInterface
      */
     public function createAccount(CreateAccountCommand $command, bool $isDryRun = false): CreateAccountResponse
     {
-        $this->p
+        $this->prepareTransaction($command);
+        $response = $this->driver->executeTransaction($command, $isDryRun);
+
+        return new CreateAccountResponse($response->getRawData());
+    }
+
+    /**
+     * Returns accoun
