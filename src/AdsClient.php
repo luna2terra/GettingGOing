@@ -136,4 +136,9 @@ class AdsClient implements LoggerAwareInterface
     }
 
     /**
-     * Executes `
+     * Executes `change_node_key` transaction.
+     *
+     * @param  ChangeNodeKeyCommand $command
+     * @param  bool                 $isDryRun if true, transaction won't be send to network
+     * @return ChangeNodeKeyResponse
+    
