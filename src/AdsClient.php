@@ -145,4 +145,13 @@ class AdsClient implements LoggerAwareInterface
     public function changeNodeKey(ChangeNodeKeyCommand $command, bool $isDryRun = false): ChangeNodeKeyResponse
     {
         $this->prepareTransaction($command);
-        $response = $this->driver->executeTransaction($comman
+        $response = $this->driver->executeTransaction($command, $isDryRun);
+
+        return new ChangeNodeKeyResponse($response->getRawData());
+    }
+
+    /**
+     * Executes `create_account` transaction.
+     *
+     * @param  CreateAccountCommand $command
+     * @param  bool              
