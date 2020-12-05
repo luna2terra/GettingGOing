@@ -195,4 +195,12 @@ class AdsClient implements LoggerAwareInterface
      */
     public function getAccounts(string $nodeId, ?string $blockId = null): GetAccountsResponse
     {
-        $node = (int)hexdec
+        $node = (int)hexdec($nodeId);
+        $command = new GetAccountsCommand($node, $blockId);
+        $response = $this->driver->executeCommand($command);
+
+        return new GetAccountsResponse($response->getRawData());
+    }
+
+    /**
+     * Returns bloc
