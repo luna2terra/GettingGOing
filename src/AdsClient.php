@@ -203,4 +203,11 @@ class AdsClient implements LoggerAwareInterface
     }
 
     /**
-     * Returns bloc
+     * Returns block data.
+     *
+     * @param null|string $blockId block id, time in Unix Epoch seconds as hexadecimal string.
+     *                             If null, last block will be taken.
+     *
+     * @return GetBlockResponse
+     *
+     * @throws Comma
