@@ -210,4 +210,11 @@ class AdsClient implements LoggerAwareInterface
      *
      * @return GetBlockResponse
      *
-     * @throws Comma
+     * @throws CommandException
+     */
+    public function getBlock(?string $blockId = null): GetBlockResponse
+    {
+        $command = new GetBlockCommand($blockId);
+        $response = $this->driver->executeCommand($command);
+
+ 
