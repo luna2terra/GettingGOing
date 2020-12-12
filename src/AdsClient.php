@@ -223,4 +223,6 @@ class AdsClient implements LoggerAwareInterface
     /**
      * Updates block data for selected period and returns ids of updated blocks.
      *
-     * @param null|string $blockIdFrom starting block id, time i
+     * @param null|string $blockIdFrom starting block id, time in Unix Epoch seconds as hexadecimal string.
+     *                                 If null, first block (genesis) will be taken.
+     * @param null|string $blockIdTo   ending block id, time in Unix Epoch seconds as hexadecimal 
