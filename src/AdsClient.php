@@ -217,4 +217,10 @@ class AdsClient implements LoggerAwareInterface
         $command = new GetBlockCommand($blockId);
         $response = $this->driver->executeCommand($command);
 
- 
+        return new GetBlockResponse($response->getRawData());
+    }
+
+    /**
+     * Updates block data for selected period and returns ids of updated blocks.
+     *
+     * @param null|string $blockIdFrom starting block id, time i
