@@ -225,4 +225,11 @@ class AdsClient implements LoggerAwareInterface
      *
      * @param null|string $blockIdFrom starting block id, time in Unix Epoch seconds as hexadecimal string.
      *                                 If null, first block (genesis) will be taken.
-     * @param null|string $blockIdTo   ending block id, time in Unix Epoch seconds as hexadecimal 
+     * @param null|string $blockIdTo   ending block id, time in Unix Epoch seconds as hexadecimal string.
+     *                                 If null, last block will be taken.
+     *
+     * @return GetBlockIdsResponse
+     *
+     * @throws CommandException
+     */
+    public function getBlockIds(?string $blockIdFrom = null
