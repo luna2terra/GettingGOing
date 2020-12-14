@@ -237,4 +237,10 @@ class AdsClient implements LoggerAwareInterface
         $command = new GetBlockIdsCommand($blockIdFrom, $blockIdTo);
         $response = $this->driver->executeCommand($command);
 
-        return new GetBlockIdsResp
+        return new GetBlockIdsResponse($response->getRawData());
+    }
+
+    /**
+     * Collects broadcast messages for particular block. Messages are in random order and can be duplicated.
+     *
+     * @param null|string $blockId block id, time in Unix Epoch seco
