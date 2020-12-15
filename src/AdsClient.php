@@ -255,4 +255,16 @@ class AdsClient implements LoggerAwareInterface
         $command = new GetBroadcastCommand($blockId);
         $response = $this->driver->executeCommand($command);
 
-        return new GetBroadcastResponse($response->get
+        return new GetBroadcastResponse($response->getRawData());
+    }
+
+    /**
+     * Returns available log event.
+     *
+     * @param null|DateTimeInterface $from start date of event log
+     *
+     * @return GetLogResponse
+     *
+     * @throws CommandException
+     */
+    public funct
