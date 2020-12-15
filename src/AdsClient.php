@@ -289,3 +289,9 @@ class AdsClient implements LoggerAwareInterface
 
         return new GetAccountResponse($response->getRawData());
     }
+
+    /**
+     * Returns message data. Each message contains one or more transactions.
+     *
+     * @param string      $messageId message id
+     * @param null|string $blockId   block id, time in Unix Epoch seconds as he
