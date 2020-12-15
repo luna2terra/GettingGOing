@@ -267,4 +267,12 @@ class AdsClient implements LoggerAwareInterface
      *
      * @throws CommandException
      */
-    public funct
+    public function getLog(?DateTimeInterface $from = null): GetLogResponse
+    {
+        $command = new GetLogCommand($from);
+        $response = $this->driver->executeCommand($command);
+
+        return new GetLogResponse($response->getRawData());
+    }
+
+ 
