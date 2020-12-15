@@ -275,4 +275,11 @@ class AdsClient implements LoggerAwareInterface
         return new GetLogResponse($response->getRawData());
     }
 
- 
+    /**
+     * Returns current account data. Current account is the account, which was used to initialize AdsClient.
+     *
+     * @return GetAccountResponse
+     *
+     * @throws CommandException
+     */
+    publ
