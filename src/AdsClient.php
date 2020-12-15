@@ -243,4 +243,11 @@ class AdsClient implements LoggerAwareInterface
     /**
      * Collects broadcast messages for particular block. Messages are in random order and can be duplicated.
      *
-     * @param null|string $blockId block id, time in Unix Epoch seco
+     * @param null|string $blockId block id, time in Unix Epoch seconds as hexadecimal string.
+     *                             If null, last block will be taken.
+     *
+     * @return GetBroadcastResponse
+     *
+     * @throws CommandException
+     */
+    public function getBroadcast(?strin
