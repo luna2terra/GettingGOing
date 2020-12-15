@@ -250,4 +250,9 @@ class AdsClient implements LoggerAwareInterface
      *
      * @throws CommandException
      */
-    public function getBroadcast(?strin
+    public function getBroadcast(?string $blockId = null): GetBroadcastResponse
+    {
+        $command = new GetBroadcastCommand($blockId);
+        $response = $this->driver->executeCommand($command);
+
+        return new GetBroadcastResponse($response->get
