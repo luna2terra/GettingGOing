@@ -282,4 +282,10 @@ class AdsClient implements LoggerAwareInterface
      *
      * @throws CommandException
      */
-    publ
+    public function getMe(): GetAccountResponse
+    {
+        $command = new GetMeCommand();
+        $response = $this->driver->executeCommand($command);
+
+        return new GetAccountResponse($response->getRawData());
+    }
