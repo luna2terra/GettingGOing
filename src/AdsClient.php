@@ -301,4 +301,9 @@ class AdsClient implements LoggerAwareInterface
      *
      * @throws CommandException
      */
-    public function getMessage(string $messageId
+    public function getMessage(string $messageId, ?string $blockId = null): GetMessageResponse
+    {
+        $command = new GetMessageCommand($messageId, $blockId);
+        $response = $this->driver->executeCommand($command);
+
+        return new GetMessageRespo
