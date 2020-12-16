@@ -294,4 +294,11 @@ class AdsClient implements LoggerAwareInterface
      * Returns message data. Each message contains one or more transactions.
      *
      * @param string      $messageId message id
-     * @param null|string $blockId   block id, time in Unix Epoch seconds as he
+     * @param null|string $blockId   block id, time in Unix Epoch seconds as hexadecimal string.
+     *                               If null, block will be calculated automatically.
+     *
+     * @return GetMessageResponse
+     *
+     * @throws CommandException
+     */
+    public function getMessage(string $messageId
