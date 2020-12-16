@@ -306,4 +306,10 @@ class AdsClient implements LoggerAwareInterface
         $command = new GetMessageCommand($messageId, $blockId);
         $response = $this->driver->executeCommand($command);
 
-        return new GetMessageRespo
+        return new GetMessageResponse($response->getRawData());
+    }
+
+    /**
+     * Returns message ids for selected block.
+     *
+     * @param null|string $blockId block id, time in Unix Epoch seconds as hexadecimal string.
