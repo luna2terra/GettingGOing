@@ -313,3 +313,10 @@ class AdsClient implements LoggerAwareInterface
      * Returns message ids for selected block.
      *
      * @param null|string $blockId block id, time in Unix Epoch seconds as hexadecimal string.
+     *                             If null, last block will be taken.
+     *
+     * @return GetMessageIdsResponse
+     *
+     * @throws CommandException
+     */
+    public function getMessageIds(?string $blockId = null): GetMessageIdsResp
