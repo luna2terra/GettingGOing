@@ -336,4 +336,10 @@ class AdsClient implements LoggerAwareInterface
      *
      * @throws CommandException
      */
-    public function getTransaction(stri
+    public function getTransaction(string $txid): GetTransactionResponse
+    {
+        $command = new GetTransactionCommand($txid);
+        $response = $this->driver->executeCommand($command);
+
+        return new GetTransactionResponse($response->getRawData());
+ 
