@@ -353,4 +353,8 @@ class AdsClient implements LoggerAwareInterface
      * - `SendOneCommand`: Transfers funds to one account;
      *
      * Also commands `ChangeNodeKeyCommand`, `CreateAccountCommand` can be used,
-  
+     * but separate functions are prepared especially for them.
+     *
+     * @param  AbstractTransactionCommand $command
+     * @param  bool                       $isDryRun if true, transaction won't be send to network
+     * @return TransactionResponse
