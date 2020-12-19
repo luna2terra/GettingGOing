@@ -342,4 +342,10 @@ class AdsClient implements LoggerAwareInterface
         $response = $this->driver->executeCommand($command);
 
         return new GetTransactionResponse($response->getRawData());
- 
+    }
+
+    /**
+     * Executes transaction.
+     * `AbstractTransactionCommand` can be one of:
+     * - `BroadcastCommand`: Sends broadcast message to blockchain network;
+     * - `CreateNodeCommand`: Creates node in blockch
