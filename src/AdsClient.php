@@ -362,4 +362,8 @@ class AdsClient implements LoggerAwareInterface
     public function runTransaction(AbstractTransactionCommand $command, bool $isDryRun = false): TransactionResponse
     {
         $this->prepareTransaction($command);
-        $response = 
+        $response = $this->driver->executeTransaction($command, $isDryRun);
+
+        return new TransactionResponse($response->getRawData());
+    }
+}
