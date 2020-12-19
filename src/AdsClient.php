@@ -348,4 +348,9 @@ class AdsClient implements LoggerAwareInterface
      * Executes transaction.
      * `AbstractTransactionCommand` can be one of:
      * - `BroadcastCommand`: Sends broadcast message to blockchain network;
-     * - `CreateNodeCommand`: Creates node in blockch
+     * - `CreateNodeCommand`: Creates node in blockchain network;
+     * - `SendManyCommand`: Transfers funds to many accounts;
+     * - `SendOneCommand`: Transfers funds to one account;
+     *
+     * Also commands `ChangeNodeKeyCommand`, `CreateAccountCommand` can be used,
+  
