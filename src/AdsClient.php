@@ -328,4 +328,12 @@ class AdsClient implements LoggerAwareInterface
     }
 
     /**
-  
+     * Returns single transaction data.
+     *
+     * @param string $txid transaction id
+     *
+     * @return GetTransactionResponse
+     *
+     * @throws CommandException
+     */
+    public function getTransaction(stri
