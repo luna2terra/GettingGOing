@@ -358,3 +358,8 @@ class AdsClient implements LoggerAwareInterface
      * @param  AbstractTransactionCommand $command
      * @param  bool                       $isDryRun if true, transaction won't be send to network
      * @return TransactionResponse
+     */
+    public function runTransaction(AbstractTransactionCommand $command, bool $isDryRun = false): TransactionResponse
+    {
+        $this->prepareTransaction($command);
+        $response = 
