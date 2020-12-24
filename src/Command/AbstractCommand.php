@@ -28,4 +28,8 @@ namespace Adshares\Ads\Command;
  */
 abstract class AbstractCommand implements CommandInterface
 {
-    public funct
+    public function getAttributes(): array
+    {
+        return [];
+    }
+}
