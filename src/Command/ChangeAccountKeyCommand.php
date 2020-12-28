@@ -44,3 +44,16 @@ class ChangeAccountKeyCommand extends AbstractTransactionCommand
      * @param string $confirm   Signature of empty string generated using secret key
      */
     public function __construct(string $publicKey, string $confirm)
+    {
+        $this->publicKey = $publicKey;
+        $this->confirm = $confirm;
+    }
+
+    public function getName(): string
+    {
+        return 'change_account_key';
+    }
+
+    public function getAttributes(): array
+    {
+   
