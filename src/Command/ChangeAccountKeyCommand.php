@@ -38,4 +38,9 @@ class ChangeAccountKeyCommand extends AbstractTransactionCommand
     protected $publicKey;
 
     /**
-     * CreateAccountCom
+     * CreateAccountCommand constructor.
+     *
+     * @param string $publicKey Public key
+     * @param string $confirm   Signature of empty string generated using secret key
+     */
+    public function __construct(string $publicKey, string $confirm)
