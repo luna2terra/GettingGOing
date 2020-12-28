@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -21,15 +22,8 @@
 
 namespace Adshares\Ads\Command;
 
-class ChangeAccountKeyCommand extends AbstractTransactionCommand
+class ChangeNodeKeyCommand extends AbstractTransactionCommand
 {
-    /**
-     * Signature of empty string generated using secret key
-     *
-     * @var string
-     */
-    protected $confirm;
-
     /**
      * Public key
      *
@@ -38,26 +32,22 @@ class ChangeAccountKeyCommand extends AbstractTransactionCommand
     protected $publicKey;
 
     /**
-     * CreateAccountCommand constructor.
+     * ChangeNodeKeyCommand constructor.
      *
      * @param string $publicKey Public key
-     * @param string $confirm   Signature of empty string generated using secret key
      */
-    public function __construct(string $publicKey, string $confirm)
+    public function __construct(string $publicKey)
     {
         $this->publicKey = $publicKey;
-        $this->confirm = $confirm;
     }
 
     public function getName(): string
     {
-        return 'change_account_key';
+        return 'change_node_key';
     }
 
     public function getAttributes(): array
     {
-        $attributes['confirm'] = $this->confirm;
-        $attributes['public_key'] = $this->publicKey;
-        return $attributes;
+        return ['public_key' => $this->publicKey];
     }
 }
