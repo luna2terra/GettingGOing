@@ -40,3 +40,9 @@ interface CommandInterface
     public function getName(): string;
 
     /**
+     * Returns command specific attributes.
+     *
+     * @return int[]|string[]|string[][]
+     */
+    public function getAttributes(): array;
+}
