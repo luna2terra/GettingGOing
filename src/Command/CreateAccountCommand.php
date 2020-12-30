@@ -43,4 +43,16 @@ class CreateAccountCommand extends AbstractTransactionCommand
      * @param string $publicKey Public key
      * @param string $confirm   Signature of empty string generated using secret key
      */
-    public function setAccountKey(string $publicKey, string $c
+    public function setAccountKey(string $publicKey, string $confirm): void
+    {
+        $this->publicKey = $publicKey;
+        $this->confirm = $confirm;
+    }
+
+    public function getName(): string
+    {
+        return 'create_account';
+    }
+
+    public function getAttributes(): array
+ 
