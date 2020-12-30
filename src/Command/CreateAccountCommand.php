@@ -24,4 +24,18 @@ namespace Adshares\Ads\Command;
 class CreateAccountCommand extends AbstractTransactionCommand
 {
     /**
-     * 
+     * Signature of empty string generated using secret key
+     *
+     * @var string
+     */
+    protected $confirm;
+
+    /**
+     * Public key
+     *
+     * @var string
+     */
+    protected $publicKey;
+
+    /**
+     * Sets ke
