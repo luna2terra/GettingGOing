@@ -38,4 +38,9 @@ class CreateAccountCommand extends AbstractTransactionCommand
     protected $publicKey;
 
     /**
-     * Sets ke
+     * Sets key of account.
+     *
+     * @param string $publicKey Public key
+     * @param string $confirm   Signature of empty string generated using secret key
+     */
+    public function setAccountKey(string $publicKey, string $c
