@@ -55,4 +55,10 @@ class CreateAccountCommand extends AbstractTransactionCommand
     }
 
     public function getAttributes(): array
- 
+    {
+        $attributes = [];
+        if ($this->confirm && $this->publicKey) {
+            $attributes['confirm'] = $this->confirm;
+            $attributes['public_key'] = $this->publicKey;
+        }
+        return
