@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -21,46 +22,23 @@
 
 namespace Adshares\Ads\Command;
 
-class CreateAccountCommand extends AbstractTransactionCommand
+class CreateNodeCommand extends AbstractTransactionCommand
 {
     /**
-     * Signature of empty string generated using secret key
-     *
-     * @var string
+     * CreateNodeCommand constructor.
      */
-    protected $confirm;
-
-    /**
-     * Public key
-     *
-     * @var string
-     */
-    protected $publicKey;
-
-    /**
-     * Sets key of account.
-     *
-     * @param string $publicKey Public key
-     * @param string $confirm   Signature of empty string generated using secret key
-     */
-    public function setAccountKey(string $publicKey, string $confirm): void
+    public function __construct()
     {
-        $this->publicKey = $publicKey;
-        $this->confirm = $confirm;
+        // Function create_node does not take any parameters.
     }
 
     public function getName(): string
     {
-        return 'create_account';
+        return 'create_node';
     }
 
     public function getAttributes(): array
     {
-        $attributes = [];
-        if ($this->confirm && $this->publicKey) {
-            $attributes['confirm'] = $this->confirm;
-            $attributes['public_key'] = $this->publicKey;
-        }
-        return $attributes;
+        return [];
     }
 }
