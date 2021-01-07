@@ -46,3 +46,5 @@ class GetAccountCommand extends AbstractCommand
     public function getAttributes(): array
     {
         return ['address' => $this->address];
+    }
+}
