@@ -23,4 +23,16 @@ namespace Adshares\Ads\Command;
 
 class GetAccountCommand extends AbstractCommand
 {
-   
+    /**
+     * @var string
+     */
+    private $address;
+
+    /**
+     * GetAccountCommand constructor.
+     *
+     * @param string $address
+     */
+    public function __construct(string $address)
+    {
+  
