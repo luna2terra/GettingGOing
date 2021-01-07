@@ -35,4 +35,14 @@ class GetAccountCommand extends AbstractCommand
      */
     public function __construct(string $address)
     {
-  
+        $this->address = $address;
+    }
+
+    public function getName(): string
+    {
+        return 'get_account';
+    }
+
+    public function getAttributes(): array
+    {
+        return ['address' => $this->address];
