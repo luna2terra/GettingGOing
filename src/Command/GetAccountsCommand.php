@@ -26,3 +26,15 @@ class GetAccountsCommand extends AbstractCommand
     /**
      * @var null|string
      */
+    private $blockId;
+
+    /**
+     * @var int $node
+     */
+    private $node;
+
+    /**
+     * @param int         $node
+     * @param null|string $blockId
+     */
+    public function __construct(int $node, ?string $blockId = null)
