@@ -38,3 +38,16 @@ class GetAccountsCommand extends AbstractCommand
      * @param null|string $blockId
      */
     public function __construct(int $node, ?string $blockId = null)
+    {
+        $this->blockId = $blockId;
+        $this->node = $node;
+    }
+
+    public function getName(): string
+    {
+        return 'get_accounts';
+    }
+
+    public function getAttributes(): array
+    {
+        $attribu
