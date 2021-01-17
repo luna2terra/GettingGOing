@@ -50,4 +50,11 @@ class GetAccountsCommand extends AbstractCommand
 
     public function getAttributes(): array
     {
-        $attribu
+        $attributes = [];
+        if ($this->blockId) {
+            $attributes['block'] = $this->blockId;
+        }
+        $attributes['node'] = $this->node;
+        return $attributes;
+    }
+}
