@@ -29,3 +29,15 @@ class GetBlockCommand extends AbstractCommand
      */
     private $blockId;
 
+    /**
+     * @param null|string $blockId
+     */
+    public function __construct(?string $blockId)
+    {
+        $this->blockId = $blockId;
+    }
+
+    public function getName(): string
+    {
+        return 'get_block';
+  
