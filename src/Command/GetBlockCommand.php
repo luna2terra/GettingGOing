@@ -40,4 +40,14 @@ class GetBlockCommand extends AbstractCommand
     public function getName(): string
     {
         return 'get_block';
-  
+    }
+
+    public function getAttributes(): array
+    {
+        $attributes = [];
+        if ($this->blockId) {
+            $attributes['block'] = $this->blockId;
+        }
+        return $attributes;
+    }
+}
