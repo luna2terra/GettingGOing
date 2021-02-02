@@ -51,4 +51,10 @@ class GetBlockIdsCommand extends AbstractCommand
 
     public function getAttributes(): array
     {
-  
+        $attributes = [];
+        if ($this->blockIdFrom) {
+            $attributes['from'] = $this->blockIdFrom;
+        }
+        if ($this->blockIdTo) {
+            $attributes['to'] = $this->blockIdTo;
+   
