@@ -30,4 +30,14 @@ class GetBlockIdsCommand extends AbstractCommand
     private $blockIdFrom;
     /**
      *
-  
+     * @var null|string
+     */
+    private $blockIdTo;
+
+    /**
+     * @param null|string $blockIdFrom
+     * @param null|string $blockIdTo
+     */
+    public function __construct(?string $blockIdFrom, ?string $blockIdTo)
+    {
+ 
