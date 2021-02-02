@@ -40,4 +40,15 @@ class GetBlockIdsCommand extends AbstractCommand
      */
     public function __construct(?string $blockIdFrom, ?string $blockIdTo)
     {
- 
+        $this->blockIdFrom = $blockIdFrom;
+        $this->blockIdTo = $blockIdTo;
+    }
+
+    public function getName(): string
+    {
+        return 'get_blocks';
+    }
+
+    public function getAttributes(): array
+    {
+  
