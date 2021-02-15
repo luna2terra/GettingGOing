@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -21,42 +22,31 @@
 
 namespace Adshares\Ads\Command;
 
-class GetBlockIdsCommand extends AbstractCommand
+class GetBroadcastCommand extends AbstractCommand
 {
     /**
-     *
      * @var null|string
      */
-    private $blockIdFrom;
-    /**
-     *
-     * @var null|string
-     */
-    private $blockIdTo;
+    private $blockId;
 
     /**
-     * @param null|string $blockIdFrom
-     * @param null|string $blockIdTo
+     * @param null|string $blockId
      */
-    public function __construct(?string $blockIdFrom, ?string $blockIdTo)
+    public function __construct(?string $blockId = null)
     {
-        $this->blockIdFrom = $blockIdFrom;
-        $this->blockIdTo = $blockIdTo;
+        $this->blockId = $blockId;
     }
 
     public function getName(): string
     {
-        return 'get_blocks';
+        return 'get_broadcast';
     }
 
     public function getAttributes(): array
     {
         $attributes = [];
-        if ($this->blockIdFrom) {
-            $attributes['from'] = $this->blockIdFrom;
-        }
-        if ($this->blockIdTo) {
-            $attributes['to'] = $this->blockIdTo;
+        if ($this->blockId) {
+            $attributes['from'] = $this->blockId;
         }
         return $attributes;
     }
