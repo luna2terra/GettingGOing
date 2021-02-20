@@ -36,4 +36,16 @@ class GetLogCommand extends AbstractCommand
      */
     public function __construct(?DateTimeInterface $from)
     {
-        $
+        $this->from = $from;
+    }
+
+    public function getName(): string
+    {
+        return 'get_log';
+    }
+
+    public function getAttributes(): array
+    {
+        $attributes = [];
+        if (null !== $this->from) {
+            $at
