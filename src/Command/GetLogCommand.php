@@ -48,4 +48,8 @@ class GetLogCommand extends AbstractCommand
     {
         $attributes = [];
         if (null !== $this->from) {
-            $at
+            $attributes['from'] = $this->from->getTimestamp();
+        }
+        return $attributes;
+    }
+}
