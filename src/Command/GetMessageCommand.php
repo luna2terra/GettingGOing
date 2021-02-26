@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -21,15 +22,40 @@
 
 namespace Adshares\Ads\Command;
 
-class GetMeCommand extends AbstractCommand
+class GetMessageCommand extends AbstractCommand
 {
     /**
-     * Returns command name.
-     *
-     * @return string
+     * @var null|string
      */
+    private $blockId;
+
+    /**
+     * @var string
+     */
+    private $messageId;
+
+    /**
+     * @param string      $messageId
+     * @param null|string $blockId
+     */
+    public function __construct(string $messageId, string $blockId = null)
+    {
+        $this->messageId = $messageId;
+        $this->blockId = $blockId;
+    }
+
     public function getName(): string
     {
-        return 'get_me';
+        return 'get_message';
+    }
+
+    public function getAttributes(): array
+    {
+        $attributes = [];
+        $attributes['message_id'] = $this->messageId;
+        if ($this->blockId) {
+            $attributes['block'] = $this->blockId;
+        }
+        return $attributes;
     }
 }
