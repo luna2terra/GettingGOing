@@ -16,4 +16,18 @@
  * See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ADS PHP Client. If not, see <https://
+ * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
+ */
+
+namespace Adshares\Ads\Command;
+
+class GetMeCommand extends AbstractCommand
+{
+    /**
+     * Returns command name.
+     *
+     * @return string
+     */
+    public function getName(): string
+    {
+ 
