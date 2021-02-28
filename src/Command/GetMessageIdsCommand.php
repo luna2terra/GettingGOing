@@ -32,4 +32,17 @@ class GetMessageIdsCommand extends AbstractCommand
      *
      * @param null|string $blockId
      */
-    public function __construct(
+    public function __construct(?string $blockId)
+    {
+        $this->blockId = $blockId;
+    }
+
+    public function getName(): string
+    {
+        return 'get_message_list';
+    }
+
+    public function getAttributes(): array
+    {
+        $attributes = [];
+        if
