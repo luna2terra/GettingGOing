@@ -19,4 +19,17 @@
  * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
  */
 
-namespace Adshar
+namespace Adshares\Ads\Command;
+
+class GetMessageIdsCommand extends AbstractCommand
+{
+    /**
+     * @var null|string
+     */
+    private $blockId;
+
+    /**
+     *
+     * @param null|string $blockId
+     */
+    public function __construct(
