@@ -45,4 +45,9 @@ class GetMessageIdsCommand extends AbstractCommand
     public function getAttributes(): array
     {
         $attributes = [];
-        if
+        if ($this->blockId) {
+            $attributes['block'] = $this->blockId;
+        }
+        return $attributes;
+    }
+}
