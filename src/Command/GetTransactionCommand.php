@@ -31,3 +31,15 @@ class GetTransactionCommand extends AbstractCommand
     public function __construct(string $txid)
     {
         $this->txid = $txid;
+    }
+
+    public function getName(): string
+    {
+        return 'get_transaction';
+    }
+
+    public function getAttributes(): array
+    {
+        return ['txid' => $this->txid];
+    }
+}
