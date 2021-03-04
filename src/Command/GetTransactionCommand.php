@@ -16,4 +16,18 @@
  * See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ADS PHP Client. If not, see <https://www.gnu.org/license
+ * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
+ */
+
+namespace Adshares\Ads\Command;
+
+class GetTransactionCommand extends AbstractCommand
+{
+    /**
+     * Transaction ID
+     */
+    private string $txid;
+
+    public function __construct(string $txid)
+    {
+        $this->txid = $txid;
