@@ -23,4 +23,9 @@ namespace Adshares\Ads\Command;
 
 use Adshares\Ads\Util\AdsConverter;
 
-class SendManyCommand exte
+class SendManyCommand extends AbstractTransactionCommand
+{
+    /**
+     * Array of wires. Each entry is pair: account address => amount in clicks.
+     *                     Example: ['0001-00000000-XXXX'=>200,'0001-00000001-XXXX'=>10]
+   
