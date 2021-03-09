@@ -35,4 +35,16 @@ class SendManyCommand extends AbstractTransactionCommand
 
     /**
      * @param int[] $wires array of wires. Each entry is pair: account address => amount in clicks.
-     *                     Example: ['0
+     *                     Example: ['0001-00000000-XXXX'=>200,'0001-00000001-XXXX'=>10]
+     */
+    public function __construct(array $wires)
+    {
+        $this->wires = $wires;
+    }
+
+    public function getName(): string
+    {
+        return 'send_many';
+    }
+
+    public f
