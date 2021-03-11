@@ -54,4 +54,6 @@ class SendManyCommand extends AbstractTransactionCommand
             $attributes['wires'][$address] = AdsConverter::clicksToAds($amount);
         }
 
-        return $attri
+        return $attributes;
+    }
+}
