@@ -47,4 +47,11 @@ class SendManyCommand extends AbstractTransactionCommand
         return 'send_many';
     }
 
-    public f
+    public function getAttributes(): array
+    {
+        $attributes = [];
+        foreach ($this->wires as $address => $amount) {
+            $attributes['wires'][$address] = AdsConverter::clicksToAds($amount);
+        }
+
+        return $attri
