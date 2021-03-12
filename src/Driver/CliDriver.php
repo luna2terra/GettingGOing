@@ -277,3 +277,103 @@ class CliDriver implements DriverInterface, LoggerAwareInterface
     /**
      * @param CommandInterface $command
      * @return ResponseInterface
+     * @throws CommandException
+     */
+    public function executeCommand(CommandInterface $command): ResponseInterface
+    {
+        $process = $this->getProcess();
+        $data = $command->getAttributes();
+        $data['run'] = $command->getName();
+
+        return $this->runProcess($command, $data, $process);
+    }
+
+    /**
+     * @param TransactionInterface $transaction
+     * @param bool $isDryRun if true, transaction will not be send to network
+     * @return ResponseInterface
+     */
+    public function executeTransaction(TransactionInterface $transaction, bool $isDryRun = false): ResponseInterface
+    {
+        $process = $this->getProcess(
+            $transaction->getLastHash(),
+            $transaction->getLastMsid(),
+            $isDryRun
+        );
+        $data = $transaction->getAttributes();
+        $data['run'] = $transaction->getName();
+        if ($transaction->getSender()) {
+            $data['sender'] = $transaction->getSender();
+        }
+        if ($transaction->getSignature()) {
+            $data['signature'] = $transaction->getSignature();
+        }
+        if ($transaction->getTimestamp()) {
+            $data['time'] = $transaction->getTimestamp();
+        }
+
+        return $this->runProcess($transaction, $data, $process);
+    }
+
+    /**
+     * @param CommandInterface $command
+     * @param int[]|string[]|string[][] $data all attributes of command
+     * @param Process<string> $process process
+     * @return RawResponse
+     */
+    protected function runProcess(CommandInterface $command, array $data, Process $process): RawResponse
+    {
+        $preparedInputData = (string)json_encode($data);
+
+        $input = new InputStream();
+        $process->setInput($input);
+        $process->start();
+
+        if (null !== $this->secret) {
+            $input->write("$this->secret\n");
+        }
+
+        $input->write($preparedInputData);
+        $input->close();
+
+        $start = microtime(true);
+        try {
+            $process->wait();
+        } catch (ProcessTimedOutException $exc) {
+            throw new CommandException($command, 'Process timed out');
+        }
+
+        if ($process->getExitCode()) {
+            throw new CommandException($command, $process->getErrorOutput());
+        }
+
+        try {
+            $output = $process->getOutput();
+            $messages = $this->prepareOutput($command, $output);
+            $message = array_shift($messages);
+        } catch (Throwable $e) {
+            throw new CommandException(
+                $command,
+                sprintf("%s\n%s", $output ?? '', $process->getErrorOutput()),
+                $e->getCode(),
+                $e
+            );
+        }
+
+        $context = [
+            'time' => microtime(true) - $start,
+        ];
+
+        $this->logger->debug(sprintf('[ADS_CLIENT] %s %s', $command->getName(), $preparedInputData), $context);
+
+        if (isset($message[self::LABEL_ERROR])) {
+            throw new CommandException(
+                $command,
+                $message[self::LABEL_ERROR],
+                CommandError::getCodeByMessage($message[self::LABEL_ERROR])
+            );
+        }
+
+        return new RawResponse($message);
+    }
+}
