@@ -105,3 +105,75 @@ abstract class AbstractEntity implements EntityInterface
     protected static function defaultConvertType(string $type, $value)
     {
         if (preg_match('/(\S+)\[]/', $type, $matches)) {
+            // $type matched array type
+            list(, $t) = $matches;
+            foreach ((array)$value as $k => $v) {
+                $value[$k] = self::convertType($t, $v);
+            }
+        } else {
+            $entityType = 'Adshares\Ads\Entity\\' . $type;
+            if (class_exists($entityType)) {
+                $type = $entityType;
+            }
+            if (class_exists($type)) {
+                $interfaces = class_implements($type);
+                if (is_array($interfaces) && array_key_exists('Adshares\Ads\Entity\EntityInterface', $interfaces)) {
+                    /* @var $type EntityInterface */
+                    $value = EntityFactory::create((new ReflectionClass($type))->getShortName(), $value);
+                }
+            }
+        }
+
+        return $value;
+    }
+
+    /**
+     * @param string $name
+     * @param array|mixed $value
+     * @param ReflectionClass<EntityInterface>|null $refClass
+     * @return int|mixed
+     */
+    protected static function castProperty(string $name, $value, ?ReflectionClass $refClass = null)
+    {
+        if (null !== $refClass) {
+            $comment = '';
+            if ($refClass->hasProperty($name)) {
+                $comment = $refClass->getProperty($name)->getDocComment();
+            }
+            $matches = [];
+            if (preg_match('/@var\s+([^\s]+)/', (string)$comment, $matches)) {
+                $types = explode('|', $matches[1]);
+                $type = array_shift($types);
+                if ('null' == $type) {
+                    $type = array_shift($types);
+                }
+                $value = self::convertType((string)$type, $value);
+            }
+        }
+
+        return $value;
+    }
+
+    /**
+     * @param string[]|string[][] $data
+     */
+    public function fillWithRawData(array $data): void
+    {
+        $refClass = new ReflectionClass($this);
+        foreach ($data as $key => $value) {
+            $name = self::toCamelCase($key);
+
+            if (property_exists($this, $name)) {
+                $this->$name = static::castProperty($name, $value, $refClass);
+            }
+        }
+    }
+
+    public static function createFromRawData(array $data): EntityInterface
+    {
+        $entity = new static();
+        $entity->fillWithRawData($data);
+
+        return $entity;
+    }
+}
