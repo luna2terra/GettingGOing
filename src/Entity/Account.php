@@ -19,4 +19,19 @@
  * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
  */
 
-namespace Adshares\Ads\Enti
+namespace Adshares\Ads\Entity;
+
+use Adshares\Ads\Util\AdsConverter;
+use DateTimeInterface;
+use ReflectionClass;
+
+/**
+ * Class Account
+ *
+ * @package Adshares\Ads\Entity
+ */
+class Account extends AbstractEntity
+{
+    /**
+     * Account address
+ 
