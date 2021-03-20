@@ -34,4 +34,24 @@ class Account extends AbstractEntity
 {
     /**
      * Account address
- 
+     *
+     * @var string
+     */
+    protected $address;
+
+    /**
+     * Balance
+     *
+     * @var int
+     */
+    protected $balance;
+
+    /**
+     * Hash
+     *
+     * @var string
+     */
+    protected $hash;
+
+    /**
+     * Block ti
