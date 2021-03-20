@@ -54,4 +54,18 @@ class Account extends AbstractEntity
     protected $hash;
 
     /**
-     * Block ti
+     * Block time of an outgoing transaction request
+     *
+     * @var DateTimeInterface
+     */
+    protected $localChange;
+
+    /**
+     * Number of last message
+     *
+     * @var int
+     */
+    protected $msid;
+
+    /**
+     * No
