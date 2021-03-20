@@ -68,4 +68,19 @@ class Account extends AbstractEntity
     protected $msid;
 
     /**
-     * No
+     * Node ordinal number
+     *
+     * @var int
+     */
+    protected $node;
+
+    /**
+     * Paired account address
+     *
+     * @var null|string
+     */
+    protected $pairedAddress;
+
+    /**
+     * Paired node ordinal number
+ 
