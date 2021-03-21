@@ -114,4 +114,17 @@ class Account extends AbstractEntity
      *
      * @var DateTimeInterface
      */
-    
+    protected $time;
+
+    /**
+     * @return string account address
+     */
+    public function getAddress(): string
+    {
+        return $this->address;
+    }
+
+    /**
+     * @return int Balance
+     */
+    pub
