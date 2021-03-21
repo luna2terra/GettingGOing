@@ -98,4 +98,20 @@ class Account extends AbstractEntity
     /**
      * Block time of an incoming transaction from a remote host
      *
-     * @var Da
+     * @var DateTimeInterface
+     */
+    protected $remoteChange;
+
+    /**
+     * Status
+     *
+     * @var int
+     */
+    protected $status;
+
+    /**
+     * Time of last transaction
+     *
+     * @var DateTimeInterface
+     */
+    
