@@ -83,4 +83,19 @@ class Account extends AbstractEntity
 
     /**
      * Paired node ordinal number
- 
+     *
+     * @var int
+     */
+    protected $pairedNode;
+
+    /**
+     * Public key
+     *
+     * @var string
+     */
+    protected $publicKey;
+
+    /**
+     * Block time of an incoming transaction from a remote host
+     *
+     * @var Da
