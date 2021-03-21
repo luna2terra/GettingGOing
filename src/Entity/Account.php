@@ -127,4 +127,14 @@ class Account extends AbstractEntity
     /**
      * @return int Balance
      */
-    pub
+    public function getBalance(): int
+    {
+        return $this->balance;
+    }
+
+    /**
+     * @return string Hash
+     */
+    public function getHash(): string
+    {
+        return $this->has
