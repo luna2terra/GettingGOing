@@ -137,4 +137,16 @@ class Account extends AbstractEntity
      */
     public function getHash(): string
     {
-        return $this->has
+        return $this->hash;
+    }
+
+    /**
+     * @return DateTimeInterface Block time of an outgoing transaction request
+     */
+    public function getLocalChange(): DateTimeInterface
+    {
+        return $this->localChange;
+    }
+
+    /**
+     * @return int Num
