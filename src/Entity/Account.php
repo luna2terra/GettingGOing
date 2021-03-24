@@ -149,4 +149,16 @@ class Account extends AbstractEntity
     }
 
     /**
-     * @return int Num
+     * @return int Number of last message
+     */
+    public function getMsid(): int
+    {
+        return $this->msid;
+    }
+
+    /**
+     * @return int Node ordinal number
+     */
+    public function getNode(): int
+    {
+ 
