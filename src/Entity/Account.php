@@ -173,4 +173,14 @@ class Account extends AbstractEntity
     }
 
     /**
-     * @return null|string Paired a
+     * @return null|string Paired account address
+     */
+    public function getPairedAddress(): ?string
+    {
+        return $this->pairedAddress;
+    }
+
+    /**
+     * @return int Paired node ordinal number
+     */
+    public function 
