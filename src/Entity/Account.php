@@ -161,4 +161,16 @@ class Account extends AbstractEntity
      */
     public function getNode(): int
     {
- 
+        return $this->node;
+    }
+
+    /**
+     * @return string Node id
+     */
+    public function getNodeId(): string
+    {
+        return sprintf('%04X', $this->node);
+    }
+
+    /**
+     * @return null|string Paired a
