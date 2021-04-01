@@ -183,4 +183,14 @@ class Account extends AbstractEntity
     /**
      * @return int Paired node ordinal number
      */
-    public function 
+    public function getPairedNode(): int
+    {
+        return $this->pairedNode;
+    }
+
+    /**
+     * @return string Paired node id
+     */
+    public function getPairedNodeId(): string
+    {
+        return sprintf('%04X', $this->paired
