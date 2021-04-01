@@ -193,4 +193,16 @@ class Account extends AbstractEntity
      */
     public function getPairedNodeId(): string
     {
-        return sprintf('%04X', $this->paired
+        return sprintf('%04X', $this->pairedNode);
+    }
+
+    /**
+     * @return string Public key
+     */
+    public function getPublicKey(): string
+    {
+        return $this->publicKey;
+    }
+
+    /**
+     * @return DateTimeInterface Bl
