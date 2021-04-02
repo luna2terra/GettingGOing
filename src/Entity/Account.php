@@ -205,4 +205,16 @@ class Account extends AbstractEntity
     }
 
     /**
-     * @return DateTimeInterface Bl
+     * @return DateTimeInterface Block time of an incoming transaction from a remote host
+     */
+    public function getRemoteChange(): DateTimeInterface
+    {
+        return $this->remoteChange;
+    }
+
+    /**
+     * @return int Status
+     */
+    public function getStatus(): int
+    {
+ 
