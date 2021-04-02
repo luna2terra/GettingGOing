@@ -229,4 +229,11 @@ class Account extends AbstractEntity
     }
 
     /**
-     * @return bool
+     * @return bool true if account has been deleted, false otherwise
+     */
+    public function isStatusDeleted(): bool
+    {
+        return ($this->status & 1) != 0;
+    }
+
+    protected static function castProperty(string $name, $value, ?ReflectionCla
