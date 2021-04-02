@@ -217,4 +217,16 @@ class Account extends AbstractEntity
      */
     public function getStatus(): int
     {
- 
+        return $this->status;
+    }
+
+    /**
+     * @return DateTimeInterface Time of last transaction
+     */
+    public function getTime(): DateTimeInterface
+    {
+        return $this->time;
+    }
+
+    /**
+     * @return bool
