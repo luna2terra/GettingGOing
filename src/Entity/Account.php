@@ -236,4 +236,12 @@ class Account extends AbstractEntity
         return ($this->status & 1) != 0;
     }
 
-    protected static function castProperty(string $name, $value, ?ReflectionCla
+    protected static function castProperty(string $name, $value, ?ReflectionClass $refClass = null)
+    {
+        if ('balance' === $name) {
+            return AdsConverter::adsToClicks($value);
+        }
+
+        return parent::castProperty($name, $value, $refClass);
+    }
+}
