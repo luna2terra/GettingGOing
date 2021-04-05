@@ -222,3 +222,77 @@ class Block extends AbstractEntity
      */
     public function getNowHash(): string
     {
+        return $this->nowHash;
+    }
+
+    /**
+     * @return string Old block hash
+     */
+    public function getOldHash(): string
+    {
+        return $this->oldHash;
+    }
+
+    /**
+     * @return DateTimeInterface Block time
+     */
+    public function getTime(): DateTimeInterface
+    {
+        return $this->time;
+    }
+
+    /**
+     * @return string Hash of vip public keys
+     */
+    public function getVipHash(): string
+    {
+        return $this->vipHash;
+    }
+
+    /**
+     * @return int Forking signatures
+     */
+    public function getVoteNo(): int
+    {
+        return $this->voteNo;
+    }
+
+    /**
+     * @return int Total number of signatures
+     */
+    public function getVoteTotal(): int
+    {
+        return $this->voteTotal;
+    }
+
+    /**
+     * @return int Confirming signatures
+     */
+    public function getVoteYes(): int
+    {
+        return $this->voteYes;
+    }
+
+    protected static function castProperty(string $name, $value, ?ReflectionClass $refClass = null)
+    {
+        if ('dividendBalance' === $name) {
+            return AdsConverter::adsToClicks($value);
+        }
+
+        return parent::castProperty($name, $value, $refClass);
+    }
+
+    public static function createFromRawData(array $data): EntityInterface
+    {
+        $entity = new static();
+        $entity->fillWithRawData($data);
+        $entity->minHash = is_array($data['minhash']) ? '' : $data['minhash'];
+        $entity->msgHash = is_array($data['msghash']) ? '' : $data['msghash'];
+        $entity->nodHash = is_array($data['nodhash']) ? '' : $data['nodhash'];
+        $entity->nowHash = is_array($data['nowhash']) ? '' : $data['nowhash'];
+        $entity->oldHash = is_array($data['oldhash']) ? '' : $data['oldhash'];
+        $entity->vipHash = is_array($data['viphash']) ? '' : $data['viphash'];
+
+        return $entity;
+    }
+}
