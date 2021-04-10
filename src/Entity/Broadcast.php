@@ -37,4 +37,20 @@ class Broadcast extends AbstractEntity
      *
      * @var int
      */
-    protect
+    protected $accountMsid;
+
+    /**
+     * Sender address
+     *
+     * @var string
+     */
+    protected $address;
+
+    /**
+     * Block time of broadcast transaction
+     *
+     * @var DateTimeInterface
+     */
+    protected $blockTime;
+
+    
