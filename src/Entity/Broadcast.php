@@ -21,4 +21,20 @@
 
 namespace Adshares\Ads\Entity;
 
-use Adshares\Ads\Util\AdsConver
+use Adshares\Ads\Util\AdsConverter;
+use DateTimeInterface;
+use ReflectionClass;
+
+/**
+ * Class Broadcast
+ *
+ * @package Adshares\Ads\Entity
+ */
+class Broadcast extends AbstractEntity
+{
+    /**
+     * Sender last message number
+     *
+     * @var int
+     */
+    protect
