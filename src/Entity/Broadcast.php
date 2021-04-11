@@ -53,4 +53,21 @@ class Broadcast extends AbstractEntity
      */
     protected $blockTime;
 
-    
+    /**
+     * Transaction data as hexadecimal string
+     *
+     * @var string
+     */
+    protected $data;
+
+    /**
+     * Fee
+     *
+     * @var int
+     */
+    protected $fee;
+
+    /**
+     * Id
+     *
+     * @
