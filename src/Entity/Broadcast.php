@@ -70,4 +70,23 @@ class Broadcast extends AbstractEntity
     /**
      * Id
      *
-     * @
+     * @var string
+     */
+    protected $id;
+
+    /**
+     * Sender input hash
+     *
+     * @var string
+     */
+    protected $inputHash;
+
+    /**
+     * Message
+     *
+     * @var string
+     */
+    protected $message;
+
+    /**
+   
