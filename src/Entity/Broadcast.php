@@ -89,4 +89,18 @@ class Broadcast extends AbstractEntity
     protected $message;
 
     /**
-   
+     * Sender node ordinal number
+     *
+     * @var int
+     */
+    protected $node;
+
+    /**
+     * Position of the broadcast transaction in node message
+     *
+     * @var int
+     */
+    protected $nodeMpos;
+
+    /**
+     *
