@@ -103,4 +103,20 @@ class Broadcast extends AbstractEntity
     protected $nodeMpos;
 
     /**
+     * Number of last node message
      *
+     * @var int
+     */
+    protected $nodeMsid;
+
+    /**
+     * Sender public key
+     *
+     * @var string
+     */
+    protected $publicKey;
+
+    /**
+     * Signature
+     *
+     * 
