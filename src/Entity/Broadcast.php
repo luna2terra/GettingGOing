@@ -119,4 +119,19 @@ class Broadcast extends AbstractEntity
     /**
      * Signature
      *
-     * 
+     * @var string
+     */
+    protected $signature;
+
+    /**
+     *
+     * @var DateTimeInterface
+     */
+    protected $time;
+
+    /**
+     * true if verification passed, false if verification failed
+     *
+     * @var boolean
+     */
+    protec
