@@ -134,4 +134,15 @@ class Broadcast extends AbstractEntity
      *
      * @var boolean
      */
-    protec
+    protected $verify;
+
+    /**
+     * @return int Sender last message number
+     */
+    public function getAccountMsid(): int
+    {
+        return $this->accountMsid;
+    }
+
+    /**
+     * @return string Send
