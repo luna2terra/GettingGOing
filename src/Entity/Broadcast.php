@@ -145,4 +145,14 @@ class Broadcast extends AbstractEntity
     }
 
     /**
-     * @return string Send
+     * @return string Sender address
+     */
+    public function getAddress(): string
+    {
+        return $this->address;
+    }
+
+    /**
+     * @return DateTimeInterface Block time of broadcast transaction
+     */
+    public function getBlockTime(): Dat
