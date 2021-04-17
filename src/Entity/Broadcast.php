@@ -155,4 +155,19 @@ class Broadcast extends AbstractEntity
     /**
      * @return DateTimeInterface Block time of broadcast transaction
      */
-    public function getBlockTime(): Dat
+    public function getBlockTime(): DateTimeInterface
+    {
+        return $this->blockTime;
+    }
+
+    /**
+     * Transaction data as hexadecimal string
+     *
+     * @return string
+     */
+    public function getData(): string
+    {
+        return $this->data;
+    }
+
+ 
