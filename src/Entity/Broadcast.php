@@ -184,3 +184,17 @@ class Broadcast extends AbstractEntity
     public function getId(): string
     {
         return $this->id;
+    }
+
+    /**
+     * @return string Sender input hash
+     */
+    public function getInputHash(): string
+    {
+        return $this->inputHash;
+    }
+
+    /**
+     * @return string Message
+     */
+    public f
