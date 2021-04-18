@@ -170,4 +170,17 @@ class Broadcast extends AbstractEntity
         return $this->data;
     }
 
- 
+    /**
+     * @return int Fee
+     */
+    public function getFee(): int
+    {
+        return $this->fee;
+    }
+
+    /**
+     * @return string Id
+     */
+    public function getId(): string
+    {
+        return $this->id;
