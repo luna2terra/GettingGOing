@@ -197,4 +197,18 @@ class Broadcast extends AbstractEntity
     /**
      * @return string Message
      */
-    public f
+    public function getMessage(): string
+    {
+        return $this->message;
+    }
+
+    /**
+     * @return int Sender node ordinal number
+     */
+    public function getNode(): int
+    {
+        return $this->node;
+    }
+
+    /**
+     * @return string Sen
