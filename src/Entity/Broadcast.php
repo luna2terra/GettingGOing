@@ -211,4 +211,12 @@ class Broadcast extends AbstractEntity
     }
 
     /**
-     * @return string Sen
+     * @return string Sender node id
+     */
+    public function getNodeId(): string
+    {
+        return sprintf('%04X', $this->node);
+    }
+
+    /**
+     * @return int Position of the broadcast transaction in node 
