@@ -219,4 +219,16 @@ class Broadcast extends AbstractEntity
     }
 
     /**
-     * @return int Position of the broadcast transaction in node 
+     * @return int Position of the broadcast transaction in node message
+     */
+    public function getNodeMpos(): int
+    {
+        return $this->nodeMpos;
+    }
+
+    /**
+     * @return int Number of last node message
+     */
+    public function getNodeMsid(): int
+    {
+        return $this
