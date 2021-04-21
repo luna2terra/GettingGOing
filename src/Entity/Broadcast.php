@@ -231,4 +231,18 @@ class Broadcast extends AbstractEntity
      */
     public function getNodeMsid(): int
     {
-        return $this
+        return $this->nodeMsid;
+    }
+
+    /**
+     * @return string Sender public key
+     */
+    public function getPublicKey(): string
+    {
+        return $this->publicKey;
+    }
+
+    /**
+     * @return string Signature
+     */
+ 
