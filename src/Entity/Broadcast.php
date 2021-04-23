@@ -245,4 +245,17 @@ class Broadcast extends AbstractEntity
     /**
      * @return string Signature
      */
- 
+    public function getSignature(): string
+    {
+        return $this->signature;
+    }
+
+    /**
+     * @return DateTimeInterface
+     */
+    public function getTime(): DateTimeInterface
+    {
+        return $this->time;
+    }
+
+    /**
