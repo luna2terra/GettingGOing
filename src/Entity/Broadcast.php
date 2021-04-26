@@ -259,3 +259,11 @@ class Broadcast extends AbstractEntity
     }
 
     /**
+     * @return bool true if verification passed, false if verification failed
+     */
+    public function isVerificationPassed(): bool
+    {
+        return $this->verify;
+    }
+
+    protected static function castProperty(string $name, $value,
