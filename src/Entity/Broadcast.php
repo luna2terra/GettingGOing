@@ -266,4 +266,11 @@ class Broadcast extends AbstractEntity
         return $this->verify;
     }
 
-    protected static function castProperty(string $name, $value,
+    protected static function castProperty(string $name, $value, ?ReflectionClass $refClass = null)
+    {
+        if ('fee' === $name) {
+            return AdsConverter::adsToClicks($value);
+        }
+
+        if ('verify' === $name) {
+            return 'passed' === $
