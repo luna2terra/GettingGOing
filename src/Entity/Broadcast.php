@@ -273,4 +273,9 @@ class Broadcast extends AbstractEntity
         }
 
         if ('verify' === $name) {
-            return 'passed' === $
+            return 'passed' === $value;
+        }
+
+        return parent::castProperty($name, $value, $refClass);
+    }
+}

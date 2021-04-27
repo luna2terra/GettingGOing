@@ -1,0 +1,136 @@
+
+<?php
+
+/**
+ * Copyright (c) 2018-2021 Adshares sp. z o.o.
+ *
+ * This file is part of ADS PHP Client
+ *
+ * ADS PHP Client is free software: you can redistribute and/or modify it
+ * under the terms of the GNU General Public License as published
+ * by the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * ADS PHP Client is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty
+ * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ * See the GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
+ */
+
+namespace Adshares\Ads\Entity;
+
+use Adshares\Ads\Entity\Transaction\AbstractTransaction;
+use Adshares\Ads\Exception\AdsException;
+
+/**
+ * Class EntityFactory
+ *
+ * @package Adshares\Ads\Entity
+ */
+class EntityFactory
+{
+    /**
+     * @var string[]
+     */
+    private static $entityMap = [
+        'Account' => '\Adshares\Ads\Entity\Account',
+        'Block' => '\Adshares\Ads\Entity\Block',
+        'Broadcast' => '\Adshares\Ads\Entity\Broadcast',
+        'Message' => '\Adshares\Ads\Entity\Message',
+        'NetworkTx' => '\Adshares\Ads\Entity\NetworkTx',
+        'NewAccount' => '\Adshares\Ads\Entity\NewAccount',
+        'Node' => '\Adshares\Ads\Entity\Node',
+        'Tx' => '\Adshares\Ads\Entity\Tx',
+        // Transactions
+        'BroadcastTransaction' => '\Adshares\Ads\Entity\Transaction\BroadcastTransaction',
+        'ConnectionTransaction' => '\Adshares\Ads\Entity\Transaction\ConnectionTransaction',
+        'EmptyTransaction' => '\Adshares\Ads\Entity\Transaction\EmptyTransaction',
+        'KeyTransaction' => '\Adshares\Ads\Entity\Transaction\KeyTransaction',
+        'LogAccountTransaction' => '\Adshares\Ads\Entity\Transaction\LogAccountTransaction',
+        'NetworkTransaction' => '\Adshares\Ads\Entity\Transaction\NetworkTransaction',
+        'SendManyTransaction' => '\Adshares\Ads\Entity\Transaction\SendManyTransaction',
+        'SendManyTransactionWire' => '\Adshares\Ads\Entity\Transaction\SendManyTransactionWire',
+        'SendOneTransaction' => '\Adshares\Ads\Entity\Transaction\SendOneTransaction',
+        'StatusTransaction' => '\Adshares\Ads\Entity\Transaction\StatusTransaction',
+    ];
+
+    /**
+     * @param string $type
+     * @param string $className
+     */
+    public static function setEntityClass(string $type, string $className): void
+    {
+        if (!array_key_exists($type, self::$entityMap)) {
+            throw new AdsException(sprintf('Cannot find entity type "%s"', $type));
+        }
+
+        self::$entityMap[$type] = $className;
+    }
+
+    /**
+     * @param string[] $map
+     */
+    public static function setEntityMap(array $map): void
+    {
+        foreach ($map as $type => $className) {
+            self::setEntityClass($type, $className);
+        }
+    }
+
+    /**
+     * @param string $type
+     * @param string[]|string[][]|string[][][]|string[][][][] $data
+     * @return mixed
+     */
+    public static function create(string $type, array $data = [])
+    {
+        if (!array_key_exists($type, self::$entityMap)) {
+            throw new AdsException(sprintf('Cannot find entity class for "%s"', $type));
+        }
+
+        return self::$entityMap[$type]::createFromRawData($data);
+    }
+
+    /**
+     * @param string[]|string[][]|string[][][]|string[][][][] $data
+     * @return Account
+     */
+    public static function createAccount(array $data = []): Account
+    {
+        return self::create('Account', $data);
+    }
+
+    /**
+     * @param string[]|string[][]|string[][][]|string[][][][] $data
+     * @return Block
+     */
+    public static function createBlock(array $data = []): Block
+    {
+        return self::create('Block', $data);
+    }
+
+    /**
+     * @param string[]|string[][]|string[][][]|string[][][][] $data
+     * @return Broadcast
+     */
+    public static function createBroadcast(array $data = []): Broadcast
+    {
+        return self::create('Broadcast', $data);
+    }
+
+    /**
+     * @param string[]|string[][]|string[][][]|string[][][][] $data
+     * @return Message
+     */
+    public static function createMessage(array $data = []): Message
+    {
+        return self::create('Message', $data);
+    }
+
+    /**
+     * @param string[]|string[][]|string[][][]|string[][][][] $data
+     * @return NetworkTx
+     */
