@@ -134,3 +134,85 @@ class EntityFactory
      * @param string[]|string[][]|string[][][]|string[][][][] $data
      * @return NetworkTx
      */
+    public static function createNetworkTx(array $data = []): NetworkTx
+    {
+        return self::create('NetworkTx', $data);
+    }
+
+    /**
+     * @param string[]|string[][]|string[][][]|string[][][][] $data
+     * @return NewAccount
+     */
+    public static function createNewAccount(array $data = []): NewAccount
+    {
+        return self::create('NewAccount', $data);
+    }
+
+    /**
+     * @param string[]|string[][]|string[][][]|string[][][][] $data
+     * @return Node
+     */
+    public static function createNode(array $data = []): Node
+    {
+        return self::create('Node', $data);
+    }
+
+    /**
+     * @param string[]|string[][]|string[][][]|string[][][][] $data
+     * @return AbstractTransaction
+     * @throws AdsException
+     */
+    public static function createTransaction(array $data = []): AbstractTransaction
+    {
+        $type = array_key_exists('type', $data) && is_string($data['type']) ? $data['type'] : null;
+        switch ($type) {
+            case 'broadcast':
+                $entity = self::create('BroadcastTransaction', $data);
+                break;
+            case 'account_created':
+            case 'change_account_key':
+            case 'change_node_key':
+                $entity = self::create('KeyTransaction', $data);
+                break;
+            case 'connection':
+                $entity = self::create('ConnectionTransaction', $data);
+                break;
+            case 'create_account':
+            case 'create_node':
+            case 'retrieve_funds':
+                $entity = self::create('NetworkTransaction', $data);
+                break;
+            case 'log_account':
+                $entity = self::create('LogAccountTransaction', $data);
+                break;
+            case 'send_many':
+                $entity = self::create('SendManyTransaction', $data);
+                break;
+            case 'send_one':
+                $entity = self::create('SendOneTransaction', $data);
+                break;
+            case 'set_account_status':
+            case 'set_node_status':
+            case 'unset_account_status':
+            case 'unset_node_status':
+                $entity = self::create('StatusTransaction', $data);
+                break;
+            case 'empty':
+                $entity = self::create('EmptyTransaction', $data);
+                break;
+            default:
+                throw new AdsException(sprintf('Unsupported transaction type "%s".', $type));
+        }
+
+        return $entity;
+    }
+
+    /**
+     * @param string[]|string[][]|string[][][]|string[][][][] $data
+     * @return Tx
+     */
+    public static function createTx(array $data = []): Tx
+    {
+        return self::create('Tx', $data);
+    }
+}
