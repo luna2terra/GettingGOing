@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -21,11 +22,55 @@
 
 namespace Adshares\Ads\Entity;
 
-interface EntityInterface
+use DateTimeInterface;
+
+/**
+ * Message from getMessage response.
+ *
+ * @package Adshares\Ads\Entity
+ */
+class Message extends AbstractEntity
 {
     /**
-     * @param  string[]|string[][] $data
-     * @return EntityInterface
+     * Block id
+     *
+     * @var string
      */
-    public static function createFromRawData(array $data): EntityInterface;
-}
+    protected $blockId;
+
+    /**
+     * Message hash
+     *
+     * @var string
+     */
+    protected $hash;
+
+    /**
+     * Length
+     *
+     * @var int
+     */
+    protected $length;
+
+    /**
+     * Message id
+     *
+     * @var string
+     */
+    protected $id;
+
+    /**
+     * Node ordinal number
+     *
+     * @var int
+     */
+    protected $node;
+
+    /**
+     * @var DateTimeInterface
+     */
+    protected $time;
+
+    /**
+     * @return string Block id
+     */
