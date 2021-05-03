@@ -74,3 +74,57 @@ class Message extends AbstractEntity
     /**
      * @return string Block id
      */
+    public function getBlockId(): string
+    {
+        return $this->blockId;
+    }
+
+    /**
+     * @return string Message hash
+     */
+    public function getHash(): string
+    {
+        return $this->hash;
+    }
+
+    /**
+     * @return int Length
+     */
+    public function getLength(): int
+    {
+        return $this->length;
+    }
+
+    /**
+     * @return string Message id
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string Node id
+     */
+    public function getNodeId(): string
+    {
+        return sprintf('%04X', $this->node);
+    }
+
+    /**
+     * @return DateTimeInterface
+     */
+    public function getTime(): DateTimeInterface
+    {
+        return $this->time;
+    }
+
+    public static function createFromRawData(array $data): EntityInterface
+    {
+        $entity = new static();
+        $entity->fillWithRawData($data);
+        $entity->id = is_array($data['message_id']) ? '' : $data['message_id'];
+
+        return $entity;
+    }
+}
