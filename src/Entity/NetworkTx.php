@@ -28,4 +28,21 @@ use DateTimeInterface;
  *
  * @package Adshares\Ads\Entity
  */
-class Net
+class NetworkTx extends AbstractEntity
+{
+    /**
+     * Block id
+     *
+     * @var string
+     */
+    protected $blockId;
+
+    /**
+     * Block time
+     *
+     * @var DateTimeInterface
+     */
+    protected $blockTime;
+
+    /**
+     * Hash path to 
