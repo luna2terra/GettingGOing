@@ -45,4 +45,17 @@ class NetworkTx extends AbstractEntity
     protected $blockTime;
 
     /**
-     * Hash path to 
+     * Hash path to block hash, array of string
+     *
+     * @var string[]
+     */
+    protected $hashpath;
+
+    /**
+     * Number of hashes in hash path (path to block hash)
+     *
+     * @var int
+     */
+    protected $hashpathSize;
+
+    /*
