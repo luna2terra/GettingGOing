@@ -58,4 +58,19 @@ class NetworkTx extends AbstractEntity
      */
     protected $hashpathSize;
 
-    /*
+    /**
+     * Transaction data as hexadecimal string
+     *
+     * @var string
+     */
+    protected $data;
+
+    /**
+     * Transaction id
+     *
+     * @var string
+     */
+    protected $id;
+
+    /**
+     * Node ordinal number
