@@ -74,3 +74,19 @@ class NetworkTx extends AbstractEntity
 
     /**
      * Node ordinal number
+     *
+     * @var int
+     */
+    protected $node;
+
+    /**
+     * Number of last node message
+     *
+     * @var int
+     */
+    protected $nodeMsid;
+
+    /**
+     * Transaction position in node message
+     *
+  
