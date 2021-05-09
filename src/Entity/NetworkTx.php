@@ -89,4 +89,18 @@ class NetworkTx extends AbstractEntity
     /**
      * Transaction position in node message
      *
-  
+     * @var int
+     */
+    protected $nodeMpos;
+
+    /**
+     * Size of the transaction data
+     *
+     * @var int
+     */
+    protected $size;
+
+    /**
+     * @return string Block id
+     */
+    public function getBlockId():
