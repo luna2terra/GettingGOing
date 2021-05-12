@@ -117,4 +117,14 @@ class NetworkTx extends AbstractEntity
     }
 
     /**
-     * @return string[
+     * @return string[] Hash path to block hash, array of string
+     */
+    public function getHashpath(): array
+    {
+        return $this->hashpath;
+    }
+
+    /**
+     * @return int Number of hashes in hash path (path to block hash)
+     */
+ 
