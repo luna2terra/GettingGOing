@@ -103,4 +103,18 @@ class NetworkTx extends AbstractEntity
     /**
      * @return string Block id
      */
-    public function getBlockId():
+    public function getBlockId(): string
+    {
+        return $this->blockId;
+    }
+
+    /**
+     * @return DateTimeInterface Block time
+     */
+    public function getBlockTime(): DateTimeInterface
+    {
+        return $this->blockTime;
+    }
+
+    /**
+     * @return string[
