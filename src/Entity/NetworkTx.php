@@ -137,4 +137,18 @@ class NetworkTx extends AbstractEntity
      */
     public function getData(): string
     {
-       
+        return $this->data;
+    }
+
+    /**
+     * @return string Transaction id
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return int Node ordinal number
+     */
+    public 
