@@ -127,4 +127,14 @@ class NetworkTx extends AbstractEntity
     /**
      * @return int Number of hashes in hash path (path to block hash)
      */
- 
+    public function getHashpathSize(): int
+    {
+        return $this->hashpathSize;
+    }
+
+    /**
+     * @return string Transaction data as hexadecimal string
+     */
+    public function getData(): string
+    {
+       
