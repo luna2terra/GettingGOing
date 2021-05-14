@@ -151,4 +151,17 @@ class NetworkTx extends AbstractEntity
     /**
      * @return int Node ordinal number
      */
-    public 
+    public function getNode(): int
+    {
+        return $this->node;
+    }
+
+    /**
+     * @return string Node id
+     */
+    public function getNodeId(): string
+    {
+        return sprintf('%04X', $this->node);
+    }
+
+    /**
