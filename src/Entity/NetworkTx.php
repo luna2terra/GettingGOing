@@ -165,3 +165,12 @@ class NetworkTx extends AbstractEntity
     }
 
     /**
+     * @return int Number of last node message
+     */
+    public function getNodeMsid(): int
+    {
+        return $this->nodeMsid;
+    }
+
+    /**
+     * @return int Transaction position in node message
