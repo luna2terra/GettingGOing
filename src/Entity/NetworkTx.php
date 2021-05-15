@@ -174,3 +174,15 @@ class NetworkTx extends AbstractEntity
 
     /**
      * @return int Transaction position in node message
+     */
+    public function getNodeMpos(): int
+    {
+        return $this->nodeMpos;
+    }
+
+    /**
+     * @return int Size of the transaction data
+     */
+    public function getSize(): int
+    {
+        return $this-
