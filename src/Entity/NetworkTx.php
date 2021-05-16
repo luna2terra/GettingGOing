@@ -185,4 +185,6 @@ class NetworkTx extends AbstractEntity
      */
     public function getSize(): int
     {
-        return $this-
+        return $this->size;
+    }
+}
