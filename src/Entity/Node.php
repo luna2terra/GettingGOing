@@ -138,3 +138,96 @@ class Node extends AbstractEntity
      * @return string Id
      */
     public function getId(): string
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string IP address
+     */
+    public function getIpv4(): string
+    {
+        return $this->ipv4;
+    }
+
+    /**
+     * @return string Hash of last message
+     */
+    public function getMessageHash(): string
+    {
+        return $this->messageHash;
+    }
+
+    /**
+     * @return int Number of last message
+     */
+    public function getMsid(): int
+    {
+        return $this->msid;
+    }
+
+    /**
+     * @return DateTimeInterface Time of last message
+     */
+    public function getMtim(): DateTimeInterface
+    {
+        return $this->mtim;
+    }
+
+    /**
+     * @return int IP port (for peers, blockchain messaging)
+     */
+    public function getPort(): int
+    {
+        return $this->port;
+    }
+
+    /**
+     * @return string Public key
+     */
+    public function getPublicKey(): string
+    {
+        return $this->publicKey;
+    }
+
+    /**
+     * @return int Status
+     */
+    public function getStatus(): int
+    {
+        return $this->status;
+    }
+
+    /**
+     * @return bool true if node has been deleted, false otherwise
+     */
+    public function isStatusDeleted(): bool
+    {
+        return ($this->status & (1 << 0)) != 0;
+    }
+
+    /**
+     * @return bool true if node is vip, false otherwise
+     */
+    public function isStatusVip(): bool
+    {
+        return ($this->status & (1 << 1)) != 0;
+    }
+
+    /**
+     * @return bool true if node has most funds, false otherwise
+     */
+    public function isStatusMostFunds(): bool
+    {
+        return ($this->status & (1 << 2)) != 0;
+    }
+
+    protected static function castProperty(string $name, $value, ReflectionClass $refClass = null)
+    {
+        if ('balance' === $name) {
+            return AdsConverter::adsToClicks($value);
+        }
+
+        return parent::castProperty($name, $value, $refClass);
+    }
+}
