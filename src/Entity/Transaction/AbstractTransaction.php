@@ -19,4 +19,13 @@
  * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
  */
 
-namespace Adshares\A
+namespace Adshares\Ads\Entity\Transaction;
+
+use Adshares\Ads\Entity\AbstractEntity;
+
+/**
+ * AbstractTransaction is base class for all transactions included in getMessage response.
+ *
+ * @package Adshares\Ads\Entity
+ */
+abstract class Abs
