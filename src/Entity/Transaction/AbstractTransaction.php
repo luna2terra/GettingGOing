@@ -28,4 +28,22 @@ use Adshares\Ads\Entity\AbstractEntity;
  *
  * @package Adshares\Ads\Entity
  */
-abstract class Abs
+abstract class AbstractTransaction extends AbstractEntity
+{
+    /**
+     * @var string
+     */
+    protected $blockId;
+
+    /**
+     * @var string
+     */
+    protected $id;
+
+    /**
+     * @var string
+     */
+    protected $messageId;
+
+    /**
+   
