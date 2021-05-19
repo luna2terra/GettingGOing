@@ -46,4 +46,21 @@ abstract class AbstractTransaction extends AbstractEntity
     protected $messageId;
 
     /**
-   
+     * @var string
+     */
+    protected $nodeId;
+
+    /**
+     * @var string
+     */
+    protected $type;
+
+    /**
+     * @var int
+     */
+    protected $size;
+
+    /**
+     * @return string
+     */
+    public function getBlockId
