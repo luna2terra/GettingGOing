@@ -79,4 +79,18 @@ abstract class AbstractTransaction extends AbstractEntity
     /**
      * @return string
      */
-    
+    public function getMessageId(): string
+    {
+        return $this->messageId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNodeId(): string
+    {
+        return $this->nodeId;
+    }
+
+    /**
+  
