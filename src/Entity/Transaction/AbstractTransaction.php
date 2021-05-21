@@ -63,4 +63,20 @@ abstract class AbstractTransaction extends AbstractEntity
     /**
      * @return string
      */
-    public function getBlockId
+    public function getBlockId(): string
+    {
+        return $this->blockId;
+    }
+
+    /**
+     * @return string
+     */
+    public function getId(): string
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return string
+     */
+    
