@@ -93,4 +93,16 @@ abstract class AbstractTransaction extends AbstractEntity
     }
 
     /**
-  
+     * @return string
+     */
+    public function getType(): string
+    {
+        return $this->type;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSize(): int
+    {
+        return $this->siz
