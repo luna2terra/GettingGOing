@@ -105,4 +105,6 @@ abstract class AbstractTransaction extends AbstractEntity
      */
     public function getSize(): int
     {
-        return $this->siz
+        return $this->size;
+    }
+}
