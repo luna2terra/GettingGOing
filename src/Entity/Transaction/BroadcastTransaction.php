@@ -24,3 +24,15 @@ namespace Adshares\Ads\Entity\Transaction;
 use DateTimeInterface;
 
 /**
+ * Transaction type=<'broadcast'>.
+ *
+ * @package Adshares\Ads\Entity\Transaction
+ */
+class BroadcastTransaction extends AbstractTransaction
+{
+    use GetSenderAddressTrait;
+
+    /**
+     * @var string
+     */
+    protected $mess
