@@ -35,4 +35,24 @@ class BroadcastTransaction extends AbstractTransaction
     /**
      * @var string
      */
-    protected $mess
+    protected $message;
+
+    /**
+     * @var int
+     */
+    protected $messageLength;
+
+    /**
+     * @var int
+     */
+    protected $msgId;
+
+    /**
+     * @var int
+     */
+    protected $node;
+
+    /**
+     * @var string
+     */
+    prote
