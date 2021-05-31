@@ -55,4 +55,19 @@ class BroadcastTransaction extends AbstractTransaction
     /**
      * @var string
      */
-    prote
+    protected $signature;
+
+    /**
+     * @var DateTimeInterface
+     */
+    protected $time;
+
+    /**
+     * @var int
+     */
+    protected $user;
+
+    /**
+     * @return string
+     */
+    public function getMessage(): stri
