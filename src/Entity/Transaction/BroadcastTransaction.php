@@ -86,4 +86,21 @@ class BroadcastTransaction extends AbstractTransaction
     /**
      * @return int
      */
-    public function getMsgId(
+    public function getMsgId(): int
+    {
+        return $this->msgId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNode(): int
+    {
+        return $this->node;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSignature(): string
+   
