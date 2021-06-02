@@ -70,4 +70,20 @@ class BroadcastTransaction extends AbstractTransaction
     /**
      * @return string
      */
-    public function getMessage(): stri
+    public function getMessage(): string
+    {
+        return $this->message;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMessageLength(): int
+    {
+        return $this->messageLength;
+    }
+
+    /**
+     * @return int
+     */
+    public function getMsgId(
