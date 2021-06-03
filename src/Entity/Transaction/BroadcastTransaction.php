@@ -103,4 +103,17 @@ class BroadcastTransaction extends AbstractTransaction
      * @return string
      */
     public function getSignature(): string
-   
+    {
+        return $this->signature;
+    }
+
+    /**
+     * @return DateTimeInterface
+     */
+    public function getTime(): DateTimeInterface
+    {
+        return $this->time;
+    }
+
+    /**
+     * @retur
