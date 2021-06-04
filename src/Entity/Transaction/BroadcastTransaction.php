@@ -116,4 +116,10 @@ class BroadcastTransaction extends AbstractTransaction
     }
 
     /**
-     * @retur
+     * @return int
+     */
+    public function getUser(): int
+    {
+        return $this->user;
+    }
+}
