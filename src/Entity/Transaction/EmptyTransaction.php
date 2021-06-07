@@ -26,4 +26,6 @@ namespace Adshares\Ads\Entity\Transaction;
  *
  * @package Adshares\Ads\Entity\Transaction
  */
-class EmptyTransaction extends AbstractT
+class EmptyTransaction extends AbstractTransaction
+{
+}
