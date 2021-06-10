@@ -34,4 +34,7 @@ trait GetSenderAddressTrait
             '%04X-%08X-%s',
             $this->node,
             $this->user,
-      
+            AdsChecksumGenerator::getAccountChecksum($this->node, $this->user)
+        );
+    }
+}
