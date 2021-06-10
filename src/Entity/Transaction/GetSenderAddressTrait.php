@@ -23,4 +23,15 @@ namespace Adshares\Ads\Entity\Transaction;
 
 use Adshares\Ads\Util\AdsChecksumGenerator;
 
-trait GetSenderAddressTr
+trait GetSenderAddressTrait
+{
+    /**
+     * @return string
+     */
+    public function getSenderAddress(): string
+    {
+        return sprintf(
+            '%04X-%08X-%s',
+            $this->node,
+            $this->user,
+      
