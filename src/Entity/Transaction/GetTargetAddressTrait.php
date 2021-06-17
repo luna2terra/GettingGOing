@@ -30,3 +30,11 @@ trait GetTargetAddressTrait
      */
     public function getTargetAddress(): ?string
     {
+        if (null === $this->targetNode || null === $this->targetUser) {
+            return null;
+        }
+
+        return sprintf(
+            '%04X-%08X-%s',
+            $this->targetNode,
+            $this->targetUser,
