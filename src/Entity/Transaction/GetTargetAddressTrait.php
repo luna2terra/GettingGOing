@@ -38,3 +38,7 @@ trait GetTargetAddressTrait
             '%04X-%08X-%s',
             $this->targetNode,
             $this->targetUser,
+            AdsChecksumGenerator::getAccountChecksum($this->targetNode, $this->targetUser)
+        );
+    }
+}
