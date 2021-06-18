@@ -22,17 +22,17 @@
 
 namespace Adshares\Ads\Entity\Transaction;
 
+use Adshares\Ads\Entity\Account;
 use DateTimeInterface;
 
 /**
- * Transaction type=<'account_created', 'change_account_key', 'change_node_key'>.
+ * Transaction type=<'log_account'>.
  *
  * @package Adshares\Ads\Entity\Transaction
  */
-class KeyTransaction extends AbstractTransaction
+class LogAccountTransaction extends AbstractTransaction
 {
     use GetSenderAddressTrait;
-    use GetTargetAddressTrait;
 
     /**
      * @var int
@@ -40,9 +40,9 @@ class KeyTransaction extends AbstractTransaction
     protected $msgId;
 
     /**
-     * @var null|string
+     * @var Account
      */
-    protected $newPublicKey;
+    protected $networkAccount;
 
     /**
      * @var int
@@ -50,34 +50,9 @@ class KeyTransaction extends AbstractTransaction
     protected $node;
 
     /**
-     * @var null|string
-     */
-    protected $oldPublicKey;
-
-    /**
-     * @var null|string
-     */
-    protected $publicKey;
-
-    /**
-     * @var null|string
-     */
-    protected $publicKeySignature;
-
-    /**
-     * @var null|string
+     * @var string
      */
     protected $signature;
-
-    /**
-     * @var null|int
-     */
-    protected $targetNode;
-
-    /**
-     * @var null|int
-     */
-    protected $targetUser;
 
     /**
      * @var DateTimeInterface
@@ -98,11 +73,11 @@ class KeyTransaction extends AbstractTransaction
     }
 
     /**
-     * @return null|string
+     * @return Account
      */
-    public function getNewPublicKey(): ?string
+    public function getNetworkAccount(): Account
     {
-        return $this->newPublicKey;
+        return $this->networkAccount;
     }
 
     /**
@@ -114,59 +89,11 @@ class KeyTransaction extends AbstractTransaction
     }
 
     /**
-     * @return null|string
+     * @return string
      */
-    public function getOldPublicKey(): ?string
-    {
-        return $this->oldPublicKey;
-    }
-
-    /**
-     * @return null|string
-     */
-    public function getPublicKey(): ?string
-    {
-        return $this->publicKey;
-    }
-
-    /**
-     * @return null|string
-     */
-    public function getPublicKeySignature(): ?string
-    {
-        return $this->publicKeySignature;
-    }
-
-    /**
-     * @return null|string
-     */
-    public function getSignature(): ?string
+    public function getSignature(): string
     {
         return $this->signature;
-    }
-
-    /**
-     * @return int|null
-     */
-    public function getTargetNode(): ?int
-    {
-        return $this->targetNode;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getTargetNodeId(): ?string
-    {
-        return is_int($this->targetNode) ? sprintf('%04X', $this->targetNode) : null;
-    }
-
-    /**
-     * @return int|null
-     */
-    public function getTargetUser(): ?int
-    {
-        return $this->targetUser;
     }
 
     /**
