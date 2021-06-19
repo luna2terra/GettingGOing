@@ -22,18 +22,17 @@
 
 namespace Adshares\Ads\Entity\Transaction;
 
+use Adshares\Ads\Util\AdsConverter;
 use DateTimeInterface;
+use ReflectionClass;
 
 /**
- * Transaction type=<'create_account', 'create_node', 'retrieve_funds'>.
+ * Transaction type=<'send_many'>.
  *
  * @package Adshares\Ads\Entity\Transaction
  */
-class NetworkTransaction extends AbstractTransaction
+class SendManyTransaction extends AbstractTransaction
 {
-    use GetSenderAddressTrait;
-    use GetTargetAddressTrait;
-
     /**
      * @var int
      */
@@ -47,17 +46,17 @@ class NetworkTransaction extends AbstractTransaction
     /**
      * @var string
      */
+    protected $senderAddress;
+
+    /**
+     * @var int
+     */
+    protected $senderFee;
+
+    /**
+     * @var string
+     */
     protected $signature;
-
-    /**
-     * @var null|int
-     */
-    protected $targetNode;
-
-    /**
-     * @var null|int
-     */
-    protected $targetUser;
 
     /**
      * @var DateTimeInterface
@@ -68,6 +67,18 @@ class NetworkTransaction extends AbstractTransaction
      * @var int
      */
     protected $user;
+
+    /**
+     * @var int
+     */
+    protected $wireCount;
+
+    /**
+     * Array of wires
+     *
+     * @var \Adshares\Ads\Entity\Transaction\SendManyTransactionWire[]
+     */
+    protected $wires;
 
     /**
      * @return int
@@ -88,33 +99,25 @@ class NetworkTransaction extends AbstractTransaction
     /**
      * @return string
      */
+    public function getSenderAddress(): string
+    {
+        return $this->senderAddress;
+    }
+
+    /**
+     * @return int
+     */
+    public function getSenderFee(): int
+    {
+        return $this->senderFee;
+    }
+
+    /**
+     * @return string
+     */
     public function getSignature(): string
     {
         return $this->signature;
-    }
-
-    /**
-     * @return int|null
-     */
-    public function getTargetNode(): ?int
-    {
-        return $this->targetNode;
-    }
-
-    /**
-     * @return string|null
-     */
-    public function getTargetNodeId(): ?string
-    {
-        return is_int($this->targetNode) ? sprintf('%04X', $this->targetNode) : null;
-    }
-
-    /**
-     * @return int|null
-     */
-    public function getTargetUser(): ?int
-    {
-        return $this->targetUser;
     }
 
     /**
@@ -131,5 +134,30 @@ class NetworkTransaction extends AbstractTransaction
     public function getUser(): int
     {
         return $this->user;
+    }
+
+    /**
+     * @return int
+     */
+    public function getWireCount(): int
+    {
+        return $this->wireCount;
+    }
+
+    /**
+     * @return \Adshares\Ads\Entity\Transaction\SendManyTransactionWire[] Array of wires
+     */
+    public function getWires(): array
+    {
+        return $this->wires;
+    }
+
+    protected static function castProperty(string $name, $value, ReflectionClass $refClass = null)
+    {
+        if ('senderFee' === $name) {
+            return AdsConverter::adsToClicks($value);
+        }
+
+        return parent::castProperty($name, $value, $refClass);
     }
 }
