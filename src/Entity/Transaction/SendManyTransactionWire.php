@@ -22,4 +22,18 @@
 namespace Adshares\Ads\Entity\Transaction;
 
 use Adshares\Ads\Entity\AbstractEntity;
-use Adshares\Ads\Util\AdsConve
+use Adshares\Ads\Util\AdsConverter;
+use ReflectionClass;
+
+/**
+ * @package Adshares\Ads\Entity\Transaction
+ */
+class SendManyTransactionWire extends AbstractEntity
+{
+    /**
+     * @var int
+     */
+    protected $amount;
+
+    /**
+     * @var string
