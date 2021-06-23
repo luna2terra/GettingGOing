@@ -37,3 +37,20 @@ class SendManyTransactionWire extends AbstractEntity
 
     /**
      * @var string
+     */
+    protected $targetAddress;
+
+    /**
+     * @var int
+     */
+    protected $targetNode;
+
+    /**
+     * @var int
+     */
+    protected $targetUser;
+
+    /**
+     * @return int
+     */
+    public function getAmount
