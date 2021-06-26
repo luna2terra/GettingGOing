@@ -53,4 +53,20 @@ class SendManyTransactionWire extends AbstractEntity
     /**
      * @return int
      */
-    public function getAmount
+    public function getAmount(): int
+    {
+        return $this->amount;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTargetNode(): int
+    {
+        return $this->targetNode;
+    }
+
+    /**
+     * @return string
+     */
+    
