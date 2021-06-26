@@ -69,4 +69,14 @@ class SendManyTransactionWire extends AbstractEntity
     /**
      * @return string
      */
-    
+    public function getTargetNodeId(): string
+    {
+        return sprintf('%04X', $this->targetNode);
+    }
+
+    /**
+     * @return int
+     */
+    public function getTargetUser(): int
+    {
+        return $this->targ
