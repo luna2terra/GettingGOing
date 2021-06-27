@@ -79,4 +79,15 @@ class SendManyTransactionWire extends AbstractEntity
      */
     public function getTargetUser(): int
     {
-        return $this->targ
+        return $this->targetUser;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTargetAddress(): string
+    {
+        return $this->targetAddress;
+    }
+
+    protected static function castProperty(string $name
