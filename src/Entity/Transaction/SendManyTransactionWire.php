@@ -90,4 +90,10 @@ class SendManyTransactionWire extends AbstractEntity
         return $this->targetAddress;
     }
 
-    protected static function castProperty(string $name
+    protected static function castProperty(string $name, $value, ReflectionClass $refClass = null)
+    {
+        if ('amount' === $name) {
+            return AdsConverter::adsToClicks($value);
+        }
+
+        return parent::castProperty($name, $value, $refClass);
