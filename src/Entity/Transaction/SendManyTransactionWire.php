@@ -97,3 +97,5 @@ class SendManyTransactionWire extends AbstractEntity
         }
 
         return parent::castProperty($name, $value, $refClass);
+    }
+}
