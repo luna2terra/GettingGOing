@@ -26,4 +26,17 @@ use DateTimeInterface;
 use ReflectionClass;
 
 /**
- * Tran
+ * Transaction type=<'send_one'>.
+ *
+ * @package Adshares\Ads\Entity\Transaction
+ */
+class SendOneTransaction extends AbstractTransaction
+{
+    /**
+     * @var int
+     */
+    protected $amount;
+
+    /**
+     * @var string
+     *
