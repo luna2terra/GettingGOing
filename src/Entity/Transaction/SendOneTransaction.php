@@ -57,4 +57,22 @@ class SendOneTransaction extends AbstractTransaction
      */
     protected $senderAddress;
 
-    
+    /**
+     * @var int
+     */
+    protected $senderFee;
+
+    /**
+     * @var string
+     */
+    protected $signature;
+
+    /**
+     * @var string
+     */
+    protected $targetAddress;
+
+    /**
+     * @var int
+     */
+    pro
