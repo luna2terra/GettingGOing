@@ -75,4 +75,23 @@ class SendOneTransaction extends AbstractTransaction
     /**
      * @var int
      */
-    pro
+    protected $targetNode;
+
+    /**
+     * @var int
+     */
+    protected $targetUser;
+
+    /**
+     * @var DateTimeInterface
+     */
+    protected $time;
+
+    /**
+     * @var int
+     */
+    protected $user;
+
+    /**
+     * @return int
+     */
