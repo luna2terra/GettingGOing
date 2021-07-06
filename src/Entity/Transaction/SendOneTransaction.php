@@ -95,3 +95,20 @@ class SendOneTransaction extends AbstractTransaction
     /**
      * @return int
      */
+    public function getAmount(): int
+    {
+        return $this->amount;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMessage(): string
+    {
+        return $this->message;
+    }
+
+    /**
+     * @return int
+     */
+    pub
