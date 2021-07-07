@@ -111,4 +111,19 @@ class SendOneTransaction extends AbstractTransaction
     /**
      * @return int
      */
-    pub
+    public function getMsgId(): int
+    {
+        return $this->msgId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNode(): int
+    {
+        return $this->node;
+    }
+
+    /**
+     * @return string
+     
