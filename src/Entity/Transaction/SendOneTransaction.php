@@ -138,3 +138,19 @@ class SendOneTransaction extends AbstractTransaction
     public function getSenderFee(): int
     {
         return $this->senderFee;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTargetAddress(): string
+    {
+        return $this->targetAddress;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTargetNode(): int
+    {
+        ret
