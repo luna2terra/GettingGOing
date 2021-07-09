@@ -153,4 +153,16 @@ class SendOneTransaction extends AbstractTransaction
      */
     public function getTargetNode(): int
     {
-        ret
+        return $this->targetNode;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTargetNodeId(): string
+    {
+        return sprintf('%04X', $this->targetNode);
+    }
+
+    /**
+     * @return 
