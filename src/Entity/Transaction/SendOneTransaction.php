@@ -165,4 +165,16 @@ class SendOneTransaction extends AbstractTransaction
     }
 
     /**
-     * @return 
+     * @return int
+     */
+    public function getTargetUser(): int
+    {
+        return $this->targetUser;
+    }
+
+    /**
+     * @return DateTimeInterface
+     */
+    public function getTime(): DateTimeInterface
+    {
+        re
