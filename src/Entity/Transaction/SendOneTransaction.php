@@ -177,4 +177,19 @@ class SendOneTransaction extends AbstractTransaction
      */
     public function getTime(): DateTimeInterface
     {
-        re
+        return $this->time;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUser(): int
+    {
+        return $this->user;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSignature(): string
+  
