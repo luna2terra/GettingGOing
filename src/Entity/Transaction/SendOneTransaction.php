@@ -200,4 +200,10 @@ class SendOneTransaction extends AbstractTransaction
     {
         switch ($name) {
             case 'amount':
-     
+            case 'senderFee':
+                return AdsConverter::adsToClicks($value);
+            default:
+                return parent::castProperty($name, $value, $refClass);
+        }
+    }
+}
