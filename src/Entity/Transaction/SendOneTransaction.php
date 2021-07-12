@@ -192,4 +192,12 @@ class SendOneTransaction extends AbstractTransaction
      * @return string
      */
     public function getSignature(): string
-  
+    {
+        return $this->signature;
+    }
+
+    protected static function castProperty(string $name, $value, ReflectionClass $refClass = null)
+    {
+        switch ($name) {
+            case 'amount':
+     
