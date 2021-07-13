@@ -61,3 +61,88 @@ class StatusTransaction extends AbstractTransaction
 
     /**
      * @var null|int
+     */
+    protected $targetUser;
+
+    /**
+     * @var DateTimeInterface
+     */
+    protected $time;
+
+    /**
+     * @var int
+     */
+    protected $user;
+
+    /**
+     * @return int
+     */
+    public function getMsgId(): int
+    {
+        return $this->msgId;
+    }
+
+    /**
+     * @return int
+     */
+    public function getNode(): int
+    {
+        return $this->node;
+    }
+
+    /**
+     * @return string
+     */
+    public function getSignature(): string
+    {
+        return $this->signature;
+    }
+
+    /**
+     * @return int
+     */
+    public function getStatus(): int
+    {
+        return $this->status;
+    }
+
+    /**
+     * @return int
+     */
+    public function getTargetNode(): int
+    {
+        return $this->targetNode;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTargetNodeId(): string
+    {
+        return sprintf('%04X', $this->targetNode);
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getTargetUser(): ?int
+    {
+        return $this->targetUser;
+    }
+
+    /**
+     * @return DateTimeInterface
+     */
+    public function getTime(): DateTimeInterface
+    {
+        return $this->time;
+    }
+
+    /**
+     * @return int
+     */
+    public function getUser(): int
+    {
+        return $this->user;
+    }
+}
