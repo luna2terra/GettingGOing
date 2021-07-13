@@ -150,3 +150,65 @@ class Tx extends AbstractEntity
      * @return int|null Cost of the transaction (deduction from balance)
      */
     public function getDeduct(): ?int
+    {
+        return $this->deduct;
+    }
+
+    /**
+     * @return int|null Transaction fee (part of deduct)
+     */
+    public function getFee(): ?int
+    {
+        return $this->fee;
+    }
+
+    /**
+     * @return null|string Transaction id. Transaction identifier is not null if the transaction was submitted
+     * to the node and is scheduled for broadcast on the network.
+     */
+    public function getId(): ?string
+    {
+        return $this->id;
+    }
+
+    /**
+     * @return int|null Transaction position in message
+     */
+    public function getNodeMpos(): ?int
+    {
+        return $this->nodeMpos;
+    }
+
+    /**
+     * @return int|null Node message id
+     */
+    public function getNodeMsid(): ?int
+    {
+        return $this->nodeMsid;
+    }
+
+    /**
+     * @return string Transaction signature as hexadecimal string
+     */
+    public function getSignature(): string
+    {
+        return $this->signature;
+    }
+
+    /**
+     * @return DateTimeInterface
+     */
+    public function getTime(): DateTimeInterface
+    {
+        return $this->time;
+    }
+
+    protected static function castProperty(string $name, $value, ReflectionClass $refClass = null)
+    {
+        if (in_array($name, self::MONEY_FIELDS)) {
+            return AdsConverter::adsToClicks($value);
+        }
+
+        return parent::castProperty($name, $value, $refClass);
+    }
+}
