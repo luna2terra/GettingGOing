@@ -19,4 +19,17 @@
  * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
  */
 
-namespace Adshares\Ads\Exceptio
+namespace Adshares\Ads\Exception;
+
+use Adshares\Ads\Command\CommandInterface;
+use Throwable;
+
+/**
+ * CommandException is exception during command call.
+ *
+ * @package Adshares\Ads\Exception
+ */
+class CommandException extends AdsException
+{
+    /**
+     * @var CommandInterfac
