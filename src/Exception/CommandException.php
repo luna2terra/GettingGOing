@@ -32,4 +32,12 @@ use Throwable;
 class CommandException extends AdsException
 {
     /**
-     * @var CommandInterfac
+     * @var CommandInterface
+     */
+    protected $command;
+
+    /**
+     * CommandException constructor.
+     *
+     * @param CommandInterface $command
+     * @param string           $message  [optional] The Exception message t
