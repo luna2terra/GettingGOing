@@ -44,4 +44,11 @@ class CommandException extends AdsException
      * @param int              $code     [optional] The Exception code.
      * @param Throwable|null  $previous [optional] The previous throwable used for the exception chaining.
      */
-    public function __cons
+    public function __construct(CommandInterface $command, $message = '', $code = 0, Throwable $previous = null)
+    {
+        parent::__construct($message, $code, $previous);
+        $this->command = $command;
+    }
+
+    /**
+     * @return Comm
