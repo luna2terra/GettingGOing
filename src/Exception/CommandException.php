@@ -51,4 +51,10 @@ class CommandException extends AdsException
     }
 
     /**
-     * @return Comm
+     * @return CommandInterface
+     */
+    public function getCommand(): CommandInterface
+    {
+        return $this->command;
+    }
+}
