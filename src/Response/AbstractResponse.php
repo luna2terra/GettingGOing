@@ -102,3 +102,27 @@ abstract class AbstractResponse implements ResponseInterface
         }
 
         if (array_key_exists('previous_block_time', $data)) {
+            $date = new DateTime();
+            $date->setTimestamp((int)$data['previous_block_time']);
+
+            $this->previousBlockTime = $date;
+        }
+
+        if (array_key_exists('tx', $data) && is_array($data['tx'])) {
+            $this->tx = EntityFactory::createTx($data['tx']);
+        }
+    }
+
+    public function getRawData(?string $key = null)
+    {
+        if (null === $key) {
+            return $this->data;
+        }
+
+        if (array_key_exists($key, $this->data)) {
+            return $this->data[$key];
+        }
+
+        return null;
+    }
+}
