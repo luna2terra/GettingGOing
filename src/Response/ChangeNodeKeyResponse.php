@@ -22,4 +22,15 @@
 namespace Adshares\Ads\Response;
 
 /**
- * Response for `change_node_key` 
+ * Response for `change_node_key` transactions.
+ *
+ * @package Adshares\Ads\Response
+ */
+class ChangeNodeKeyResponse extends TransactionResponse
+{
+    /**
+     * `true`, if account key was changed, `false` otherwise
+     *
+     * @var bool
+     */
+    protected $keyC
