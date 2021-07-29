@@ -33,4 +33,10 @@ class ChangeNodeKeyResponse extends TransactionResponse
      *
      * @var bool
      */
-    protected $keyC
+    protected $keyChanged;
+
+    protected function loadData(array $data): void
+    {
+        parent::loadData($data);
+
+        $this->keyChanged = array_key_exists('result', $data) && ('Node key changed' === $data['resu
