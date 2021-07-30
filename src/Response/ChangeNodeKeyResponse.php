@@ -39,4 +39,14 @@ class ChangeNodeKeyResponse extends TransactionResponse
     {
         parent::loadData($data);
 
-        $this->keyChanged = array_key_exists('result', $data) && ('Node key changed' === $data['resu
+        $this->keyChanged = array_key_exists('result', $data) && ('Node key changed' === $data['result']);
+    }
+
+    /**
+     * @return bool `true`, if account key was changed, `false` otherwise
+     */
+    public function isKeyChanged(): bool
+    {
+        return $this->keyChanged;
+    }
+}
