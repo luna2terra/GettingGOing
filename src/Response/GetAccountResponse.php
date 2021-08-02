@@ -22,4 +22,19 @@
 namespace Adshares\Ads\Response;
 
 use Adshares\Ads\Entity\Account;
-us
+use Adshares\Ads\Entity\EntityFactory;
+
+/**
+ * Response for GetAccount request.
+ *
+ * @package Adshares\Ads\Response
+ */
+class GetAccountResponse extends AbstractResponse
+{
+    /**
+     *
+     * @var Account
+     */
+    protected $account;
+
+    /
