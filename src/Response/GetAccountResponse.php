@@ -15,4 +15,11 @@
  * of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
  * See the GNU General Public License for more details.
  *
- * Y
+ * You should have received a copy of the GNU General Public License
+ * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
+ */
+
+namespace Adshares\Ads\Response;
+
+use Adshares\Ads\Entity\Account;
+us
