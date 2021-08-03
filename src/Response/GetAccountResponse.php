@@ -37,4 +37,14 @@ class GetAccountResponse extends AbstractResponse
      */
     protected $account;
 
-    /
+    /**
+     *
+     * @var Account
+     */
+    protected $networkAccount;
+
+    protected function loadData(array $data): void
+    {
+        parent::loadData($data);
+
+        if (array_key_exists('account', $d
