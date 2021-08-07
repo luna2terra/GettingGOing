@@ -61,4 +61,15 @@ class GetAccountResponse extends AbstractResponse
      */
     public function getAccount(): Account
     {
-        return $this->
+        return $this->account;
+    }
+
+    /**
+     *
+     * @return Account
+     */
+    public function getNetworkAccount(): Account
+    {
+        return $this->networkAccount;
+    }
+}
