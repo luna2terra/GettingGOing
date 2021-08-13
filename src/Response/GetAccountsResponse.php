@@ -19,4 +19,14 @@
  * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
  */
 
-n
+namespace Adshares\Ads\Response;
+
+use Adshares\Ads\Entity\Account;
+use Adshares\Ads\Entity\EntityFactory;
+
+/**
+ * Response for GetAccounts request.
+ *
+ * @package Adshares\Ads\Response
+ */
+class GetAccountsResp
