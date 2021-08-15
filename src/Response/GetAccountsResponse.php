@@ -29,4 +29,17 @@ use Adshares\Ads\Entity\EntityFactory;
  *
  * @package Adshares\Ads\Response
  */
-class GetAccountsResp
+class GetAccountsResponse extends AbstractResponse
+{
+    /**
+     * Array of accounts
+     *
+     * @var Account[]
+     */
+    protected $accounts;
+
+    protected function loadData(array $data): void
+    {
+        parent::loadData($data);
+
+    
