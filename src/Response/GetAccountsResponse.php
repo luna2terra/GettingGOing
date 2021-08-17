@@ -42,4 +42,7 @@ class GetAccountsResponse extends AbstractResponse
     {
         parent::loadData($data);
 
-    
+        if (array_key_exists('accounts', $data) && is_array($data['accounts'])) {
+            foreach ($data['accounts'] as $value) {
+                if (is_array($value)) {
+                    $this->accounts[] = EntityFactor
