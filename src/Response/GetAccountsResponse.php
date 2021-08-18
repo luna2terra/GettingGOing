@@ -45,4 +45,17 @@ class GetAccountsResponse extends AbstractResponse
         if (array_key_exists('accounts', $data) && is_array($data['accounts'])) {
             foreach ($data['accounts'] as $value) {
                 if (is_array($value)) {
-                    $this->accounts[] = EntityFactor
+                    $this->accounts[] = EntityFactory::createAccount($value);
+                }
+            }
+        }
+    }
+
+    /**
+     * @return Account[] Array of accounts
+     */
+    public function getAccounts(): array
+    {
+        return $this->accounts;
+    }
+}
