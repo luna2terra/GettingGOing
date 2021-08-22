@@ -26,4 +26,14 @@ namespace Adshares\Ads\Response;
  *
  * @package Adshares\Ads\Response
  */
-class GetBlockIdsResponse extends A
+class GetBlockIdsResponse extends AbstractResponse
+{
+    /**
+     * Array of updated block ids. Can be empty, if all blocks in selected period were updated earlier.
+     *
+     * @var string[]
+     */
+    protected $blockIds = [];
+
+    /**
+     * Number of u
