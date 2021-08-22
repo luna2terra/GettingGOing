@@ -36,4 +36,12 @@ class GetBlockIdsResponse extends AbstractResponse
     protected $blockIds = [];
 
     /**
-     * Number of u
+     * Number of updated blocks. Value of 0 means that all blocks were updated in selected period.
+     *
+     * @var int
+     */
+    protected $updatedBlocks;
+
+    protected function loadData(array $data): void
+    {
+        parent::load
