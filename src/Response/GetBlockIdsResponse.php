@@ -44,4 +44,10 @@ class GetBlockIdsResponse extends AbstractResponse
 
     protected function loadData(array $data): void
     {
-        parent::load
+        parent::loadData($data);
+
+        if (array_key_exists('blocks', $data) && is_array($data['blocks'])) {
+            foreach ($data['blocks'] as $value) {
+                if (!is_array($value)) {
+                    $this->blockIds[] = $value;
+      
