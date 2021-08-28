@@ -50,4 +50,13 @@ class GetBlockIdsResponse extends AbstractResponse
             foreach ($data['blocks'] as $value) {
                 if (!is_array($value)) {
                     $this->blockIds[] = $value;
-      
+                }
+            }
+        }
+        if (array_key_exists('updated_blocks', $data)) {
+            $this->updatedBlocks = (int)$data['updated_blocks'];
+        }
+    }
+
+    /**
+     * @return string[] Ar
