@@ -67,4 +67,11 @@ class GetBlockIdsResponse extends AbstractResponse
         return $this->blockIds;
     }
 
-    /*
+    /**
+     * @return int Number of updated blocks. Value of 0 means that all blocks were updated in selected period.
+     */
+    public function getUpdatedBlocks(): int
+    {
+        return $this->updatedBlocks;
+    }
+}
