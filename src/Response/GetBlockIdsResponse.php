@@ -59,4 +59,12 @@ class GetBlockIdsResponse extends AbstractResponse
     }
 
     /**
-     * @return string[] Ar
+     * @return string[] Array of updated block ids. Can be empty,
+     * if all blocks in selected period were updated earlier.
+     */
+    public function getBlockIds(): array
+    {
+        return $this->blockIds;
+    }
+
+    /*
