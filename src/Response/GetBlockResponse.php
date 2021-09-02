@@ -25,4 +25,18 @@ use Adshares\Ads\Entity\Block;
 use Adshares\Ads\Entity\EntityFactory;
 
 /**
- * Response for GetBlock reque
+ * Response for GetBlock request.
+ *
+ * @package Adshares\Ads\Response
+ */
+class GetBlockResponse extends AbstractResponse
+{
+    /**
+     *
+     * @var Block
+     */
+    protected $block;
+
+    protected function loadData(array $data): void
+    {
+        parent:
