@@ -39,4 +39,13 @@ class GetBlockResponse extends AbstractResponse
 
     protected function loadData(array $data): void
     {
-        parent:
+        parent::loadData($data);
+
+        if (array_key_exists('block', $data) && is_array($data['block'])) {
+            $this->block = EntityFactory::createBlock($data['block']);
+        }
+    }
+
+    /**
+     *
+     * @return Block
