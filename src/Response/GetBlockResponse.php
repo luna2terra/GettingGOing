@@ -49,3 +49,9 @@ class GetBlockResponse extends AbstractResponse
     /**
      *
      * @return Block
+     */
+    public function getBlock(): Block
+    {
+        return $this->block;
+    }
+}
