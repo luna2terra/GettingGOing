@@ -129,3 +129,12 @@ class GetBroadcastResponse extends AbstractResponse
     }
 
     /**
+     * @return string Log file type. Two values are possible:
+     *      'archive' - reporting previously reported broadcast log,
+     *      'new' - reporting new broadcast log.
+     */
+    public function getLogFile(): string
+    {
+        return $this->logFile;
+    }
+}
