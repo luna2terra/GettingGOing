@@ -23,4 +23,18 @@ namespace Adshares\Ads\Response;
 
 use Adshares\Ads\Entity\EntityFactory;
 use Adshares\Ads\Entity\Message;
-use Adshares\Ads\Entity\T
+use Adshares\Ads\Entity\Transaction\AbstractTransaction;
+
+/**
+ * Response GetMessageResponse request.
+ *
+ * @package Adshares\Ads\Response
+ */
+class GetMessageResponse extends AbstractResponse
+{
+    /**
+     * Message
+     *
+     * @var Message
+     */
+    
