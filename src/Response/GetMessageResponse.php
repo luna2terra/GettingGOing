@@ -16,4 +16,11 @@
  * See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- 
+ * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
+ */
+
+namespace Adshares\Ads\Response;
+
+use Adshares\Ads\Entity\EntityFactory;
+use Adshares\Ads\Entity\Message;
+use Adshares\Ads\Entity\T
