@@ -50,4 +50,8 @@ class GetMessageResponse extends AbstractResponse
     {
         parent::loadData($data);
 
-        
+        $this->message = EntityFactory::createMessage($data);
+
+        if (array_key_exists('transactions', $data) && is_array($data['transactions'])) {
+            $blockId = $data['block_id'];
+            $messageId = $data['message_i
