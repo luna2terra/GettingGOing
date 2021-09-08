@@ -37,4 +37,17 @@ class GetMessageResponse extends AbstractResponse
      *
      * @var Message
      */
-    
+    protected $message;
+
+    /**
+     * Array of transactions
+     *
+     * @var AbstractTransaction[]
+     */
+    protected $transactions = [];
+
+    protected function loadData(array $data): void
+    {
+        parent::loadData($data);
+
+        
