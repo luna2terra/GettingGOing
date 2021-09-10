@@ -59,4 +59,12 @@ class GetMessageResponse extends AbstractResponse
             foreach ($data['transactions'] as $value) {
                 if (is_array($value)) {
                     $value['block_id'] = $blockId;
-                    $value['mes
+                    $value['message_id'] = $messageId;
+                    $value['node_id'] = $nodeId;
+                    $this->transactions[] = EntityFactory::createTransaction($value);
+                }
+            }
+        }
+    }
+
+    /
