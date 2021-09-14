@@ -78,4 +78,8 @@ class GetMessageResponse extends AbstractResponse
     /**
      * @return AbstractTransaction[] Array of transactions
      */
-    public function get
+    public function getTransactions(): array
+    {
+        return $this->transactions;
+    }
+}
