@@ -16,4 +16,14 @@
  * See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ADS PHP Client. If not, see <https://www
+ * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
+ */
+
+namespace Adshares\Ads\Response;
+
+/**
+ * RawResponse is response that contains all returned ADS data in one array.
+ *
+ * @package Adshares\Ads\Response
+ */
+class RawResponse extends AbstractRespon
