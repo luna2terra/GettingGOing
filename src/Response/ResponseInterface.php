@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -21,11 +22,34 @@
 
 namespace Adshares\Ads\Response;
 
+use Adshares\Ads\Entity\Tx;
+use DateTimeInterface;
+
 /**
- * RawResponse is response that contains all returned ADS data in one array.
+ * Interface ResponseInterface
  *
  * @package Adshares\Ads\Response
  */
-class RawResponse extends AbstractResponse
+interface ResponseInterface
 {
+    /**
+     * @return DateTimeInterface Time of current block
+     */
+    public function getCurrentBlockTime(): DateTimeInterface;
+
+    /**
+     * @return DateTimeInterface Time of previous block
+     */
+    public function getPreviousBlockTime(): DateTimeInterface;
+
+    /**
+     * @return Tx
+     */
+    public function getTx(): Tx;
+
+    /**
+     * @param null|string $key key in data array
+     * @return mixed data for given key, for null key all data is returned, if key is not present null is returned
+     */
+    public function getRawData(?string $key = null);
 }

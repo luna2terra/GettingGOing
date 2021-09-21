@@ -1,7 +1,8 @@
+
 <?php
 
 /**
- * Copyright (c) 2018-2022 Adshares sp. z o.o.
+ * Copyright (c) 2018-2021 Adshares sp. z o.o.
  *
  * This file is part of ADS PHP Client
  *
@@ -21,11 +22,37 @@
 
 namespace Adshares\Ads\Response;
 
+use Adshares\Ads\Entity\Account;
+use Adshares\Ads\Entity\EntityFactory;
+
 /**
- * RawResponse is response that contains all returned ADS data in one array.
+ * Common response for most of the transactions.
  *
  * @package Adshares\Ads\Response
  */
-class RawResponse extends AbstractResponse
+class TransactionResponse extends AbstractResponse
 {
+    /**
+     * Account state before executing transaction
+     *
+     * @var Account
+     */
+    protected $account;
+
+    protected function loadData(array $data): void
+    {
+        parent::loadData($data);
+
+        if (array_key_exists('account', $data) && is_array($data['account'])) {
+            $this->account = EntityFactory::createAccount($data['account']);
+        }
+    }
+
+    /**
+     * @return Account Account state before executing transaction
+     */
+    public function getAccount(): Account
+    {
+        return $this->account;
+    }
 }
