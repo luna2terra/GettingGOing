@@ -22,4 +22,14 @@
 namespace Adshares\Ads\Util;
 
 /**
- * AdsChecksumGenerator is utility c
+ * AdsChecksumGenerator is utility class which generates checksum used in account address.
+ *
+ * @package Adshares\Ads\Util
+ */
+class AdsChecksumGenerator
+{
+    /**
+     * Generates CRC16 checksum.
+     *
+     * @param  string $hexChars string
+     * @r
