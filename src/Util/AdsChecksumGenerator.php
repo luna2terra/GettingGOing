@@ -32,4 +32,11 @@ class AdsChecksumGenerator
      * Generates CRC16 checksum.
      *
      * @param  string $hexChars string
-     * @r
+     * @return int checksum
+     */
+    private static function crc16(string $hexChars): int
+    {
+        $chars = (string)hex2bin($hexChars);
+        $crc = 0x1D0F;
+        for ($i = 0; $i < strlen($chars); $i++) {
+   
