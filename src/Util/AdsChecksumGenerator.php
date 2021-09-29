@@ -49,3 +49,10 @@ class AdsChecksumGenerator
     /**
      * Generate checksum for account.
      *
+     * @param  int $node node number
+     * @param  int $user account number in node
+     * @return string
+     */
+    public static function getAccountChecksum(int $node, int $user): string
+    {
+        return sprintf('%04X',
