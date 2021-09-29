@@ -55,4 +55,6 @@ class AdsChecksumGenerator
      */
     public static function getAccountChecksum(int $node, int $user): string
     {
-        return sprintf('%04X',
+        return sprintf('%04X', self::crc16(sprintf('%04X%08X', $node, $user)));
+    }
+}
