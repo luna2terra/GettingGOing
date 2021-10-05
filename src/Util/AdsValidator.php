@@ -16,4 +16,14 @@
  * See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * a
+ * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
+ */
+
+namespace Adshares\Ads\Util;
+
+/**
+ * AdsValidator is utility class responsible for validation of ADS ids.
+ *
+ * @package Adshares\Ads\Util
+ */
+class AdsValid
