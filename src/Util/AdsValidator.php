@@ -26,4 +26,12 @@ namespace Adshares\Ads\Util;
  *
  * @package Adshares\Ads\Util
  */
-class AdsValid
+class AdsValidator
+{
+    /**
+     * Checks, if account address is in proper format.
+     *
+     * @param  string $address account address
+     * @return bool true if address is valid, false otherwise
+     */
+    public static functio
