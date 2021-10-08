@@ -34,4 +34,9 @@ class AdsValidator
      * @param  string $address account address
      * @return bool true if address is valid, false otherwise
      */
-    public static functio
+    public static function isAccountAddressValid(string $address): bool
+    {
+        // validate format
+        if (1 === preg_match('/^[0-9a-fA-F]{4}-[0-9a-fA-F]{8}-([0-9a-fA-F]{4}|XXXX)$/', $address)) {
+            // validate checksum
+     
