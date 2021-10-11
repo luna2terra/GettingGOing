@@ -44,4 +44,7 @@ class AdsValidator
                 // 'XXXX' is allowed as checksum replacement
                 return true;
             }
-            $nodeId = subs
+            $nodeId = substr($address, 0, 4);
+            $userId = substr($address, 5, 8);
+            $checksumComputed = AdsChecksumGenerator::getAccountChecksum((int)hexdec($nodeId), (int)hexdec($userId));
+            return $checksum === $
