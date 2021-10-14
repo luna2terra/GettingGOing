@@ -47,4 +47,15 @@ class AdsValidator
             $nodeId = substr($address, 0, 4);
             $userId = substr($address, 5, 8);
             $checksumComputed = AdsChecksumGenerator::getAccountChecksum((int)hexdec($nodeId), (int)hexdec($userId));
-            return $checksum === $
+            return $checksum === $checksumComputed;
+        }
+        return false;
+    }
+
+    /**
+     * Checks, if message id is valid.
+     *
+     * @param  string $messageId message id
+     * @return bool true if id is valid, false otherwise
+     */
+   
