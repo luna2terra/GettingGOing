@@ -66,4 +66,9 @@ class AdsValidator
     /**
      * Checks, if transaction id is valid.
      *
-     * @param  string $txid transaction 
+     * @param  string $txid transaction id
+     * @return bool true if id is valid, false otherwise
+     */
+    public static function isTransactionIdValid(string $txid): bool
+    {
+        return 1 === preg_match('/^[0-9a-fA-F]{4}:[0-9a-fA-F]{8}:[0-
