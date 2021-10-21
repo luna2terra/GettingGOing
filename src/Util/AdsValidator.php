@@ -58,4 +58,12 @@ class AdsValidator
      * @param  string $messageId message id
      * @return bool true if id is valid, false otherwise
      */
-   
+    public static function isMessageIdValid(string $messageId): bool
+    {
+        return 1 === preg_match('/^[0-9a-fA-F]{4}:[0-9a-fA-F]{8}$/', $messageId);
+    }
+
+    /**
+     * Checks, if transaction id is valid.
+     *
+     * @param  string $txid transaction 
