@@ -30,3 +30,29 @@ class ChangeAccountKeyTest extends TestCase
 {
     /**
      * Public key generated from `a` pass-phrase
+     *
+     * @var string
+     */
+    private $publicKey = 'EAE1C8793B5597C4B3F490E76AC31172C439690F8EE14142BB851A61F9A49F0E';
+    /**
+     * Empty string signed with private key generated from `a` pass-phrase
+     *
+     * @var string
+     */
+    private $signature = '1F0571D30661FB1D50BE0D61A0A0E97BAEFF8C030CD0269ADE49438A4AD4CF897367'
+    . 'E21B100C694F220D922200B3AB852A377D8857A64C36CB1569311760F303';
+
+    public function testChangeAccountKey(): void
+    {
+        $client = new TestAdsClient();
+
+        $command = new ChangeAccountKeyCommand($this->publicKey, $this->signature);
+        $response = $client->changeAccountKey($command);
+        $txid = $response->getTx()->getId();
+        $this->assertNotNull($txid);
+        if (null != $txid) {
+            $this->assertTrue(AdsValidator::isTransactionIdValid($txid), 'Invalid tx.id');
+        }
+        $this->assertTrue($response->isKeyChanged());
+    }
+}
