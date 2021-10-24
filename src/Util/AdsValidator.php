@@ -71,4 +71,6 @@ class AdsValidator
      */
     public static function isTransactionIdValid(string $txid): bool
     {
-        return 1 === preg_match('/^[0-9a-fA-F]{4}:[0-9a-fA-F]{8}:[0-
+        return 1 === preg_match('/^[0-9a-fA-F]{4}:[0-9a-fA-F]{8}:[0-9a-fA-F]{4}$/', $txid);
+    }
+}
