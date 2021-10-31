@@ -22,4 +22,14 @@
 namespace Adshares\Ads\Tests\E2E;
 
 use Adshares\Ads\Command\ChangeNodeKeyCommand;
-use 
+use Adshares\Ads\Util\AdsValidator;
+use PHPUnit\Framework\TestCase;
+
+class ChangeNodeKeyTest extends TestCase
+{
+    /**
+     * Public key generated from `a` pass-phrase
+     *
+     * @var string
+     */
+    private $publicKey = 'EAE1C879
