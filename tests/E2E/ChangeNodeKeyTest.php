@@ -42,4 +42,10 @@ class ChangeNodeKeyTest extends TestCase
          * Please check if matching secret_key
          * is added to key/key.txt file for node which key should be changed.
          *
-         * The secret_key generated from `a`
+         * The secret_key generated from `a` pass-phrase is
+         * `CA978112CA1BBDCAFAC231B39A23DC4DA786EFF8147C4E72B9807785AFEE48BB`.
+         */
+        $command = new ChangeNodeKeyCommand($this->publicKey);
+
+        $response = $client->changeNodeKey($command);
+        $this->as
