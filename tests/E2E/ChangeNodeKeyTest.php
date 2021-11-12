@@ -38,4 +38,8 @@ class ChangeNodeKeyTest extends TestCase
     {
         $client = new TestAdsClient();
         /*
-         * If `Matching secret key not 
+         * If `Matching secret key not found` exception is thrown,
+         * Please check if matching secret_key
+         * is added to key/key.txt file for node which key should be changed.
+         *
+         * The secret_key generated from `a`
