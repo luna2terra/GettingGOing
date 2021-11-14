@@ -48,4 +48,9 @@ class ChangeNodeKeyTest extends TestCase
         $command = new ChangeNodeKeyCommand($this->publicKey);
 
         $response = $client->changeNodeKey($command);
-        $this->as
+        $this->assertTrue($response->isKeyChanged());
+        $txid = $response->getTx()->getId();
+        $this->assertNotNull($txid);
+        if (null != $txid) {
+            $this->assertTrue(AdsValidator::isTransactionIdValid($txid), 'Invalid tx.id');
+    
