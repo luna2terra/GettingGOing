@@ -53,4 +53,6 @@ class ChangeNodeKeyTest extends TestCase
         $this->assertNotNull($txid);
         if (null != $txid) {
             $this->assertTrue(AdsValidator::isTransactionIdValid($txid), 'Invalid tx.id');
-    
+        }
+    }
+}
