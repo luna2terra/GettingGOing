@@ -22,4 +22,13 @@
 namespace Adshares\Ads\Tests\E2E;
 
 use Adshares\Ads\Command\CreateAccountCommand;
-use PHPUnit\Framework\Te
+use PHPUnit\Framework\TestCase;
+
+class CreateAccountTest extends TestCase
+{
+    /**
+     * Public key generated from `a` pass-phrase
+     *
+     * @var string
+     */
+    private $publicKey = 'EAE1C8793B5597C4B3F490E76AC31172C439690F8EE14142BB8
