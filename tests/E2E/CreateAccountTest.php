@@ -49,4 +49,12 @@ class CreateAccountTest extends TestCase
 
         $this->assertEquals($client->getAddress(), $response->getAccount()->getAddress());
         $newAccount = $response->getNewAccount();
-        $this->assertEquals($newAccount->getNodeId(), substr($newAccount-
+        $this->assertEquals($newAccount->getNodeId(), substr($newAccount->getAddress(), 0, 4));
+    }
+
+    public function testCreateAccountWithChangeKey(): void
+    {
+        $client = new TestAdsClient();
+
+        $command = new CreateAccountCommand();
+        $command->setAccountKey($this
