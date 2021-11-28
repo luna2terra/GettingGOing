@@ -57,4 +57,8 @@ class CreateAccountTest extends TestCase
         $client = new TestAdsClient();
 
         $command = new CreateAccountCommand();
-        $command->setAccountKey($this
+        $command->setAccountKey($this->publicKey, $this->signature);
+        $response = $client->createAccount($command);
+
+        $this->assertEquals($client->getAddress(), $response->getAccount()->getAddress());
+        $newAccount = $respon
