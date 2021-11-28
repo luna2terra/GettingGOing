@@ -61,4 +61,7 @@ class CreateAccountTest extends TestCase
         $response = $client->createAccount($command);
 
         $this->assertEquals($client->getAddress(), $response->getAccount()->getAddress());
-        $newAccount = $respon
+        $newAccount = $response->getNewAccount();
+        $this->assertEquals($newAccount->getNodeId(), substr($newAccount->getAddress(), 0, 4));
+    }
+}
