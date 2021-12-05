@@ -27,4 +27,9 @@ class GetAccountTest extends TestCase
 {
     public function testGetAccount(): void
     {
-      
+        $accountAddress = '0001-00000000-9B6F';
+        $client = new TestAdsClient();
+        $response = $client->getAccount($accountAddress);
+
+        $str = $response->getAccount()->getAddress();
+        $this
