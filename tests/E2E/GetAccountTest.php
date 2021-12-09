@@ -32,4 +32,9 @@ class GetAccountTest extends TestCase
         $response = $client->getAccount($accountAddress);
 
         $str = $response->getAccount()->getAddress();
-        $this
+        $this->assertEquals($accountAddress, $str);
+
+        $str = $response->getNetworkAccount()->getAddress();
+        $this->assertEquals($accountAddress, $str);
+    }
+}
