@@ -44,4 +44,11 @@ class GetLogTest extends TestCase
         $client = new TestAdsClient();
 
         $from = new DateTime();
-        $from->setTimestamp(20
+        $from->setTimestamp(2000000000);
+        $response = $client->getLog($from);
+
+        $account = $response->getAccount();
+        $this->assertEquals($client->getAddress(), $account->getAddress());
+
+        $log = $response->getLog();
+        $this->assertCoun
