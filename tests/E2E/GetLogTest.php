@@ -36,4 +36,12 @@ class GetLogTest extends TestCase
         $this->assertEquals($client->getAddress(), $account->getAddress());
 
         $log = $response->getLog();
-    
+        $this->assertGreaterThan(0, count($log));
+    }
+
+    public function testGetLogInFuture(): void
+    {
+        $client = new TestAdsClient();
+
+        $from = new DateTime();
+        $from->setTimestamp(20
