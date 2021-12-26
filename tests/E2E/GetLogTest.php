@@ -28,4 +28,12 @@ class GetLogTest extends TestCase
 {
     public function testGetLog(): void
     {
-        $client = new Tes
+        $client = new TestAdsClient();
+
+        $response = $client->getLog();
+
+        $account = $response->getAccount();
+        $this->assertEquals($client->getAddress(), $account->getAddress());
+
+        $log = $response->getLog();
+    
