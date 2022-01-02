@@ -51,4 +51,6 @@ class GetLogTest extends TestCase
         $this->assertEquals($client->getAddress(), $account->getAddress());
 
         $log = $response->getLog();
-        $this->assertCoun
+        $this->assertCount(0, $log);
+    }
+}
