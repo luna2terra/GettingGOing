@@ -25,4 +25,12 @@ use PHPUnit\Framework\TestCase;
 
 class GetMeTest extends TestCase
 {
-    public function testGetMe
+    public function testGetMe(): void
+    {
+        $client = new TestAdsClient();
+        $response = $client->getMe();
+
+        $account = $response->getAccount();
+        $this->assertEquals($client->getAddress(), $account->getAddress());
+    }
+}
