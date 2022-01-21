@@ -19,4 +19,12 @@
  * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
  */
 
-na
+namespace Adshares\Ads\Tests\E2E;
+
+use Adshares\Ads\Driver\CommandError;
+use Adshares\Ads\Exception\CommandException;
+use PHPUnit\Framework\TestCase;
+
+class NodeTest extends TestCase
+{
+    public function testGetBlock(): v
