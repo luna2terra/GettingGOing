@@ -27,4 +27,13 @@ use PHPUnit\Framework\TestCase;
 
 class NodeTest extends TestCase
 {
-    public function testGetBlock(): v
+    public function testGetBlock(): void
+    {
+        $client = new TestAdsClient();
+
+        $response = null;
+        $attempt = 0;
+        $attemptMax = 10;
+        while ((null === $response) && ($attempt < $attemptMax)) {
+            try {
+     
