@@ -40,4 +40,10 @@ class NodeTest extends TestCase
             } catch (CommandException $ce) {
                 $this->assertEquals(CommandError::GET_BLOCK_INFO_UNAVAILABLE, $ce->getCode());
                 $attempt++;
-        
+                sleep(4);
+            }
+        }
+        $this->assertNotNull($response, 'Didn\'t receive block data in expected attempts.');
+        if (null !== $response) {
+            $block = $response->getBlock();
+     
