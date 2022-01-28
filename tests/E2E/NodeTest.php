@@ -36,4 +36,8 @@ class NodeTest extends TestCase
         $attemptMax = 10;
         while ((null === $response) && ($attempt < $attemptMax)) {
             try {
-     
+                $response = $client->getBlock();
+            } catch (CommandException $ce) {
+                $this->assertEquals(CommandError::GET_BLOCK_INFO_UNAVAILABLE, $ce->getCode());
+                $attempt++;
+        
