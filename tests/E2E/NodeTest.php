@@ -46,4 +46,11 @@ class NodeTest extends TestCase
         $this->assertNotNull($response, 'Didn\'t receive block data in expected attempts.');
         if (null !== $response) {
             $block = $response->getBlock();
-     
+            $this->assertNotEquals(0, $block->getMessageCount());
+            $this->assertGreaterThan(1, count($block->getNodes()));
+        }
+    }
+
+    public function testGetBlockWithInvalidTime(): void
+    {
+ 
