@@ -53,4 +53,8 @@ class NodeTest extends TestCase
 
     public function testGetBlockWithInvalidTime(): void
     {
- 
+        $client = new TestAdsClient();
+
+        $this->expectException(CommandException::class);
+        $this->expectExceptionCode(CommandError::GET_BLOCK_INFO_UNAVAILABLE);
+       
