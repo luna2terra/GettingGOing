@@ -57,4 +57,12 @@ class NodeTest extends TestCase
 
         $this->expectException(CommandException::class);
         $this->expectExceptionCode(CommandError::GET_BLOCK_INFO_UNAVAILABLE);
-       
+        $client->getBlock('10000000');
+    }
+
+    public function testGetAccounts(): void
+    {
+        $client = new TestAdsClient();
+
+        $response = $client->getAccounts('0001');
+        $accounts = $response->getAcc
