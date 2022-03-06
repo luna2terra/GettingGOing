@@ -147,3 +147,12 @@ class SendTransferTest extends TestCase
         $this->assertNotNull($txDryRun->getData());
 
         $tx = $client->runTransaction($command, false)->getTx();
+        $this->assertNotNull($tx->getAccountHashin());
+        $this->assertNotNull($tx->getAccountMsid());
+        $this->assertNotNull($tx->getData());
+
+        $this->assertEquals($txDryRun->getAccountHashin(), $tx->getAccountHashin());
+        $this->assertEquals($txDryRun->getAccountMsid(), $tx->getAccountMsid());
+        $this->assertEquals($txDryRun->getData(), $tx->getData());
+    }
+}
