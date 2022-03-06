@@ -74,3 +74,7 @@ class NodeTest extends TestCase
         $client = new TestAdsClient();
 
         $response = $client->getAccounts('0001');
+        $blockTime = dechex($response->getPreviousBlockTime()->getTimestamp());
+        $accounts = $response->getAccounts();
+        $response2 = $client->getAccounts('0001', $blockTime);
+        $accounts2 = $response2->getA
