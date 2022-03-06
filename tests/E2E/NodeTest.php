@@ -77,4 +77,8 @@ class NodeTest extends TestCase
         $blockTime = dechex($response->getPreviousBlockTime()->getTimestamp());
         $accounts = $response->getAccounts();
         $response2 = $client->getAccounts('0001', $blockTime);
-        $accounts2 = $response2->getA
+        $accounts2 = $response2->getAccounts();
+
+        $this->assertEquals($accounts2, $accounts);
+    }
+}
