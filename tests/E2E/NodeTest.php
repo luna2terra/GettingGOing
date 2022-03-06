@@ -65,4 +65,12 @@ class NodeTest extends TestCase
         $client = new TestAdsClient();
 
         $response = $client->getAccounts('0001');
-        $accounts = $response->getAcc
+        $accounts = $response->getAccounts();
+        $this->assertGreaterThan(0, count($accounts));
+    }
+
+    public function testGetAccountsFromBlock(): void
+    {
+        $client = new TestAdsClient();
+
+        $response = $client->getAccounts('0001');
