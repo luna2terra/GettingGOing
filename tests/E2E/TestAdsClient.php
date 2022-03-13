@@ -24,3 +24,13 @@ namespace Adshares\Ads\Tests\E2E;
 use Adshares\Ads\AdsClient;
 use Adshares\Ads\Driver\CliDriver;
 use Psr\Log\LoggerInterface;
+use RuntimeException;
+
+class TestAdsClient extends AdsClient
+{
+    private string $address;
+
+    public function __construct(LoggerInterface $logger = null)
+    {
+        if (null === ($address = self::getenv('ADS_ADDRESS'))) {
+ 
