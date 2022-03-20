@@ -33,4 +33,9 @@ class TestAdsClient extends AdsClient
     public function __construct(LoggerInterface $logger = null)
     {
         if (null === ($address = self::getenv('ADS_ADDRESS'))) {
- 
+            throw new RuntimeException('Set up env variable ADS_ADDRESS');
+        }
+        $this->address = $address;
+        $port = self::getenv('ADS_PORT');
+        $driver = new CliDriver(
+            $this->
