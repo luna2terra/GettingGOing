@@ -38,4 +38,13 @@ class TestAdsClient extends AdsClient
         $this->address = $address;
         $port = self::getenv('ADS_PORT');
         $driver = new CliDriver(
-            $this->
+            $this->address,
+            self::getenv('ADS_SECRET'),
+            self::getenv('ADS_HOST'),
+            $port !== null ? (int)$port : null,
+            $logger
+        );
+        parent::__construct($driver, $logger);
+    }
+
+    public function getAddres
