@@ -47,4 +47,14 @@ class TestAdsClient extends AdsClient
         parent::__construct($driver, $logger);
     }
 
-    public function getAddres
+    public function getAddress(): string
+    {
+        return $this->address;
+    }
+
+    private static function getenv(string $name): ?string
+    {
+        $value = getenv($name);
+        return $value === false ? null : $value;
+    }
+}
