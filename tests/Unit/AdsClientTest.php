@@ -22,4 +22,9 @@
 namespace Adshares\Ads\Tests\Unit;
 
 use Adshares\Ads\AdsClient;
-use Adshares\Ads\Command\ChangeAccount
+use Adshares\Ads\Command\ChangeAccountKeyCommand;
+use Adshares\Ads\Command\ChangeNodeKeyCommand;
+use Adshares\Ads\Command\CreateAccountCommand;
+use Adshares\Ads\Command\CreateNodeCommand;
+use Adshares\Ads\Command\SendOneCommand;
+use Adshar
