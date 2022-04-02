@@ -27,4 +27,11 @@ use Adshares\Ads\Command\ChangeNodeKeyCommand;
 use Adshares\Ads\Command\CreateAccountCommand;
 use Adshares\Ads\Command\CreateNodeCommand;
 use Adshares\Ads\Command\SendOneCommand;
-use Adshar
+use Adshares\Ads\Driver\CliDriver;
+use Adshares\Ads\Entity\Broadcast;
+use Adshares\Ads\Tests\Unit\Entity\ExtendedAccount;
+use DateTime;
+use PHPUnit\Framework\MockObject\Stub\ConsecutiveCalls;
+use PHPUnit\Framework\TestCase;
+use RuntimeException;
+use Symfony
