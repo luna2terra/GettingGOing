@@ -34,4 +34,14 @@ use DateTime;
 use PHPUnit\Framework\MockObject\Stub\ConsecutiveCalls;
 use PHPUnit\Framework\TestCase;
 use RuntimeException;
-use Symfony
+use Symfony\Component\Process\Process;
+
+class AdsClientTest extends TestCase
+{
+    /**
+     * @var string
+     */
+    private $address = '0001-00000000-9B6F';
+    /**
+     * @var string
+    
