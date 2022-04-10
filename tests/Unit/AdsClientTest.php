@@ -77,4 +77,10 @@ class AdsClientTest extends TestCase
         $command->setLastHash('CDE7C5D0D243D60500BDD32A8FC2A9EA7E9F7631B6CCFE77C26521A323087665');
         $response = $client->changeAccountKey($command);
 
-        $this->ass
+        $this->assertEquals('0001:0000004E:0001', $response->getTx()->getId());
+        $this->assertTrue($response->isKeyChanged());
+    }
+
+    public function testChangeNodeKey(): void
+    {
+        $client = $this->createAdsClient(0, $this->strip
