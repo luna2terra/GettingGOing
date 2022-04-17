@@ -98,4 +98,7 @@ class AdsClientTest extends TestCase
         $client = $this->createAdsClient(0, $this->stripNewLine(Raw::createAccount()));
         $command = new CreateAccountCommand();
         $command->setLastMsid(3);
-        $command->setLastHash('
+        $command->setLastHash('CDE7C5D0D243D60500BDD32A8FC2A9EA7E9F7631B6CCFE77C26521A323087665');
+        $response = $client->createAccount($command);
+        $account = $response->getAccount();
+        $this->assertEquals('0002-00000000-75BD', $account->getAddress()
