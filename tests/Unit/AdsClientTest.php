@@ -94,4 +94,8 @@ class AdsClientTest extends TestCase
     }
 
     public function testCreateAccount(): void
-    
+    {
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::createAccount()));
+        $command = new CreateAccountCommand();
+        $command->setLastMsid(3);
+        $command->setLastHash('
