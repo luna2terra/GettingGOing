@@ -83,4 +83,8 @@ class AdsClientTest extends TestCase
 
     public function testChangeNodeKey(): void
     {
-        $client = $this->createAdsClient(0, $this->strip
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::changeNodeKey()));
+        $command = new ChangeNodeKeyCommand($this->publicKey);
+        $command->setLastMsid(3);
+        $command->setLastHash('CDE7C5D0D243D60500BDD32A8FC2A9EA7E9F7631B6CCFE77C26521A323087665');
+        $response = 
