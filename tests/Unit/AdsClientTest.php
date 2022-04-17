@@ -87,4 +87,11 @@ class AdsClientTest extends TestCase
         $command = new ChangeNodeKeyCommand($this->publicKey);
         $command->setLastMsid(3);
         $command->setLastHash('CDE7C5D0D243D60500BDD32A8FC2A9EA7E9F7631B6CCFE77C26521A323087665');
-        $response = 
+        $response = $client->changeNodeKey($command);
+
+        $this->assertEquals('0001:0000001B:0001', $response->getTx()->getId());
+        $this->assertTrue($response->isKeyChanged());
+    }
+
+    public function testCreateAccount(): void
+    
