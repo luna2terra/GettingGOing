@@ -112,4 +112,8 @@ class AdsClientTest extends TestCase
     public function testCreateNode(): void
     {
         $client = $this->createAdsClient(0, $this->stripNewLine(Raw::createNode()));
-        $command = new 
+        $command = new CreateNodeCommand();
+        $command->setLastMsid(3);
+        $command->setLastHash('35CABB3B28BA322AE62063024917293549FD6D42BF7ADCC933584F1585025D97');
+        $response = $client->runTransaction($command);
+   
