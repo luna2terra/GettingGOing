@@ -101,4 +101,9 @@ class AdsClientTest extends TestCase
         $command->setLastHash('CDE7C5D0D243D60500BDD32A8FC2A9EA7E9F7631B6CCFE77C26521A323087665');
         $response = $client->createAccount($command);
         $account = $response->getAccount();
-        $this->assertEquals('0002-00000000-75BD', $account->getAddress()
+        $this->assertEquals('0002-00000000-75BD', $account->getAddress());
+
+        $newAccount = $response->getNewAccount();
+        $this->assertEquals('0002-00000004-3539', $newAccount->getAddress());
+        $this->assertEquals('2', $newAccount->getNode());
+        $this->assertEquals('0002', $newA
