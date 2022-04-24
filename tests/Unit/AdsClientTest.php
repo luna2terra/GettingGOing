@@ -106,4 +106,10 @@ class AdsClientTest extends TestCase
         $newAccount = $response->getNewAccount();
         $this->assertEquals('0002-00000004-3539', $newAccount->getAddress());
         $this->assertEquals('2', $newAccount->getNode());
-        $this->assertEquals('0002', $newA
+        $this->assertEquals('0002', $newAccount->getNodeId());
+    }
+
+    public function testCreateNode(): void
+    {
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::createNode()));
+        $command = new 
