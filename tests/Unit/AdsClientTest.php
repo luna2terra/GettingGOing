@@ -118,4 +118,10 @@ class AdsClientTest extends TestCase
         $response = $client->runTransaction($command);
         $this->assertEquals('0001-00000000-9B6F', $response->getAccount()->getAddress());
         $this->assertEquals(new DateTime('@1536734240'), $response->getCurrentBlockTime());
-        $this->assertEqual
+        $this->assertEquals(new DateTime('@1536734208'), $response->getPreviousBlockTime());
+        $this->assertEquals('0001:00000015:0001', $response->getTx()->getId());
+    }
+
+    public function testGetAccount(): void
+    {
+        $cli
