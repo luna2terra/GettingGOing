@@ -116,4 +116,6 @@ class AdsClientTest extends TestCase
         $command->setLastMsid(3);
         $command->setLastHash('35CABB3B28BA322AE62063024917293549FD6D42BF7ADCC933584F1585025D97');
         $response = $client->runTransaction($command);
-   
+        $this->assertEquals('0001-00000000-9B6F', $response->getAccount()->getAddress());
+        $this->assertEquals(new DateTime('@1536734240'), $response->getCurrentBlockTime());
+        $this->assertEqual
