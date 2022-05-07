@@ -124,4 +124,7 @@ class AdsClientTest extends TestCase
 
     public function testGetAccount(): void
     {
-        $cli
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::getAccount()));
+        $response = $client->getMe();
+        $account = $response->getAccount();
+        $this->assertEquals($this->address, $account->getAddre
