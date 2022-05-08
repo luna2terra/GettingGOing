@@ -134,4 +134,10 @@ class AdsClientTest extends TestCase
     {
         $client = $this->createAdsClient(0, $this->stripNewLine(Raw::getAccounts()));
         $response = $client->getAccounts('0001', '5B56E800');
-        $t
+        $this->assertGreaterThan(0, count($response->getAccounts()));
+    }
+
+    public function testGetBlock(): void
+    {
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::getBlock()));
+        $response = $client->getBloc
