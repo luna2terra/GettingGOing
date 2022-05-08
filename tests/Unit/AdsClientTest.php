@@ -140,4 +140,10 @@ class AdsClientTest extends TestCase
     public function testGetBlock(): void
     {
         $client = $this->createAdsClient(0, $this->stripNewLine(Raw::getBlock()));
-        $response = $client->getBloc
+        $response = $client->getBlock('5B56E520');
+        $this->assertGreaterThan(1, count($response->getBlock()->getNodes()));
+    }
+
+    public function testGetBlockIds(): void
+    {
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::getBlock
