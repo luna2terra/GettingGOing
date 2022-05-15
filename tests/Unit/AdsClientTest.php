@@ -157,4 +157,12 @@ class AdsClientTest extends TestCase
         $response = $client->getBroadcast('5B55D240');
         $broadcasts = $response->getBroadcast();
         $broadcast = array_shift($broadcasts);
-        $this
+        $this->assertInstanceOf(Broadcast::class, $broadcast);
+        if (null !== $broadcast) {
+            $this->assertEquals('7E', $broadcast->getMessage());
+        }
+    }
+
+    public function testGetLog(): void
+    {
+        $client =
