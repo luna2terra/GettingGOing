@@ -153,4 +153,8 @@ class AdsClientTest extends TestCase
 
     public function testGetBroadcast(): void
     {
-        $c
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::getBroadcast()));
+        $response = $client->getBroadcast('5B55D240');
+        $broadcasts = $response->getBroadcast();
+        $broadcast = array_shift($broadcasts);
+        $this
