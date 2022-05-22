@@ -170,4 +170,10 @@ class AdsClientTest extends TestCase
         $from->setTimestamp(1);
         $response = $client->getLog($from);
         $account = $response->getAccount();
-        $this->asse
+        $this->assertEquals($this->address, $account->getAddress());
+
+        $log = $response->getLog();
+        $this->assertCount(9, $log);
+
+        $event = $log[0];
+        $this->assertEquals('yes', $event['confirmed'
