@@ -165,4 +165,9 @@ class AdsClientTest extends TestCase
 
     public function testGetLog(): void
     {
-        $client =
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::getLog()));
+        $from = new DateTime();
+        $from->setTimestamp(1);
+        $response = $client->getLog($from);
+        $account = $response->getAccount();
+        $this->asse
