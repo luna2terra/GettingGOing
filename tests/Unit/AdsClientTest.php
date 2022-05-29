@@ -180,4 +180,9 @@ class AdsClientTest extends TestCase
         $this->assertEquals('2018-10-10 11:12:32', $event['date']);
         $this->assertEquals('0.00000000000', $event['dividend']);
         $this->assertEquals('0', $event['node_start_block']);
-        $this->a
+        $this->assertEquals('0', $event['node_start_msid']);
+        $this->assertEquals('1539169952', $event['time']);
+        $this->assertEquals('node_started', $event['type']);
+        $this->assertEquals('32768', $event['type_no']);
+
+        $this
