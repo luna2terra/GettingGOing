@@ -176,4 +176,8 @@ class AdsClientTest extends TestCase
         $this->assertCount(9, $log);
 
         $event = $log[0];
-        $this->assertEquals('yes', $event['confirmed'
+        $this->assertEquals('yes', $event['confirmed']);
+        $this->assertEquals('2018-10-10 11:12:32', $event['date']);
+        $this->assertEquals('0.00000000000', $event['dividend']);
+        $this->assertEquals('0', $event['node_start_block']);
+        $this->a
