@@ -185,4 +185,7 @@ class AdsClientTest extends TestCase
         $this->assertEquals('node_started', $event['type']);
         $this->assertEquals('32768', $event['type_no']);
 
-        $this
+        $this->assertArrayHasKey('account', $event);
+        $eventAccount = is_array($event['account']) ? $event['account'] : [];
+        $this->assertEquals('0000-00000000-313E', $eventAccount['address']);
+        $this->ass
