@@ -191,4 +191,7 @@ class AdsClientTest extends TestCase
         $this->assertEquals('19999999.99999997000', $eventAccount['balance']);
         $this->assertEquals('3234990E04DCBDFF', $eventAccount['hash_prefix_8']);
         $this->assertEquals('0', $eventAccount['id']);
-        $this->as
+        $this->assertEquals('1539169920', $eventAccount['local_change']);
+        $this->assertEquals('1', $eventAccount['msid']);
+        $this->assertEquals('0', $eventAccount['node']);
+        $this->assertEquals('A9C0D972D8AA', $eventAccount['public_key_prefix_
