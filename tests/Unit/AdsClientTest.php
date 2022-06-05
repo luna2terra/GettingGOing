@@ -188,4 +188,7 @@ class AdsClientTest extends TestCase
         $this->assertArrayHasKey('account', $event);
         $eventAccount = is_array($event['account']) ? $event['account'] : [];
         $this->assertEquals('0000-00000000-313E', $eventAccount['address']);
-        $this->ass
+        $this->assertEquals('19999999.99999997000', $eventAccount['balance']);
+        $this->assertEquals('3234990E04DCBDFF', $eventAccount['hash_prefix_8']);
+        $this->assertEquals('0', $eventAccount['id']);
+        $this->as
