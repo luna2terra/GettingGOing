@@ -194,4 +194,11 @@ class AdsClientTest extends TestCase
         $this->assertEquals('1539169920', $eventAccount['local_change']);
         $this->assertEquals('1', $eventAccount['msid']);
         $this->assertEquals('0', $eventAccount['node']);
-        $this->assertEquals('A9C0D972D8AA', $eventAccount['public_key_prefix_
+        $this->assertEquals('A9C0D972D8AA', $eventAccount['public_key_prefix_6']);
+        $this->assertEquals('1539169920', $eventAccount['remote_change']);
+        $this->assertEquals('0', $eventAccount['status']);
+    }
+
+    public function testGetMe(): void
+    {
+        $client = $this->createAdsC
