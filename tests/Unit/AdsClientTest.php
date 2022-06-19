@@ -207,4 +207,9 @@ class AdsClientTest extends TestCase
         $this->assertEquals($this->address, $account->getAddress());
     }
 
-    public function testGetMe
+    public function testGetMessage(): void
+    {
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::getMessage()));
+        $messageId = '0003:0000003B';
+        $response = $client->getMessage($messageId, '5B50A6A0');
+        $thi
