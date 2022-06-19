@@ -224,4 +224,9 @@ class AdsClientTest extends TestCase
 
     public function testSendOne(): void
     {
-        $client = $
+        $client = $this->createAdsClient(
+            0,
+            [$this->stripNewLine(Raw::getAccount()), $this->stripNewLine(Raw::sendOne())]
+        );
+        $command = new SendOneCommand(
+            '0001-00000001-
