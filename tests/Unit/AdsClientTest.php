@@ -212,4 +212,10 @@ class AdsClientTest extends TestCase
         $client = $this->createAdsClient(0, $this->stripNewLine(Raw::getMessage()));
         $messageId = '0003:0000003B';
         $response = $client->getMessage($messageId, '5B50A6A0');
-        $thi
+        $this->assertEquals($messageId, $response->getMessage()->getId());
+    }
+
+    public function testGetMessageIds(): void
+    {
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::getMessageIds()));
+        $response = $client->
