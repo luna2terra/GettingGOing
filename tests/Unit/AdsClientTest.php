@@ -229,4 +229,9 @@ class AdsClientTest extends TestCase
             [$this->stripNewLine(Raw::getAccount()), $this->stripNewLine(Raw::sendOne())]
         );
         $command = new SendOneCommand(
-            '0001-00000001-
+            '0001-00000001-8B4E',
+            10000000000000,
+            '46066ADCA3C787BF6874CE3361EECF7A9969D98F12719DF53440172B5A7D345A'
+        );
+        $response = $client->runTransaction($command);
+        $this->assertNotNull($respons
