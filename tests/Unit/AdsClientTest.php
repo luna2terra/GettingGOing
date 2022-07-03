@@ -234,4 +234,12 @@ class AdsClientTest extends TestCase
             '46066ADCA3C787BF6874CE3361EECF7A9969D98F12719DF53440172B5A7D345A'
         );
         $response = $client->runTransaction($command);
-        $this->assertNotNull($respons
+        $this->assertNotNull($response->getTx()->getId());
+        $this->assertEquals($this->address, $response->getAccount()->getAddress());
+    }
+
+    public function testSendOneWithExplicitSender(): void
+    {
+        $client = $this->createAdsClient(
+            0,
+ 
