@@ -247,4 +247,8 @@ class AdsClientTest extends TestCase
         $command = new SendOneCommand(
             '0001-00000001-8B4E',
             10000000000000,
-            '46066AD
+            '46066ADCA3C787BF6874CE3361EECF7A9969D98F12719DF53440172B5A7D345A'
+        );
+        $command->setSender('0001-00000001-8B4E');
+        $command->setSignature(
+            'DABDDABFC25B0C7
