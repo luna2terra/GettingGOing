@@ -242,4 +242,9 @@ class AdsClientTest extends TestCase
     {
         $client = $this->createAdsClient(
             0,
- 
+            [$this->stripNewLine(Raw::getAccount()), $this->stripNewLine(Raw::sendOne())]
+        );
+        $command = new SendOneCommand(
+            '0001-00000001-8B4E',
+            10000000000000,
+            '46066AD
