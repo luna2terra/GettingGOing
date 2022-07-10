@@ -251,4 +251,8 @@ class AdsClientTest extends TestCase
         );
         $command->setSender('0001-00000001-8B4E');
         $command->setSignature(
-            'DABDDABFC25B0C7
+            'DABDDABFC25B0C76E33C0E6285F09695EE0193D10DBBC3F2CA39E8183603D7BDC5'
+            . 'F62C14FF60A2EFCC23784F7FA380C6F38A2AD6B7DFB95FA2DCA9BA76D04503'
+        );
+        $command->setTimestamp((new DateTime())->getTimestamp());
+        $res
