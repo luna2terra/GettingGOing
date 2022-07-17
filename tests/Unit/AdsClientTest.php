@@ -255,4 +255,9 @@ class AdsClientTest extends TestCase
             . 'F62C14FF60A2EFCC23784F7FA380C6F38A2AD6B7DFB95FA2DCA9BA76D04503'
         );
         $command->setTimestamp((new DateTime())->getTimestamp());
-        $res
+        $response = $client->runTransaction($command);
+        $this->assertNotNull($response->getTx()->getId());
+        $this->assertEquals($this->address, $response->getAccount()->getAddress());
+    }
+
+    public function testSe
