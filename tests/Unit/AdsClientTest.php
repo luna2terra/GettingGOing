@@ -260,4 +260,9 @@ class AdsClientTest extends TestCase
         $this->assertEquals($this->address, $response->getAccount()->getAddress());
     }
 
-    public function testSe
+    public function testSendOneWithExplicitMsidAndHash(): void
+    {
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::sendOne()));
+        $command = new SendOneCommand(
+            '0001-00000001-8B4E',
+            1000
