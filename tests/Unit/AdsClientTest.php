@@ -265,4 +265,8 @@ class AdsClientTest extends TestCase
         $client = $this->createAdsClient(0, $this->stripNewLine(Raw::sendOne()));
         $command = new SendOneCommand(
             '0001-00000001-8B4E',
-            1000
+            10000000000000,
+            '46066ADCA3C787BF6874CE3361EECF7A9969D98F12719DF53440172B5A7D345A'
+        );
+        $command->setLastMsid(3);
+        $command->setLastHash('8592795CE4EE7AAEEC7BA0EBCB4E5B83DF0151B009363FECB99EB39B625493
