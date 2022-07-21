@@ -269,4 +269,10 @@ class AdsClientTest extends TestCase
             '46066ADCA3C787BF6874CE3361EECF7A9969D98F12719DF53440172B5A7D345A'
         );
         $command->setLastMsid(3);
-        $command->setLastHash('8592795CE4EE7AAEEC7BA0EBCB4E5B83DF0151B009363FECB99EB39B625493
+        $command->setLastHash('8592795CE4EE7AAEEC7BA0EBCB4E5B83DF0151B009363FECB99EB39B62549343');
+        $response = $client->runTransaction($command);
+        $this->assertNotNull($response->getTx()->getId());
+        $this->assertEquals($this->address, $response->getAccount()->getAddress());
+    }
+
+    public fun
