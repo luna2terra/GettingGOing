@@ -275,4 +275,10 @@ class AdsClientTest extends TestCase
         $this->assertEquals($this->address, $response->getAccount()->getAddress());
     }
 
-    public fun
+    public function testGetTransaction(): void
+    {
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::getTransactionSendOne()));
+        $txid = '0001:00000003:0001';
+        $response = $client->getTransaction($txid);
+
+        $this
