@@ -296,4 +296,9 @@ class AdsClientTest extends TestCase
 
         $response = $client->getMe();
 
-        /** @
+        /** @var ExtendedAccount $account */
+        $account = $response->getAccount();
+
+        $this->assertInstanceOf(ExtendedAccount::class, $account);
+        if ($account instanceof ExtendedAccount) {
+            $this->assertEquals($this->add
