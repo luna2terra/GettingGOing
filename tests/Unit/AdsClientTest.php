@@ -288,4 +288,12 @@ class AdsClientTest extends TestCase
     public function testSetEntityMap(): void
     {
         $entityMap = [
-            'Acc
+            'Account' => 'Adshares\Ads\Tests\Unit\Entity\ExtendedAccount',
+        ];
+
+        $client = $this->createAdsClient(0, $this->stripNewLine(Raw::getAccount()));
+        $client::setEntityMap($entityMap);
+
+        $response = $client->getMe();
+
+        /** @
