@@ -281,4 +281,11 @@ class AdsClientTest extends TestCase
         $txid = '0001:00000003:0001';
         $response = $client->getTransaction($txid);
 
-        $this
+        $this->assertEquals($txid, $response->getNetworkTx()->getId());
+        $this->assertEquals($txid, $response->getTxn()->getId());
+    }
+
+    public function testSetEntityMap(): void
+    {
+        $entityMap = [
+            'Acc
