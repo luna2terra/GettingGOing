@@ -301,4 +301,12 @@ class AdsClientTest extends TestCase
 
         $this->assertInstanceOf(ExtendedAccount::class, $account);
         if ($account instanceof ExtendedAccount) {
-            $this->assertEquals($this->add
+            $this->assertEquals($this->address, $account->getAddress());
+            $this->assertEquals($this->address, $account->getId());
+        }
+    }
+
+    /**
+     * Creates AdsClient with mocked process.
+     *
+     * @param  int          $processExitCode exit code returne
