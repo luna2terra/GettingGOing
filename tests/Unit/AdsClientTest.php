@@ -309,4 +309,10 @@ class AdsClientTest extends TestCase
     /**
      * Creates AdsClient with mocked process.
      *
-     * @param  int          $processExitCode exit code returne
+     * @param  int          $processExitCode exit code returned by process
+     * @param  string|string[] $processOutput   process output
+     * @return AdsClient
+     */
+    private function createAdsClient(int $processExitCode, $processOutput = ''): AdsClient
+    {
+        $proc
