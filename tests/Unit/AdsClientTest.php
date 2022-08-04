@@ -315,4 +315,9 @@ class AdsClientTest extends TestCase
      */
     private function createAdsClient(int $processExitCode, $processOutput = ''): AdsClient
     {
-        $proc
+        $process = $this->createMock(Process::class);
+        $process->method('getExitCode')->willReturn($processExitCode);
+        if (is_array($processOutput)) {
+            $stub = new ConsecutiveCalls($processOutput);
+        } else {
+  
