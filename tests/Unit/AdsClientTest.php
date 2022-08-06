@@ -320,4 +320,9 @@ class AdsClientTest extends TestCase
         if (is_array($processOutput)) {
             $stub = new ConsecutiveCalls($processOutput);
         } else {
-  
+            $stub = $this->onConsecutiveCalls($processOutput);
+        }
+        $process->method('getOutput')->will($stub);
+
+        $driver = $this->getMockBuilder(CliDriver::class)
+            ->setConstructorArgs([$this->addres
