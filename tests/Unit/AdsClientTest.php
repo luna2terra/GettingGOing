@@ -325,4 +325,8 @@ class AdsClientTest extends TestCase
         $process->method('getOutput')->will($stub);
 
         $driver = $this->getMockBuilder(CliDriver::class)
-            ->setConstructorArgs([$this->addres
+            ->setConstructorArgs([$this->address, $this->secret, $this->host, $this->port])
+            ->setMethods(['getProcess'])
+            ->getMock();
+        $driver->method('getProcess')->willReturn($process);
+        /** @var CliDriver
