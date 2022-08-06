@@ -329,4 +329,12 @@ class AdsClientTest extends TestCase
             ->setMethods(['getProcess'])
             ->getMock();
         $driver->method('getProcess')->willReturn($process);
-        /** @var CliDriver
+        /** @var CliDriver $driver */
+        return new AdsClient($driver);
+    }
+
+    private function stripNewLine(string $text): string
+    {
+        return str_replace(["\n", "\r"], '', $text);
+    }
+}
