@@ -31,3 +31,7 @@ class BroadcastCommandTest extends TestCase
     {
         $message = 'abcd';
         $command = new BroadcastCommand($message);
+        $this->assertEquals('broadcast', $command->getName());
+        $this->assertEquals($message, $command->getAttributes()['message']);
+    }
+}
