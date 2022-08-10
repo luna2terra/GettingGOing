@@ -21,4 +21,13 @@
 
 namespace Adshares\Ads\Tests\Unit\Command;
 
-use Adshares\Ads\Com
+use Adshares\Ads\Command\SendManyCommand;
+use Adshares\Ads\Util\AdsConverter;
+use PHPUnit\Framework\TestCase;
+
+class SendManyCommandTest extends TestCase
+{
+    public function testSendManyCommand(): void
+    {
+        $wiresIn = [
+ 
