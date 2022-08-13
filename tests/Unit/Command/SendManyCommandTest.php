@@ -30,4 +30,9 @@ class SendManyCommandTest extends TestCase
     public function testSendManyCommand(): void
     {
         $wiresIn = [
- 
+            '0001-00000000-XXXX' => 100,
+            '0001-00000001-XXXX' => 1,
+        ];
+        $command = new SendManyCommand($wiresIn);
+        $this->assertEquals('send_many', $command->getName());
+    
