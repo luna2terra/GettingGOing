@@ -35,4 +35,9 @@ class SendManyCommandTest extends TestCase
         ];
         $command = new SendManyCommand($wiresIn);
         $this->assertEquals('send_many', $command->getName());
-    
+        /** @var string[] $wiresOut */
+        $wiresOut = $command->getAttributes()['wires'];
+        foreach ($wiresOut as $key => $value) {
+            $wiresOut[$key] = AdsConverter::adsToClicks($value);
+        }
+        $this->a
