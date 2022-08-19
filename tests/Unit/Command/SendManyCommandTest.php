@@ -40,4 +40,6 @@ class SendManyCommandTest extends TestCase
         foreach ($wiresOut as $key => $value) {
             $wiresOut[$key] = AdsConverter::adsToClicks($value);
         }
-        $this->a
+        $this->assertEquals($wiresIn, $wiresOut);
+    }
+}
