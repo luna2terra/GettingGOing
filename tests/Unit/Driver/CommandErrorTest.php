@@ -37,4 +37,11 @@ class CommandErrorTest extends TestCase
         $this->assertEquals(5028, CommandError::getCodeByMessage($errorDescription));
     }
 
-    public fun
+    public function testGetCodeUnknown(): void
+    {
+        $this->assertEquals(5000, CommandError::getCodeByMessage('qwerty12345'));
+    }
+
+    public function testGetMessage(): void
+    {
+        $code = self::ERROR_ID_MA
