@@ -29,4 +29,12 @@ class CommandErrorTest extends TestCase
     /**
      * Id of last defined error.
      */
-    private const ERROR
+    private const ERROR_ID_MAX = 5057;
+
+    public function testGetCode(): void
+    {
+        $errorDescription = 'Can\'t connect to server';
+        $this->assertEquals(5028, CommandError::getCodeByMessage($errorDescription));
+    }
+
+    public fun
