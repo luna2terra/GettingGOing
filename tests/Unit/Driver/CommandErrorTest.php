@@ -44,4 +44,10 @@ class CommandErrorTest extends TestCase
 
     public function testGetMessage(): void
     {
-        $code = self::ERROR_ID_MA
+        $code = self::ERROR_ID_MAX;
+        $this->assertEquals('No new blocks to download', CommandError::getMessageByCode($code));
+    }
+
+    public function testGetMessageUnknown(): void
+    {
+        $this->assertEq
