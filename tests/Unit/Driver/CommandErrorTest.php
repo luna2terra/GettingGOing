@@ -50,4 +50,11 @@ class CommandErrorTest extends TestCase
 
     public function testGetMessageUnknown(): void
     {
-        $this->assertEq
+        $this->assertEquals('Unknown error.', CommandError::getMessageByCode(4999));
+    }
+
+    public function testRandomConversion(): void
+    {
+        for ($i = 1; $i <= 10; $i++) {
+            $code = rand(5000, self::ERROR_ID_MAX);
+            
