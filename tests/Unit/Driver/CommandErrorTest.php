@@ -57,4 +57,7 @@ class CommandErrorTest extends TestCase
     {
         for ($i = 1; $i <= 10; $i++) {
             $code = rand(5000, self::ERROR_ID_MAX);
-            
+            $this->assertEquals($code, CommandError::getCodeByMessage(CommandError::getMessageByCode($code)));
+        }
+    }
+}
