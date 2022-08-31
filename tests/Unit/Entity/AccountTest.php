@@ -27,4 +27,9 @@ use PHPUnit\Framework\TestCase;
 
 class AccountTest extends TestCase
 {
-    public function testCreateFromRow(
+    public function testCreateFromRow(): void
+    {
+        $account = EntityFactory::createAccount($this->getRawData());
+
+        $this->assertEquals('0001-00000000-9B6F', $account->getAddress());
+        $this->assertEquals(1, $account->getNode())
