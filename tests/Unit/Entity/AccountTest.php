@@ -32,4 +32,8 @@ class AccountTest extends TestCase
         $account = EntityFactory::createAccount($this->getRawData());
 
         $this->assertEquals('0001-00000000-9B6F', $account->getAddress());
-        $this->assertEquals(1, $account->getNode())
+        $this->assertEquals(1, $account->getNode());
+        $this->assertEquals('0001', $account->getNodeId());
+        $this->assertEquals(4, $account->getMsid());
+        $this->assertEquals(new DateTime('@1531394984'), $account->getTime());
+        $this->assertEquals('0001-00000003-AB
