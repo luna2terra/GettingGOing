@@ -40,4 +40,6 @@ class AccountTest extends TestCase
         $this->assertEquals(1, $account->getPairedNode());
         $this->assertEquals('0001', $account->getPairedNodeId());
         $this->assertEquals(0, $account->getStatus());
-       
+        $this->assertEquals(new DateTime('@1531394976'), $account->getLocalChange());
+        $this->assertEquals(new DateTime('@1531396672'), $account->getRemoteChange());
+        $this->assertEquals(1999999999743316130, $account->getBal
