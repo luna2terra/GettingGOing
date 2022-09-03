@@ -36,4 +36,8 @@ class AccountTest extends TestCase
         $this->assertEquals('0001', $account->getNodeId());
         $this->assertEquals(4, $account->getMsid());
         $this->assertEquals(new DateTime('@1531394984'), $account->getTime());
-        $this->assertEquals('0001-00000003-AB
+        $this->assertEquals('0001-00000003-AB0C', $account->getPairedAddress());
+        $this->assertEquals(1, $account->getPairedNode());
+        $this->assertEquals('0001', $account->getPairedNodeId());
+        $this->assertEquals(0, $account->getStatus());
+       
