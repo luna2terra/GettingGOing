@@ -65,4 +65,9 @@ class AccountTest extends TestCase
             "time": "1531394984",
             "date": "2018-07-12 11:29:44",
             "status": "0",
-     
+            "paired_node": "1",
+            "paired_id": "3",
+            "paired_address": "0001-00000003-AB0C",
+            "local_change": "1531394976",
+            "remote_change": "1531396672",
+            "balance": "19999999.9974
