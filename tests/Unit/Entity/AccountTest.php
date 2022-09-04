@@ -47,4 +47,13 @@ class AccountTest extends TestCase
             'A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363',
             $account->getPublicKey()
         );
-        $this->assertEquals('811F420FDC7FA662BE1A0B7295C88BAD330
+        $this->assertEquals('811F420FDC7FA662BE1A0B7295C88BAD3307C337129A1A52D9A1598FD8486009', $account->getHash());
+        $this->assertEquals(false, $account->isStatusDeleted());
+    }
+
+    /**
+     * @return string[]
+     */
+    private function getRawData(): array
+    {
+        return 
