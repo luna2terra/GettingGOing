@@ -42,4 +42,9 @@ class AccountTest extends TestCase
         $this->assertEquals(0, $account->getStatus());
         $this->assertEquals(new DateTime('@1531394976'), $account->getLocalChange());
         $this->assertEquals(new DateTime('@1531396672'), $account->getRemoteChange());
-        $this->assertEquals(1999999999743316130, $account->getBal
+        $this->assertEquals(1999999999743316130, $account->getBalance());
+        $this->assertEquals(
+            'A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363',
+            $account->getPublicKey()
+        );
+        $this->assertEquals('811F420FDC7FA662BE1A0B7295C88BAD330
