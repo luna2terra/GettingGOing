@@ -56,4 +56,13 @@ class AccountTest extends TestCase
      */
     private function getRawData(): array
     {
-        return 
+        return json_decode(
+            '{
+            "address": "0001-00000000-9B6F",
+            "node": "1",
+            "id": "0",
+            "msid": "4",
+            "time": "1531394984",
+            "date": "2018-07-12 11:29:44",
+            "status": "0",
+     
