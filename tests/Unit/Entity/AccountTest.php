@@ -70,4 +70,8 @@ class AccountTest extends TestCase
             "paired_address": "0001-00000003-AB0C",
             "local_change": "1531394976",
             "remote_change": "1531396672",
-            "balance": "19999999.9974
+            "balance": "19999999.99743316130",
+            "public_key": "A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363",
+            "hash": "811F420FDC7FA662BE1A0B7295C88BAD3307C337129A1A52D9A1598FD8486009"
+        }',
+       
