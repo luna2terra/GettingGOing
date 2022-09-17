@@ -74,4 +74,7 @@ class AccountTest extends TestCase
             "public_key": "A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363",
             "hash": "811F420FDC7FA662BE1A0B7295C88BAD3307C337129A1A52D9A1598FD8486009"
         }',
-       
+            true
+        );
+    }
+}
