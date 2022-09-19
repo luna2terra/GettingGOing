@@ -34,4 +34,7 @@ class BlockTest extends TestCase
 
         $this->assertEquals(12300000000, $block->getDividendBalance());
         $this->assertEquals(true, $block->isDividendPay());
-        $this->assertEquals('5B3A1E80', $block->getI
+        $this->assertEquals('5B3A1E80', $block->getId());
+        $this->assertEquals(27, $block->getMessageCount());
+        $this->assertEquals('41FB7933B8BE623E0D8C087E0AAC91F56999AB892ED1DC9B1DCB39D057427639', $block->getMinHash());
+        $this->assert
