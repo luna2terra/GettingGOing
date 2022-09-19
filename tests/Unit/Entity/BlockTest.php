@@ -30,4 +30,8 @@ class BlockTest extends TestCase
 {
     public function testCreateFromRow(): void
     {
-        $block = EntityFactory::createBl
+        $block = EntityFactory::createBlock($this->getRawData());
+
+        $this->assertEquals(12300000000, $block->getDividendBalance());
+        $this->assertEquals(true, $block->isDividendPay());
+        $this->assertEquals('5B3A1E80', $block->getI
