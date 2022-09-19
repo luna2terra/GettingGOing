@@ -21,4 +21,13 @@
 
 namespace Adshares\Ads\Tests\Unit\Entity;
 
-use Adshares\Ads\Entity\Ent
+use Adshares\Ads\Entity\EntityFactory;
+use Adshares\Ads\Entity\Node;
+use DateTime;
+use PHPUnit\Framework\TestCase;
+
+class BlockTest extends TestCase
+{
+    public function testCreateFromRow(): void
+    {
+        $block = EntityFactory::createBl
