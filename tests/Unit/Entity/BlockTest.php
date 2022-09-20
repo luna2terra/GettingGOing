@@ -37,4 +37,6 @@ class BlockTest extends TestCase
         $this->assertEquals('5B3A1E80', $block->getId());
         $this->assertEquals(27, $block->getMessageCount());
         $this->assertEquals('41FB7933B8BE623E0D8C087E0AAC91F56999AB892ED1DC9B1DCB39D057427639', $block->getMinHash());
-        $this->assert
+        $this->assertEquals('F41152F6FDB5C50697B1BCF8562F35848C7D679CAC8A69883341FF55040B684B', $block->getMsgHash());
+        $this->assertEquals(2, $block->getNodeCount());
+        $this->assertEquals('DEE608AFF65371FD14AC7118528BAAAF620931B2B261E5964C632B908D1C57EA', $blo
