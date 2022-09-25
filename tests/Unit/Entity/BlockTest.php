@@ -41,4 +41,6 @@ class BlockTest extends TestCase
         $this->assertEquals(2, $block->getNodeCount());
         $this->assertEquals('DEE608AFF65371FD14AC7118528BAAAF620931B2B261E5964C632B908D1C57EA', $block->getNodHash());
         $this->assertEquals('DDD2F343184A8BFF7FC9DE1704B9956D89B0573D7C27FE1F55D9646470B8B12C', $block->getNowHash());
-        $this->assertEquals('91655C4B8EA51E66E81F079A8C520EBB9097
+        $this->assertEquals('91655C4B8EA51E66E81F079A8C520EBB9097A44D74EEFC310C79BEDABC4204EF', $block->getOldHash());
+        $this->assertEquals(new DateTime('@1530535552'), $block->getTime());
+        $this->assertEquals('23A7002738367EC99A7BD2988720FF0824
