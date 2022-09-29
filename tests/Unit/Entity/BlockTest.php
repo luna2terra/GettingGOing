@@ -47,3 +47,13 @@ class BlockTest extends TestCase
         $this->assertEquals(1, $block->getVoteNo());
         $this->assertEquals(7, $block->getVoteTotal());
         $this->assertEquals(3, $block->getVoteYes());
+
+
+        $nodes = $block->getNodes();
+        $this->assertCount(2, $nodes);
+        $node = $nodes[0];
+        $this->assertInstanceOf(Node::class, $node);
+        $this->assertEquals('0000', $node->getId());
+    }
+
+   
