@@ -64,4 +64,7 @@ class BlockTest extends TestCase
         return json_decode(
             '{
             "id": "5B3A1E80",
-            "t
+            "time": "1530535552",
+            "message_count": "27",
+            "oldhash": "91655C4B8EA51E66E81F079A8C520EBB9097A44D74EEFC310C79BEDABC4204EF",
+            "minhash": "41FB7933B8BE623E0D8C087E0AAC91F56999AB892ED1DC
