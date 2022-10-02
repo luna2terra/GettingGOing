@@ -56,4 +56,12 @@ class BlockTest extends TestCase
         $this->assertEquals('0000', $node->getId());
     }
 
-   
+    /**
+     * @return array<string, array<int|string, array<int|string, string>|string>|string>
+     */
+    private function getRawData(): array
+    {
+        return json_decode(
+            '{
+            "id": "5B3A1E80",
+            "t
