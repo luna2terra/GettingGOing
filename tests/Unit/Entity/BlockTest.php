@@ -74,4 +74,11 @@ class BlockTest extends TestCase
             "nowhash": "DDD2F343184A8BFF7FC9DE1704B9956D89B0573D7C27FE1F55D9646470B8B12C",
             "vote_yes": "3",
             "vote_no": "1",
-            "vote_t
+            "vote_total": "7",
+            "node_count": "2",
+            "dividend_balance": "0.12300000000",
+            "dividend_pay": "true",
+            "nodes": [
+                {
+                    "id": "0000",
+                   
