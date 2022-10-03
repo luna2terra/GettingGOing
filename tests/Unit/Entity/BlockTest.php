@@ -88,4 +88,9 @@ class BlockTest extends TestCase
                     "mtim": "1530535488",
                     "balance": "0.00000000000",
                     "status": "0",
-                    "account_count
+                    "account_count": "0",
+                    "port": "0",
+                    "ipv4": "0.0.0.0"
+                }, {
+                    "id": "0001",
+                    "public_key": "73A5C92FA5142599B1C9863B43E026AFEFA6B57AEE8
