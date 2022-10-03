@@ -83,4 +83,9 @@ class BlockTest extends TestCase
                     "id": "0000",
                     "public_key": "0000000000000000000000000000000000000000000000000000000000000000",
                     "hash": "0000000000000000000000000000000000000000000000000000000000000000",
-                    "message_hash": "D18D1A21A546508BE4F2B5EF6F51
+                    "message_hash": "D18D1A21A546508BE4F2B5EF6F51981D7D2B55E46EE2EF1DE6911F8E9B2AD84D",
+                    "msid": "0",
+                    "mtim": "1530535488",
+                    "balance": "0.00000000000",
+                    "status": "0",
+                    "account_count
