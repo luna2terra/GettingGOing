@@ -101,4 +101,12 @@ class BlockTest extends TestCase
                     "balance": "2541521.69691701433",
                     "status": "6",
                     "account_count": "20",
-     
+                    "port": "8001",
+                    "ipv4": "172.16.222.101"
+                }
+            ]
+        }',
+            true
+        );
+    }
+}
