@@ -95,4 +95,10 @@ class BlockTest extends TestCase
                     "id": "0001",
                     "public_key": "73A5C92FA5142599B1C9863B43E026AFEFA6B57AEE8D189241C7F50C90BA5122",
                     "hash": "B1C1E0BF92C7C398BD885269F6912EFC22810477065E8C5BF6B5AC8DC05FEC1F",
-                    "message_hash": "14AC6CA024A5FBF06251554849BD9B9521B348A63DBEAE57E59DC4C85E00
+                    "message_hash": "14AC6CA024A5FBF06251554849BD9B9521B348A63DBEAE57E59DC4C85E00B64A",
+                    "msid": "8",
+                    "mtim": "1530535574",
+                    "balance": "2541521.69691701433",
+                    "status": "6",
+                    "account_count": "20",
+     
