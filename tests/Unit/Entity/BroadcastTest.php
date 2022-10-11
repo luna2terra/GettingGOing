@@ -27,4 +27,10 @@ use PHPUnit\Framework\TestCase;
 
 class BroadcastTest extends TestCase
 {
-  
+    public function testCreateFromRow(): void
+    {
+        $broadcast = EntityFactory::createBroadcast($this->getRawData());
+
+        $blockTime = new DateTime();
+        $blockTime->setTimestamp(1532100320);
+        $this->ass
