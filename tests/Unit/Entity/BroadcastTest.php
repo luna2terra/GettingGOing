@@ -37,3 +37,8 @@ class BroadcastTest extends TestCase
         $this->assertEquals('0001-00000000-9B6F', $broadcast->getAddress());
         $this->assertEquals(1, $broadcast->getAccountMsid());
         $this->assertEquals(1, $broadcast->getNode());
+        $this->assertEquals('0001', $broadcast->getNodeId());
+        $time = new DateTime();
+        $time->setTimestamp(1532100323);
+        $this->assertEquals($time, $broadcast->getTime());
+       
