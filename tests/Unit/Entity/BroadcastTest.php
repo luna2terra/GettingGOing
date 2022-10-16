@@ -41,4 +41,7 @@ class BroadcastTest extends TestCase
         $time = new DateTime();
         $time->setTimestamp(1532100323);
         $this->assertEquals($time, $broadcast->getTime());
-       
+        $this->assertEquals('0301000000000001000000E3FE515B0100', $broadcast->getData());
+        $this->assertEquals('FE', $broadcast->getMessage());
+        $this->assertEquals(
+            '1FB7A83994767C48F19EBB00946A3E9
