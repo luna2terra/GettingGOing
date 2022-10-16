@@ -44,4 +44,9 @@ class BroadcastTest extends TestCase
         $this->assertEquals('0301000000000001000000E3FE515B0100', $broadcast->getData());
         $this->assertEquals('FE', $broadcast->getMessage());
         $this->assertEquals(
-            '1FB7A83994767C48F19EBB00946A3E9
+            '1FB7A83994767C48F19EBB00946A3E96883FC4E7BE5F2AED3A0111F04FA58CC3'
+            . '4D14D3CD93AA4F5EFCCC86D3C14A222989263B40D5F3BB3A6DA858818497BE00',
+            $broadcast->getSignature()
+        );
+        $this->assertEquals(
+            'CD3CC372397CFE1
