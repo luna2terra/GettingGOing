@@ -49,4 +49,9 @@ class BroadcastTest extends TestCase
             $broadcast->getSignature()
         );
         $this->assertEquals(
-            'CD3CC372397CFE1
+            'CD3CC372397CFE14F62BF0CD3300DD3C18360A10846E1CBF28E53E6D01C0FCBB',
+            $broadcast->getInputHash()
+        );
+        $this->assertEquals(
+            'A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363',
+          
