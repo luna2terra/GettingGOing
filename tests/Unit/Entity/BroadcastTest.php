@@ -58,4 +58,12 @@ class BroadcastTest extends TestCase
         );
         $this->assertEquals(true, $broadcast->isVerificationPassed());
         $this->assertEquals(3, $broadcast->getNodeMsid());
-        $this->assertEquals(2, $broadcast->getNodeMpos
+        $this->assertEquals(2, $broadcast->getNodeMpos());
+        $this->assertEquals('0001:00000003:0002', $broadcast->getId());
+        $this->assertEquals(10000, $broadcast->getFee());
+    }
+
+    /**
+     * @return string[]
+     */
+    private function getRawData(): arra
