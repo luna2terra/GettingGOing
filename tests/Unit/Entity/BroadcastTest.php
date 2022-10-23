@@ -74,4 +74,10 @@ class BroadcastTest extends TestCase
             "block_date": "2018-07-20 17:25:20",
             "node": "1",
             "account": "0",
-            "address": "
+            "address": "0001-00000000-9B6F",
+            "account_msid": "1",
+            "time": "1532100323",
+            "date": "2018-07-20 17:25:23",
+            "data": "0301000000000001000000E3FE515B0100",
+            "message": "FE",
+       
