@@ -54,4 +54,8 @@ class BroadcastTest extends TestCase
         );
         $this->assertEquals(
             'A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363',
-          
+            $broadcast->getPublicKey()
+        );
+        $this->assertEquals(true, $broadcast->isVerificationPassed());
+        $this->assertEquals(3, $broadcast->getNodeMsid());
+        $this->assertEquals(2, $broadcast->getNodeMpos
