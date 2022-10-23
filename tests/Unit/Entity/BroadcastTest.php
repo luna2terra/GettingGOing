@@ -66,4 +66,12 @@ class BroadcastTest extends TestCase
     /**
      * @return string[]
      */
-    private function getRawData(): arra
+    private function getRawData(): array
+    {
+        return json_decode(
+            '{
+            "block_time": "1532100320",
+            "block_date": "2018-07-20 17:25:20",
+            "node": "1",
+            "account": "0",
+            "address": "
