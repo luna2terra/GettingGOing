@@ -87,3 +87,10 @@ class BroadcastTest extends TestCase
             "verify": "passed",
             "node_msid": "3",
             "node_mpos": "2",
+            "id": "0001:00000003:0002",
+            "fee": "0.00000010000"
+        }',
+            true
+        );
+    }
+}
