@@ -16,4 +16,13 @@
  * See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ADS PHP Client. If not,
+ * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
+ */
+
+namespace Adshares\Ads\Tests\Unit\Entity;
+
+use Adshares\Ads\Entity\EntityFactory;
+use Adshares\Ads\Exception\AdsException;
+use PHPUnit\Framework\TestCase;
+
+class EntityFact
