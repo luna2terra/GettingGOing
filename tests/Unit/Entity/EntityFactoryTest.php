@@ -32,4 +32,11 @@ class EntityFactoryTest extends TestCase
         $entityMap = [
             'NonExistent' => 'Adshares\Ads\Tests\Unit\Entity\NonExistent',
         ];
-        $this->expectExce
+        $this->expectException(AdsException::class);
+        EntityFactory::setEntityMap($entityMap);
+    }
+
+    public function testCreateException(): void
+    {
+        $this->expectException(AdsException::class);
+        EntityFactory::crea
