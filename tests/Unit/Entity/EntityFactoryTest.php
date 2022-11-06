@@ -25,4 +25,11 @@ use Adshares\Ads\Entity\EntityFactory;
 use Adshares\Ads\Exception\AdsException;
 use PHPUnit\Framework\TestCase;
 
-class EntityFact
+class EntityFactoryTest extends TestCase
+{
+    public function testSetEntityMapException(): void
+    {
+        $entityMap = [
+            'NonExistent' => 'Adshares\Ads\Tests\Unit\Entity\NonExistent',
+        ];
+        $this->expectExce
