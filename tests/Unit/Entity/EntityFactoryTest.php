@@ -39,4 +39,12 @@ class EntityFactoryTest extends TestCase
     public function testCreateException(): void
     {
         $this->expectException(AdsException::class);
-        EntityFactory::crea
+        EntityFactory::create('NonExistent');
+    }
+
+    public function testCreateTransactionException(): void
+    {
+        $this->expectException(AdsException::class);
+        EntityFactory::createTransaction(['type' => 'NonExistent']);
+    }
+}
