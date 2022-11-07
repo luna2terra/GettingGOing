@@ -16,4 +16,14 @@
  * See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with ADS PHP Client. If 
+ * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
+ */
+
+namespace Adshares\Ads\Tests\Unit\Entity;
+
+use Adshares\Ads\Entity\Account;
+
+/**
+ * Class ExtendedAccount is extended from Account to perform AdsClient.testSetEntityMap() test.
+ *
+ * @pa
