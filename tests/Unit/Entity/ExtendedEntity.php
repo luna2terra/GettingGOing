@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -21,20 +22,28 @@
 
 namespace Adshares\Ads\Tests\Unit\Entity;
 
-use Adshares\Ads\Entity\Account;
+use Adshares\Ads\Entity\AbstractEntity;
+use DateTimeInterface;
 
 /**
- * Class ExtendedAccount is extended from Account to perform AdsClient.testSetEntityMap() test.
+ * Class ExtendedEntity is extended from AbstractEntity to perform  test.
  *
  * @package Adshares\Ads\Tests\Unit\Entity
  */
-class ExtendedAccount extends Account
+class ExtendedEntity extends AbstractEntity
 {
     /**
-     * @return string Account address
+     * @var float
      */
-    public function getId(): string
-    {
-        return $this->getAddress();
-    }
+    public $floatVal;
+
+    /**
+     * @var DateTimeInterface
+     */
+    public $date;
+
+    /**
+     * @var mixed
+     */
+    public $textVal;
 }
