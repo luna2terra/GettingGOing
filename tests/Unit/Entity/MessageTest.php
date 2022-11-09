@@ -24,3 +24,12 @@ namespace Adshares\Ads\Tests\Unit\Entity;
 use Adshares\Ads\Entity\EntityFactory;
 use DateTime;
 use PHPUnit\Framework\TestCase;
+
+class MessageTest extends TestCase
+{
+    public function testCreateFromRow(): void
+    {
+        $message = EntityFactory::createMessage($this->getRawData());
+
+        $this->assertEquals('5B4F1D60', $message->getBlockId());
+        
