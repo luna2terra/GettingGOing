@@ -40,4 +40,14 @@ class MessageTest extends TestCase
         $this->assertEquals(85, $message->getLength());
         $this->assertEquals(
             '0A5D977BB5B6998E65CA04F180C9837E8CA418E5B8DD1BB29EBFD9BB6B86812F',
-          
+            $message->getHash()
+        );
+    }
+
+    /**
+     * @return array<string, array<int|string, array<int|string, string>|string>|string>
+     */
+    private function getRawData(): array
+    {
+        return json_decode(
+            
