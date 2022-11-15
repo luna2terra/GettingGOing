@@ -60,4 +60,9 @@ class MessageTest extends TestCase
                 "time": "1531912192"
             },
             "block_id": "5B4F1D60",
-      
+            "message_id": "0002:00000449",
+            "node": "2",
+            "node_msid": "1097",
+            "time": "1531911542",
+            "length": "85",
+            "hash": "0A5D977BB5B6998E65CA04F180C9837E8CA
