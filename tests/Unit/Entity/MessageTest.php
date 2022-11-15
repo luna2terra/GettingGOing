@@ -55,4 +55,9 @@ class MessageTest extends TestCase
             "previous_block_time": "1531912160",
             "tx": {
                 "data": "1A01000000000000204F5B00000000020049040000",
-                "signature": "31DE145B54
+                "signature": "31DE145B54D5E1465143CAD0448F94EF4AAEFD3B117A41FDC905F085F953BDC4'
+            . '0EB396A89D4FFF4FC08588C71DA3219F399BD1E286C335218371CC90C25AAA0E",
+                "time": "1531912192"
+            },
+            "block_id": "5B4F1D60",
+      
