@@ -50,4 +50,9 @@ class MessageTest extends TestCase
     private function getRawData(): array
     {
         return json_decode(
-            
+            '{
+            "current_block_time": "1531912192",
+            "previous_block_time": "1531912160",
+            "tx": {
+                "data": "1A01000000000000204F5B00000000020049040000",
+                "signature": "31DE145B54
