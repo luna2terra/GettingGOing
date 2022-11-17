@@ -65,4 +65,10 @@ class MessageTest extends TestCase
             "node_msid": "1097",
             "time": "1531911542",
             "length": "85",
-            "hash": "0A5D977BB5B6998E65CA04F180C9837E8CA
+            "hash": "0A5D977BB5B6998E65CA04F180C9837E8CA418E5B8DD1BB29EBFD9BB6B86812F",
+            "transactions": [
+                {
+                    "id": "0002:00000449:0001",
+                    "type": "connection",
+                    "port": "8002",
+                  
