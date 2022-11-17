@@ -71,4 +71,12 @@ class MessageTest extends TestCase
                     "id": "0002:00000449:0001",
                     "type": "connection",
                     "port": "8002",
-                  
+                    "ip_address": "10.69.3.43",
+                    "size": "7"
+                }
+            ]
+        }',
+            true
+        );
+    }
+}
