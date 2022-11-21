@@ -17,3 +17,14 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
+ */
+
+namespace Adshares\Ads\Tests\Unit\Entity;
+
+use Adshares\Ads\Entity\EntityFactory;
+use DateTime;
+use PHPUnit\Framework\TestCase;
+
+class NetworkTxTest extends TestCase
+{
+    public function testCreateFromRow(): void
