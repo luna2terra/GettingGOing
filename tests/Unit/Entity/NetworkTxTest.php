@@ -28,3 +28,9 @@ use PHPUnit\Framework\TestCase;
 class NetworkTxTest extends TestCase
 {
     public function testCreateFromRow(): void
+    {
+        $netTx = EntityFactory::createNetworkTx($this->getRawData());
+
+        $this->assertEquals('0001:0000000B:0001', $netTx->getId());
+        $this->assertEquals('AABBCCDD', $netTx->getBlockId());
+        $blockTime = n
