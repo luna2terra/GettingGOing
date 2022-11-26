@@ -33,4 +33,8 @@ class NetworkTxTest extends TestCase
 
         $this->assertEquals('0001:0000000B:0001', $netTx->getId());
         $this->assertEquals('AABBCCDD', $netTx->getBlockId());
-        $blockTime = n
+        $blockTime = new DateTime();
+        $blockTime->setTimestamp(1531495616);
+        $this->assertEquals($blockTime, $netTx->getBlockTime());
+        $this->assertEquals('1', $netTx->getNode());
+        $this->assertEquals('0001', $net
