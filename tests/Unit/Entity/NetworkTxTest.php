@@ -41,4 +41,7 @@ class NetworkTxTest extends TestCase
         $this->assertEquals(11, $netTx->getNodeMsid());
         $this->assertEquals(1, $netTx->getNodeMpos());
         $this->assertEquals(85, $netTx->getSize());
-        $this->assertEquals(7, $ne
+        $this->assertEquals(7, $netTx->getHashpathSize());
+        $this->assertEquals(
+            '0801000000000002000000BBC4485B020001000000D5FE451B11A7C42A8E322F40315FA52482A0314A15C5183753019'
+            . '946C404FFA088D6300E6D11B9F5B2E39C07D074CE763E3263331B
