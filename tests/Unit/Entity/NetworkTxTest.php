@@ -52,4 +52,14 @@ class NetworkTxTest extends TestCase
         $this->assertCount(7, $hashPath);
         foreach ($hashPath as $hash) {
             $this->assertIsString($hash);
-    
+        }
+    }
+
+    /**
+     * @return array<int|string, array<int|string, string>|string>
+     */
+    private function getRawData(): array
+    {
+        return json_decode(
+            '{
+        "id": "0001:0000000B:000
