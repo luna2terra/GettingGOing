@@ -62,4 +62,12 @@ class NetworkTxTest extends TestCase
     {
         return json_decode(
             '{
-        "id": "0001:0000000B:000
+        "id": "0001:0000000B:0001",
+        "block_time": "1531495616",
+        "block_id": "AABBCCDD",
+        "node": "1",
+        "node_msid": "11",
+        "node_mpos": "1",
+        "size": "85",
+        "hashpath_size": "7",
+        "data": "0801000000000002000000BBC
