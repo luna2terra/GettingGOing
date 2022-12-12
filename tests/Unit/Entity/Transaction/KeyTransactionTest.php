@@ -31,4 +31,8 @@ class KeyTransactionTest extends TestCase
     public function testAccountCreatedFromRaw(): void
     {
         /** @var KeyTransaction $transaction */
-        $transaction = EntityFactory::cr
+        $transaction = EntityFactory::createTransaction($this->getRawAccountCreated());
+
+        $this->assertEquals('0002:0000000A:0001', $transaction->getId());
+        $this->assertEquals('account_created', $transaction->getType());
+        $this->assertEqua
