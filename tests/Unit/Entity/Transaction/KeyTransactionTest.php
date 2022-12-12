@@ -24,4 +24,11 @@ namespace Adshares\Ads\Tests\Unit\Entity\Transaction;
 use Adshares\Ads\Entity\EntityFactory;
 use Adshares\Ads\Entity\Transaction\KeyTransaction;
 use DateTime;
-use PHPUnit
+use PHPUnit\Framework\TestCase;
+
+class KeyTransactionTest extends TestCase
+{
+    public function testAccountCreatedFromRaw(): void
+    {
+        /** @var KeyTransaction $transaction */
+        $transaction = EntityFactory::cr
