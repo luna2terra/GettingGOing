@@ -35,4 +35,7 @@ class KeyTransactionTest extends TestCase
 
         $this->assertEquals('0002:0000000A:0001', $transaction->getId());
         $this->assertEquals('account_created', $transaction->getType());
-        $this->assertEqua
+        $this->assertEquals(2, $transaction->getNode());
+        $this->assertEquals(2, $transaction->getUser());
+        $this->assertEquals(0, $transaction->getMsgId());
+        $this->assertEquals('0002-00000002-55FF', $transaction-
