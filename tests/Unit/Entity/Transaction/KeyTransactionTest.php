@@ -38,4 +38,8 @@ class KeyTransactionTest extends TestCase
         $this->assertEquals(2, $transaction->getNode());
         $this->assertEquals(2, $transaction->getUser());
         $this->assertEquals(0, $transaction->getMsgId());
-        $this->assertEquals('0002-00000002-55FF', $transaction-
+        $this->assertEquals('0002-00000002-55FF', $transaction->getSenderAddress());
+        $date = new DateTime();
+        $date->setTimestamp(1531493862);
+        $this->assertEquals($date, $transaction->getTime());
+        $this->assertEquals('0001-00000000-9B6F', $transact
