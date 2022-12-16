@@ -45,4 +45,9 @@ class KeyTransactionTest extends TestCase
         $this->assertEquals('0001-00000000-9B6F', $transaction->getTargetAddress());
         $this->assertEquals(1, $transaction->getTargetNode());
         $this->assertEquals('0001', $transaction->getTargetNodeId());
-        $this->assertEquals(0, $transaction->getTargetUser(
+        $this->assertEquals(0, $transaction->getTargetUser());
+        $this->assertEquals(
+            'A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363',
+            $transaction->getPublicKey()
+        );
+        $this->assertEquals(53, $transaction->getSi
