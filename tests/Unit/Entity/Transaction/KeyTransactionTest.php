@@ -50,4 +50,10 @@ class KeyTransactionTest extends TestCase
             'A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363',
             $transaction->getPublicKey()
         );
-        $this->assertEquals(53, $transaction->getSi
+        $this->assertEquals(53, $transaction->getSize());
+    }
+
+    public function testChangeAccountKeyFromRaw(): void
+    {
+        /** @var KeyTransaction $transaction */
+        $transaction = EntityFactory::createTransaction($this->getRawCha
