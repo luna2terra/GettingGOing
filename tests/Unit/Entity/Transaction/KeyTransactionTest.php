@@ -56,4 +56,8 @@ class KeyTransactionTest extends TestCase
     public function testChangeAccountKeyFromRaw(): void
     {
         /** @var KeyTransaction $transaction */
-        $transaction = EntityFactory::createTransaction($this->getRawCha
+        $transaction = EntityFactory::createTransaction($this->getRawChangeAccountKey());
+
+        $this->assertEquals('0001:00000009:0001', $transaction->getId());
+        $this->assertEquals('change_account_key', $transaction->getType());
+        $this->assertEquals(1, $transaction->getNode
