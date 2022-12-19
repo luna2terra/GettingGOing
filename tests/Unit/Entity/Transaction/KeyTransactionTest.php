@@ -68,4 +68,9 @@ class KeyTransactionTest extends TestCase
         $date->setTimestamp(1531498103);
         $this->assertEquals($date, $transaction->getTime());
         $this->assertNull($transaction->getTargetAddress());
-        $this->assertNull($transaction->getTa
+        $this->assertNull($transaction->getTargetNode());
+        $this->assertNull($transaction->getTargetNodeId());
+        $this->assertEquals(
+            'EAE1C8793B5597C4B3F490E76AC31172C439690F8EE14142BB851A61F9A49F0E',
+            $transaction->getPublicKey()
+        )
