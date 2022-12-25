@@ -77,4 +77,9 @@ class KeyTransactionTest extends TestCase
         $this->assertEquals(
             '01411FAC10DE65000000008100000000000000B04EEF0100000000B04EEF0100'
             . '000000200000000000000020000000000000000000000000000000626C6F636B',
-            $transaction->getPublicKeySign
+            $transaction->getPublicKeySignature()
+        );
+        $this->assertEquals(
+            '65870B267C50ABE43A63FE7294768C400DB050D455BCEC3E44C64B07F0F18392'
+            . '348E7614A088DCC21327BC0A0F009A6A12CCFC070297E8E035C2DA9DA9449303',
+            
