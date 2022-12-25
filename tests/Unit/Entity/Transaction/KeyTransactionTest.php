@@ -82,4 +82,12 @@ class KeyTransactionTest extends TestCase
         $this->assertEquals(
             '65870B267C50ABE43A63FE7294768C400DB050D455BCEC3E44C64B07F0F18392'
             . '348E7614A088DCC21327BC0A0F009A6A12CCFC070297E8E035C2DA9DA9449303',
-            
+            $transaction->getSignature()
+        );
+        $this->assertEquals(111, $transaction->getSize());
+    }
+
+    public function testChangeNodeKeyFromRaw(): void
+    {
+        /** @var KeyTransaction $transaction */
+        $transaction = EntityFactory::cre
