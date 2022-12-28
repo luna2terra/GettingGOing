@@ -90,4 +90,8 @@ class KeyTransactionTest extends TestCase
     public function testChangeNodeKeyFromRaw(): void
     {
         /** @var KeyTransaction $transaction */
-        $transaction = EntityFactory::cre
+        $transaction = EntityFactory::createTransaction($this->getRawChangeNodeKey());
+
+        $this->assertEquals('0001:00000003:0001', $transaction->getId());
+        $this->assertEquals('change_node_key', $transaction->getType());
+        $
