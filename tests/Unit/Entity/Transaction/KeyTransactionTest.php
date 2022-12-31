@@ -109,4 +109,9 @@ class KeyTransactionTest extends TestCase
             $transaction->getOldPublicKey()
         );
         $this->assertEquals(
-            'EAE1C8793B5597C4B3F490E76AC31172C439690F8EE14142BB
+            'EAE1C8793B5597C4B3F490E76AC31172C439690F8EE14142BB851A61F9A49F0E',
+            $transaction->getNewPublicKey()
+        );
+        $this->assertEquals(
+            '005451A44896768C5F39713DA0622EF721682E14497E3E0220672D6C489B02FF'
+            . 'B177FB13DF74BD870107EBFBAE9F6B
