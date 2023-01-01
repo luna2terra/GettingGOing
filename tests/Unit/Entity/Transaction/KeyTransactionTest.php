@@ -145,4 +145,14 @@ class KeyTransactionTest extends TestCase
     /**
      * @return string[]
      */
-  
+    private function getRawChangeAccountKey(): array
+    {
+        return json_decode(
+            '{
+			"id": "0001:00000009:0001",
+			"type": "change_account_key",
+			"node": "1",
+			"user": "0",
+			"msg_id": "5",
+			"time": "1531498103",
+		
