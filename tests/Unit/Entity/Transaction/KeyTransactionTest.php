@@ -123,4 +123,14 @@ class KeyTransactionTest extends TestCase
     /**
      * @return string[]
      */
-    private function getRawAccountCreated():
+    private function getRawAccountCreated(): array
+    {
+        return json_decode(
+            '{
+			"id": "0002:0000000A:0001",
+			"type": "account_created",
+			"node": "2",
+			"user": "2",
+			"msg_id": "0",
+			"time": "1531493862",
+			"target_node"
