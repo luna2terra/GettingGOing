@@ -114,4 +114,13 @@ class KeyTransactionTest extends TestCase
         );
         $this->assertEquals(
             '005451A44896768C5F39713DA0622EF721682E14497E3E0220672D6C489B02FF'
-            . 'B177FB13DF74BD870107EBFBAE9F6B
+            . 'B177FB13DF74BD870107EBFBAE9F6BA155AD4B57F4372463F97120EE35CD2007',
+            $transaction->getSignature()
+        );
+        $this->assertEquals(145, $transaction->getSize());
+    }
+
+    /**
+     * @return string[]
+     */
+    private function getRawAccountCreated():
