@@ -133,4 +133,16 @@ class KeyTransactionTest extends TestCase
 			"user": "2",
 			"msg_id": "0",
 			"time": "1531493862",
-			"target_node"
+			"target_node": "1",
+			"target_user": "0",
+			"public_key": "A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363",
+			"size": "53"
+		}',
+            true
+        );
+    }
+
+    /**
+     * @return string[]
+     */
+  
