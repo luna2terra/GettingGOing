@@ -160,4 +160,17 @@ class KeyTransactionTest extends TestCase
             . '000000200000000000000020000000000000000000000000000000626C6F636B",
 			"signature": "65870B267C50ABE43A63FE7294768C400DB050D455BCEC3E44C64B07F0F18392'
             . '348E7614A088DCC21327BC0A0F009A6A12CCFC070297E8E035C2DA9DA9449303",
-			"s
+			"size": "111"
+		}',
+            true
+        );
+    }
+
+    /**
+     * @return string[]
+     */
+    private function getRawChangeNodeKey(): array
+    {
+        return json_decode(
+            '{
+			"id": "
