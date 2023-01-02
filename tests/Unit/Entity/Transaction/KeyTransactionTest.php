@@ -155,4 +155,6 @@ class KeyTransactionTest extends TestCase
 			"user": "0",
 			"msg_id": "5",
 			"time": "1531498103",
-		
+			"public_key": "EAE1C8793B5597C4B3F490E76AC31172C439690F8EE14142BB851A61F9A49F0E",
+			"public_key_signature": "01411FAC10DE65000000008100000000000000B04EEF0100000000B04EEF0100'
+            . '0000002
