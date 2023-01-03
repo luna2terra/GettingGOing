@@ -173,4 +173,11 @@ class KeyTransactionTest extends TestCase
     {
         return json_decode(
             '{
-			"id": "
+			"id": "0001:00000003:0001",
+			"type": "change_node_key",
+			"node": "1",
+			"user": "0",
+			"msg_id": "1",
+			"time": "1531495004",
+			"target_node": "0",
+			"old_public_key": "73A5C92FA5142599B1C9863
