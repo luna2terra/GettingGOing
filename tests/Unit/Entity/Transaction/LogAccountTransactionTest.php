@@ -103,3 +103,16 @@ class LogAccountTransactionTest extends TestCase
 				"status": "0",
 				"paired_node": "2",
 				"paired_id": "1",
+				"local_change": "1531496192",
+				"remote_change": "1531496384",
+				"balance": "699999.99980000000",
+				"public_key": "A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363",
+				"hash": "68E046D32C6959447B1284A9F51CFACE9CE587446F698039D93FFB1FF1927080",
+				"checksum": "true"
+			},
+			"size": "207"
+		}',
+            true
+        );
+    }
+}
