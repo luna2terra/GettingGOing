@@ -31,4 +31,8 @@ class NetworkTransactionTest extends TestCase
     public function testCreateAccountFromRaw(): void
     {
         /** @var NetworkTransaction $transaction */
-        $transactio
+        $transaction = EntityFactory::createTransaction($this->getRawCreateAccount());
+
+        $this->assertEquals('0001:0000000E:0001', $transaction->getId());
+        $this->assertEquals('create_account', $transaction->getType());
+        $this->assertEquals(1
