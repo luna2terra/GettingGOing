@@ -23,4 +23,12 @@ namespace Adshares\Ads\Tests\Unit\Entity\Transaction;
 
 use Adshares\Ads\Entity\EntityFactory;
 use Adshares\Ads\Entity\Transaction\NetworkTransaction;
-us
+use DateTime;
+use PHPUnit\Framework\TestCase;
+
+class NetworkTransactionTest extends TestCase
+{
+    public function testCreateAccountFromRaw(): void
+    {
+        /** @var NetworkTransaction $transaction */
+        $transactio
