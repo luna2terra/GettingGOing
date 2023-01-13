@@ -35,4 +35,8 @@ class NetworkTransactionTest extends TestCase
 
         $this->assertEquals('0001:0000000E:0001', $transaction->getId());
         $this->assertEquals('create_account', $transaction->getType());
-        $this->assertEquals(1
+        $this->assertEquals(1, $transaction->getNode());
+        $this->assertEquals(0, $transaction->getUser());
+        $this->assertEquals(976, $transaction->getMsgId());
+        $this->assertEquals('0001-00000000-9B6F', $transaction->getSenderAddress());
+     
