@@ -58,4 +58,7 @@ class NetworkTransactionTest extends TestCase
         /** @var NetworkTransaction $transaction */
         $transaction = EntityFactory::createTransaction($this->getRawCreateNode());
 
-        $this->assertEquals('0001:00000009:00
+        $this->assertEquals('0001:00000009:0001', $transaction->getId());
+        $this->assertEquals('create_node', $transaction->getType());
+        $this->assertEquals(1, $transaction->getNode());
+        $this->assertEquals(0, $transaction->getUser
