@@ -61,4 +61,9 @@ class NetworkTransactionTest extends TestCase
         $this->assertEquals('0001:00000009:0001', $transaction->getId());
         $this->assertEquals('create_node', $transaction->getType());
         $this->assertEquals(1, $transaction->getNode());
-        $this->assertEquals(0, $transaction->getUser
+        $this->assertEquals(0, $transaction->getUser());
+        $this->assertEquals(1, $transaction->getMsgId());
+        $this->assertEquals('0001-00000000-9B6F', $transaction->getSenderAddress());
+        $date = new DateTime();
+        $date->setTimestamp(1531496775);
+        $this->assert
