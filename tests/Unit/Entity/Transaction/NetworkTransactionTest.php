@@ -53,4 +53,9 @@ class NetworkTransactionTest extends TestCase
         $this->assertEquals(117, $transaction->getSize());
     }
 
-    public function testCreateNodeFro
+    public function testCreateNodeFromRaw(): void
+    {
+        /** @var NetworkTransaction $transaction */
+        $transaction = EntityFactory::createTransaction($this->getRawCreateNode());
+
+        $this->assertEquals('0001:00000009:00
