@@ -81,4 +81,8 @@ class NetworkTransactionTest extends TestCase
     public function testRetrieveFundsFromRaw(): void
     {
         /** @var NetworkTransaction $transaction */
-        $transaction = 
+        $transaction = EntityFactory::createTransaction($this->getRawRetrieveFunds());
+
+        $this->assertEquals('0001:0000000F:0001', $transaction->getId());
+        $this->assertEquals('retrieve_funds', $transaction->getType());
+        $this->asser
