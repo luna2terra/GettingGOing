@@ -70,4 +70,7 @@ class NetworkTransactionTest extends TestCase
         $this->assertNull($transaction->getTargetAddress());
         $this->assertNull($transaction->getTargetNode());
         $this->assertNull($transaction->getTargetNodeId());
-       
+        $this->assertEquals(
+            '72F344B3F1E8C225C708CB1B6ACE62F9F776081F4C4F21BA25944350847EDA14'
+            . '56C29F874BA3C9FCC367EDD13C148175946AA1D2D46EF1BBDD49FFE0507E640D',
+            $transaction->getS
