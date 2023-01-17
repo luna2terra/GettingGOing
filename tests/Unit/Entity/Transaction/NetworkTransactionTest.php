@@ -102,4 +102,15 @@ class NetworkTransactionTest extends TestCase
             . '2EA1B1A0531398A3902FEF7B802F98AA6B1C417FB469F092A88508EBCAC5660A',
             $transaction->getSignature()
         );
-        $this->a
+        $this->assertEquals(85, $transaction->getSize());
+    }
+
+    /**
+     * @return string[]
+     */
+    private function getRawCreateAccount(): array
+    {
+        return json_decode(
+            '{
+			"id": "0001:0000000E:0001",
+			"type": "c
