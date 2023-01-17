@@ -113,4 +113,11 @@ class NetworkTransactionTest extends TestCase
         return json_decode(
             '{
 			"id": "0001:0000000E:0001",
-			"type": "c
+			"type": "create_account",
+			"node": "1",
+			"user": "0",
+			"msg_id": "976",
+			"time": "1531495703",
+			"target_node": "1",
+			"signature": "EBAEE201D66CD2E0B68DEE9A869FFBD14986E17770A3DA62779B6F06D0030000'
+            . 'A9C0D97
