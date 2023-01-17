@@ -98,4 +98,8 @@ class NetworkTransactionTest extends TestCase
         $this->assertEquals(1, $transaction->getTargetUser());
 
         $this->assertEquals(
-            'CC0
+            'CC05D9CE1816197AB8A02335CBB7ED0056DA088A4CFA593022679360B750E525'
+            . '2EA1B1A0531398A3902FEF7B802F98AA6B1C417FB469F092A88508EBCAC5660A',
+            $transaction->getSignature()
+        );
+        $this->a
