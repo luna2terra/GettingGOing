@@ -120,4 +120,17 @@ class NetworkTransactionTest extends TestCase
 			"time": "1531495703",
 			"target_node": "1",
 			"signature": "EBAEE201D66CD2E0B68DEE9A869FFBD14986E17770A3DA62779B6F06D0030000'
-            . 'A9C0D97
+            . 'A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363",
+			"size": "117"
+		}',
+            true
+        );
+    }
+
+    /**
+     * @return string[]
+     */
+    private function getRawCreateNode(): array
+    {
+        return json_decode(
+            
