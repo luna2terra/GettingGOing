@@ -133,4 +133,12 @@ class NetworkTransactionTest extends TestCase
     private function getRawCreateNode(): array
     {
         return json_decode(
-            
+            '{
+			"id": "0001:00000009:0001",
+			"type": "create_node",
+			"node": "1",
+			"user": "0",
+			"msg_id": "1",
+			"time": "1531496775",
+			"signature": "72F344B3F1E8C225C708CB1B6ACE62F9F776081F4C4F21BA25944350847EDA14'
+     
