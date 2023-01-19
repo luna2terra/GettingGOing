@@ -151,4 +151,14 @@ class NetworkTransactionTest extends TestCase
     /**
      * @return string[]
      */
-    private function getRawRetrieveFunds(
+    private function getRawRetrieveFunds(): array
+    {
+        return json_decode(
+            '{
+			"id": "0001:0000000F:0001",
+			"type": "retrieve_funds",
+			"node": "1",
+			"user": "0",
+			"msg_id": "1003",
+			"time": "1531495739",
+			"target_node": 
