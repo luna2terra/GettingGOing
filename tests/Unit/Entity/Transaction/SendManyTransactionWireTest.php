@@ -69,3 +69,20 @@ class SendManyTransactionWireTest extends TestCase
                     "target_node": "1",
                     "target_user": "1",
                     "target_address": "0001-00000001-8B4E",
+                    "amount": "0.00000000001"
+                },
+                {
+                    "target_node": "1",
+                    "target_user": "0",
+                    "target_address": "0001-00000000-9B6F",
+                    "amount": "1.00000000000"
+                }
+            ],
+            "signature": "F30906B2258C664987031F2D1DDA558EB47EB55A8F1C6E3E12A3A389271ADB4B'
+            . '1A7B4C2D75FE9790B2CF665ED8D55EBB13F51C8F172FE42CDED5BEC2356AB90E",
+            "size": "109"
+        }',
+            true
+        );
+    }
+}
