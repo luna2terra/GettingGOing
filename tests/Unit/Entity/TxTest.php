@@ -165,3 +165,12 @@ class TxTest extends TestCase
             "account_hashin": "4FAA7D8BA7FB2DD86E9C307752CCC3F0691C29A0AE9552C045C3E31F9191C759",
             "account_hashout": "A4B304F4FCAEB832F69DC274E7C040C3F604E44FC05FC6A6B7B1F5DA83786987",
             "deduct": "0.00220000000",
+            "fee": "0.00200000000",
+            "node_msid": "19",
+            "node_mpos": "1",
+            "id": "0001:00000013:0001"
+        }',
+            true
+        );
+    }
+}
