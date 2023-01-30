@@ -386,3 +386,207 @@ class Raw
 
     public static function getBroadcast(): string
     {
+        return '{
+            "current_block_time": "1532351072",
+            "previous_block_time": "1532351040",
+            "tx": {
+                "data": "1201000100000040D2555B68D2555B",
+                "signature": "2BB90103DF1E8E39CB38FA3A8E0733519010DE0B068278BEC039BA079FF8DEFFACCD7D436'
+            . '886D220A80FD6A3AF1BEE20FA23E4287EE720F6A4A611BF42CDCB08",
+                "time": "1532351080"
+            },
+            "block_time_hex": "5B55D240",
+            "block_time": "1532351040",
+            "broadcast_count": "1",
+            "log_file": "archive",
+            "broadcast": [{
+                    "block_time": "1532351040",
+                    "block_date": "2018-07-23 15:04:00",
+                    "node": "1",
+                    "account": "0",
+                    "address": "0001-00000000-9B6F",
+                    "account_msid": "26",
+                    "time": "1532351047",
+                    "date": "2018-07-23 15:04:07",
+                    "data": "030100000000001A00000047D2555B0100",
+                    "message": "7E",
+                    "signature": "A12F210C3AC26CCCEAF19301C4985C9C1C86A45470729530C46FDC5999252492C17996F82735'
+            . '9A10C35D456403D7B389D766324976A5145667B82E6193952D04",
+                    "input_hash": "A79B8AC0561B9B7E2B9CB792714377D8DF864B30C87697FD967BA4505445C0A7",
+                    "public_key": "A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363",
+                    "verify": "passed",
+                    "node_msid": "58",
+                    "node_mpos": "1",
+                    "id": "0001:0000003A:0001",
+                    "fee": "0.00000010000"
+                }
+            ]
+        }';
+    }
+
+    public static function getLog(): string
+    {
+        return '{
+            "current_block_time": "1539173408",
+            "previous_block_time": "1539173376",
+            "tx": {
+                "data": "1101000000000002ECBD5B",
+                "signature": "B74880E383FBE4F913A6A46E6D6BF0AB8C96F1F53BFA504566AA9C9611C188D34405'
+            . '135B6B98626B34D53DFDB80A82C9A53F39F7626E86C42A705405F45D0D0B",
+                "time": "1539173378",
+                "account_msid": "0",
+                "account_hashin": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+                "account_hashout": "66EFEA9D75CD3D6F34DB78BBCFA70E52ED7C7FE310846A5FDAAB40E80E226614",
+                "deduct": "0.00000000000",
+                "fee": "0.00000000000"
+            },
+            "account": {
+                "address": "0001-00000000-9B6F",
+                "node": "1",
+                "id": "0",
+                "msid": "1",
+                "time": "1539169920",
+                "date": "2018-10-10 11:12:00",
+                "status": "0",
+                "paired_node": "0",
+                "paired_id": "0",
+                "local_change": "1539169920",
+                "remote_change": "1539173376",
+                "balance": "19999999.99733827406",
+                "public_key": "A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363",
+                "hash": "3234990E04DCBDFF494ECA8C9EB0CA021E51C4E891573270D31AF648F7E00BDB"
+            },
+            "log": [
+                {
+                    "time": "1539169952",
+                    "date": "2018-10-10 11:12:32",
+                    "type_no": "32768",
+                    "confirmed": "yes",
+                    "type": "node_started",
+                    "node_start_msid": "0",
+                    "node_start_block": "0",
+                    "account": {
+                        "balance": "19999999.99999997000",
+                        "local_change": "1539169920",
+                        "remote_change": "1539169920",
+                        "hash_prefix_8": "3234990E04DCBDFF",
+                        "public_key_prefix_6": "A9C0D972D8AA",
+                        "status": "0",
+                        "msid": "1",
+                        "node": "0",
+                        "id": "0",
+                        "address": "0000-00000000-313E"
+                    },
+                    "dividend": "0.00000000000"
+                },
+                {
+                    "time": "1539169988",
+                    "date": "2018-10-10 11:13:08",
+                    "type_no": "32785",
+                    "confirmed": "yes",
+                    "type": "bank_profit",
+                    "profit": "0.00000000000",
+                    "node": "1",
+                    "node_msid": "1",
+                    "profit_txs": "0.00000000000",
+                    "profit_div": "0.00000000000",
+                    "fee": "0.00000004230"
+                },
+                {
+                    "time": "1539169988",
+                    "date": "2018-10-10 11:13:08",
+                    "type_no": "32785",
+                    "confirmed": "yes",
+                    "type": "bank_profit",
+                    "block_id": "5BBDDEA0",
+                    "profit_put": "0.00000000000",
+                    "profit_div": "0.00000000000",
+                    "profit_usr": "0.00000000000",
+                    "profit_get": "0.00000000000",
+                    "profit_shared": "0.00000001692",
+                    "profit": "0.00000001692",
+                    "fee": "0.00000003000"
+                },
+                {
+                    "time": "1539170020",
+                    "date": "2018-10-10 11:13:40",
+                    "type_no": "32785",
+                    "confirmed": "yes",
+                    "type": "bank_profit",
+                    "block_id": "5BBDDEC0",
+                    "profit_put": "0.00000000000",
+                    "profit_div": "0.00000000000",
+                    "profit_usr": "0.00000000000",
+                    "profit_get": "0.00000000000",
+                    "profit_shared": "0.00000000000",
+                    "profit": "0.00000000000",
+                    "fee": "0.00000003000"
+                },
+                {
+                    "time": "1539170052",
+                    "date": "2018-10-10 11:14:12",
+                    "type_no": "32784",
+                    "confirmed": "yes",
+                    "type": "dividend",
+                    "node_msid": "1",
+                    "block_id": "5BBDDF00",
+                    "dividend": "-0.00020000000"
+                },
+                {
+                    "time": "1539170052",
+                    "date": "2018-10-10 11:14:12",
+                    "type_no": "32785",
+                    "confirmed": "yes",
+                    "type": "bank_profit",
+                    "block_id": "5BBDDEE0",
+                    "profit_put": "0.00000000000",
+                    "profit_div": "0.00000000000",
+                    "profit_usr": "0.00000000000",
+                    "profit_get": "0.00000000000",
+                    "profit_shared": "0.00000000000",
+                    "profit": "0.00000000000",
+                    "fee": "0.00000003000"
+                },
+                {
+                    "time": "1539170084",
+                    "date": "2018-10-10 11:14:44",
+                    "type_no": "32785",
+                    "confirmed": "yes",
+                    "type": "bank_profit",
+                    "profit": "0.00000000000",
+                    "node": "1",
+                    "node_msid": "2",
+                    "profit_txs": "0.00000000000",
+                    "profit_div": "0.00000000000",
+                    "fee": "0.00000004197"
+                },
+                {
+                    "time": "1539170084",
+                    "date": "2018-10-10 11:14:44",
+                    "type_no": "32785",
+                    "confirmed": "yes",
+                    "type": "bank_profit",
+                    "block_id": "5BBDDF00",
+                    "profit_put": "0.00000000000",
+                    "profit_div": "0.00004000000",
+                    "profit_usr": "0.00000000000",
+                    "profit_get": "0.00000000000",
+                    "profit_shared": "0.00000001678",
+                    "profit": "0.00004001678",
+                    "fee": "0.00000003000"
+                },
+                {
+                    "time": "1539170116",
+                    "date": "2018-10-10 11:15:16",
+                    "type_no": "32785",
+                    "confirmed": "yes",
+                    "type": "bank_profit",
+                    "block_id": "5BBDDF20",
+                    "profit_put": "0.00000000000",
+                    "profit_div": "0.00000000000",
+                    "profit_usr": "0.00000000000",
+                    "profit_get": "0.00000000000",
+                    "profit_shared": "0.00000000000",
+                    "profit": "0.00000000000",
+                    "fee": "0.00000003000"
+                }
