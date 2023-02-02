@@ -590,3 +590,217 @@ class Raw
                     "profit": "0.00000000000",
                     "fee": "0.00000003000"
                 }
+            ]
+        }
+        ';
+    }
+
+    public static function getLogEmpty(): string
+    {
+        return '{
+            "current_block_time": "1539173408",
+            "previous_block_time": "1539173376",
+            "tx": {
+                "data": "1101000000000002ECBD5B",
+                "signature": "B74880E383FBE4F913A6A46E6D6BF0AB8C96F1F53BFA504566AA9C96'
+            . '11C188D34405135B6B98626B34D53DFDB80A82C9A53F39F7626E86C42A705405F45D0D0B",
+                "time": "1539173378",
+                "account_msid": "0",
+                "account_hashin": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+                "account_hashout": "66EFEA9D75CD3D6F34DB78BBCFA70E52ED7C7FE310846A5FDAAB40E80E226614",
+                "deduct": "0.00000000000",
+                "fee": "0.00000000000"
+            },
+            "account": {
+                "address": "0001-00000000-9B6F",
+                "node": "1",
+                "id": "0",
+                "msid": "1",
+                "time": "1539169920",
+                "date": "2018-10-10 11:12:00",
+                "status": "0",
+                "paired_node": "0",
+                "paired_id": "0",
+                "local_change": "1539169920",
+                "remote_change": "1539173376",
+                "balance": "19999999.99733827406",
+                "public_key": "A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363",
+                "hash": "3234990E04DCBDFF494ECA8C9EB0CA021E51C4E891573270D31AF648F7E00BDB"
+            },
+            "log": ""
+        }
+        ';
+    }
+
+    public static function getMessage(): string
+    {
+        return '{
+            "current_block_time": "1532012352",
+            "previous_block_time": "1532012320",
+            "tx": {
+                "data": "1A02000100000046A7505B0000000003003B000000",
+                "signature": "B476109568467C1EC1D9F2DCE3A0CAE2758D30504233274CAD64FB5581FB738214'
+            . '2ADBAF0565A820D3144DC588924AA8D87B45C40E3D78920A87EF3679C5A002",
+                "time": "1532012358"
+            },
+            "block_id": "5B50A6A0",
+            "message_id": "0003:0000003B",
+            "node": "3",
+            "node_msid": "59",
+            "time": "1532012203",
+            "length": "308",
+            "hash": "CA4F8EBC994E7A15B163A8DA3BED30D193D3867BFF758F3CACBB4DB4EC9D1B0C",
+            "transactions": [{
+                    "id": "0003:0000003B:0001",
+                    "type": "log_account",
+                    "node": "3",
+                    "user": "0",
+                    "msg_id": "1",
+                    "time": "1532012198",
+                    "signature": "0D15530D8F728F88311C93D244E6FF2CFA445F38C406013598753BDC0CE48C51A5423'
+            . '0B2C86A7BAF95F891D8E7C2E7A31C014A136DBE7BD05984517E9A9D7A05",
+                    "network_account": {
+                        "address": "0003-00000000-DFEC",
+                        "node": "3",
+                        "id": "0",
+                        "msid": "1",
+                        "time": "1532008192",
+                        "date": "2018-07-19 15:49:52",
+                        "status": "0",
+                        "paired_node": "3",
+                        "paired_id": "0",
+                        "local_change": "1532008192",
+                        "remote_change": "1532012160",
+                        "balance": "7999999.99503635570",
+                        "public_key": "A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363",
+                        "hash": "FBC03828DDC71C22772CED81DFCEEBC62F74E8A4B185B47746424BF38C966DA8",
+                        "checksum": "true"
+                    },
+                    "size": "207"
+                }, {
+                    "id": "0003:0000003B:0002",
+                    "type": "connection",
+                    "port": "8003",
+                    "ip_address": "172.16.222.101",
+                    "version": "@",
+                    "size": "23"
+                }
+            ]
+        }';
+    }
+
+    public static function getMessageIds(): string
+    {
+        return '{
+            "current_block_time": "1532077312",
+            "previous_block_time": "1532077280",
+            "tx": {
+                "data": "190200000000000EA5515BE0A3515B",
+                "signature": "C33CB56C758FEBAD18D50592350BD720F9143E9CAB06BD981757D'
+            . 'CE8D36DE18DB47F9CC7FAEC406C13BDB58EBAA323878C36D69825528C1F33C1A31E1572530F",
+                "time": "1532077326"
+            },
+            "block_time_hex": "5B51A3E0",
+            "block_time": "1532077024",
+            "msghash": "CC2969C3524B5B94D7835E85FB972AFCF6091256DAC64527D5DB5A67673C3868",
+            "message_count": "7",
+            "confirmed": "yes",
+            "messages": ["0001:00000001", "0001:00000002", "0001:00000003", "0002:00000001", '
+            . '"0002:00000002", "0002:00000003", "0003:00000001"]
+        }';
+    }
+
+    public static function getTransactionSendOne(): string
+    {
+        return '{
+            "current_block_time": "1532347520",
+            "previous_block_time": "1532347488",
+            "tx": {
+                "data": "140100000000009FC4555B0100030000000100",
+                "signature": "4D4C4745E1D797FC5D0A3EBD870E3F9144C37F6CE3D6161928AA86D648478F0727761EDBD1EB4308E'
+            . 'A293E640FA98772480B98F211697E47715352AF6C713E02",
+                "time": "1532347551",
+                "account_msid": "0",
+                "account_hashin": "FFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFFF",
+                "account_hashout": "25D5E0068EFE8F7CBCD9C407F2C9A42A96C56B66B4104B99185A0CF69C531A0F",
+                "deduct": "0.00000000000",
+                "fee": "0.00000000000"
+            },
+            "network_tx": {
+                "id": "0001:00000003:0001",
+                "block_time": "1532347488",
+                "block_id": "5B55C460",
+                "node": "1",
+                "node_msid": "3",
+                "node_mpos": "1",
+                "size": "125",
+                "hashpath_size": "6",
+                "data": "040100000000000100000077C4555B010001000000'
+            . '00A0724E1809000000000000000000000000000000000000000000'
+            . '0000000000000000000000000041503FB1E7BD84A3A94685FAC3841A53374DE00A3260ED5A88D4877585EAFA982E828DDA9'
+            . '9F57EA3B20DAF4723BCD6325F63042A1ED13724CB7279CF728D940A",
+                "hashpath": ["36976DC64EDC80AC9A72EFDE80BDDD323A5FA08A8CB44D5BB7D5A6555AA0DBCB", '
+            . '"D37BF29BFAB387537A0ABBCE955386BFE004887232AC7F29AD2D661EBAD78B5A", '
+            . '"E9CA4D62A2367A6C3885D46B02A763DECEBC9160EEC2C4C894858290F5B246BD", '
+            . '"3411C500E1217CA657E2BF79C2D3597A9B5D71075E4FA7312854847025885923", '
+            . '"AE2453CC3156712280AE2B410A938263167AFE13CDA61FD373372309773F0718", '
+            . '"B17412D4BB2909C03E6D168652AF93C5B5045B4FFE40C2F487171AA3EF198A0F"]
+            },
+            "txn": {
+                "type": "send_one",
+                "node": "1",
+                "user": "0",
+                "msg_id": "1",
+                "time": "1532347511",
+                "target_node": "1",
+                "target_user": "1",
+                "sender_fee": "0.05000000000",
+                "sender_address": "0001-00000000-9B6F",
+                "target_address": "0001-00000001-8B4E",
+                "amount": "100.00000000000",
+                "message": "0000000000000000000000000000000000000000000000000000000000000000",
+                "signature": "41503FB1E7BD84A3A94685FAC3841A53374DE00A3260ED5A88D4877585EAFA982E828DDA99F57EA3B20DAF472'
+            . '3BCD6325F63042A1ED13724CB7279CF728D940A"
+            }
+        }';
+    }
+
+    public static function sendOne(): string
+    {
+        return '{
+            "current_block_time": "1532415264",
+            "previous_block_time": "1532415232",
+            "tx": {
+                "data": "040100000000000300000027CD565B01000100000040420F000000000046'
+            . '066ADCA3C787BF6874CE3361EECF7A9969D98F12719DF53440172B5A7D345A",
+                "signature": "DABDDABFC25B0C76E33C0E6285F09695EE0193D10DBBC3F2CA39E8183603D7BDC5'
+            . 'F62C14FF60A2EFCC23784F7FA380C6F38A2AD6B7DFB95FA2DCA9BA76D04503",
+                "time": "1532415271",
+                "account_msid": "3",
+                "account_hashin": "8592795CE4EE7AAEEC7BA0EBCB4E5B83DF0151B009363FECB99EB39B62549343",
+                "account_hashout": "04D526CB20CCE3003B8A2103C5401ABBCAA3F42D03C2392629B6CF923F66323B",
+                "deduct": "0.00001010000",
+                "fee": "0.00000010000",
+                "node_msid": "13",
+                "node_mpos": "2",
+                "id": "0001:0000000D:0002"
+            },
+            "account": {
+                "address": "0001-00000000-9B6F",
+                "node": "1",
+                "id": "0",
+                "msid": "4",
+                "time": "1532415271",
+                "date": "2018-07-24 08:54:31",
+                "status": "0",
+                "paired_node": "1",
+                "paired_id": "0",
+                "local_change": "1532415264",
+                "remote_change": "1532415232",
+                "balance": "19999699.84935875759",
+                "public_key": "A9C0D972D8AAB73805EC4A28291E052E3B5FAFE0ADC9D724917054E5E2690363",
+                "hash": "04D526CB20CCE3003B8A2103C5401ABBCAA3F42D03C2392629B6CF923F66323B"
+            }
+        }';
+    }
+}
