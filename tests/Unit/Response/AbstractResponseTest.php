@@ -24,4 +24,12 @@ namespace Adshares\Ads\Tests\Unit\Response;
 use Adshares\Ads\Response\GetAccountResponse;
 use Adshares\Ads\Tests\Unit\Raw;
 use DateTime;
-use PHPUnit\Framework\TestCa
+use PHPUnit\Framework\TestCase;
+
+class AbstractResponseTest extends TestCase
+{
+    public function testAbstractResponse(): void
+    {
+        $response = new GetAccountResponse(json_decode(Raw::getAccount(), true));
+
+        $nonExistent
