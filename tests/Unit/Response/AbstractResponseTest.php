@@ -32,4 +32,8 @@ class AbstractResponseTest extends TestCase
     {
         $response = new GetAccountResponse(json_decode(Raw::getAccount(), true));
 
-        $nonExistent
+        $nonExistent = $response->getRawData('a');
+        $this->assertNull($nonExistent);
+
+        /** @var int $rawPreviousBlockTime */
+        $rawPreviousBlockTime = $response->getRawData('previous_block_time');
