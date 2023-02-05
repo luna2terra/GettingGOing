@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -21,24 +22,31 @@
 
 namespace Adshares\Ads\Tests\Unit\Response;
 
+use Adshares\Ads\Entity\Account;
+use Adshares\Ads\Entity\Tx;
 use Adshares\Ads\Response\GetAccountResponse;
-use Adshares\Ads\Tests\Unit\Raw;
 use DateTime;
 use PHPUnit\Framework\TestCase;
 
-class AbstractResponseTest extends TestCase
+class GetAccountResponseTest extends TestCase
 {
-    public function testAbstractResponse(): void
+    public function testGetAccountFromRaw(): void
     {
-        $response = new GetAccountResponse(json_decode(Raw::getAccount(), true));
-
-        $nonExistent = $response->getRawData('a');
-        $this->assertNull($nonExistent);
-
-        /** @var int $rawPreviousBlockTime */
-        $rawPreviousBlockTime = $response->getRawData('previous_block_time');
+        $response = new GetAccountResponse($this->getRawData());
         $time = new DateTime();
-        $time->setTimestamp($rawPreviousBlockTime);
+        $time->setTimestamp(1532091008);
+        $this->assertEquals($time, $response->getCurrentBlockTime());
+        $time->setTimestamp(1532090976);
         $this->assertEquals($time, $response->getPreviousBlockTime());
+
+        $this->assertInstanceOf(Tx::class, $response->getTx());
+        $this->assertInstanceOf(Account::class, $response->getAccount());
+        $this->assertInstanceOf(Account::class, $response->getNetworkAccount());
     }
-}
+
+    /**
+     * @return array<int|string, array<int|string, string>|string>
+     */
+    private function getRawData(): array
+    {
+        return json_decode(
