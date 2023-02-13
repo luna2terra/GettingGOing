@@ -23,4 +23,11 @@ namespace Adshares\Ads\Tests\Unit\Response;
 
 use Adshares\Ads\Entity\Broadcast;
 use Adshares\Ads\Entity\Tx;
-use Adshares\
+use Adshares\Ads\Response\GetBroadcastResponse;
+use Adshares\Ads\Tests\Unit\Raw;
+use DateTime;
+use PHPUnit\Framework\TestCase;
+
+class GetBroadcastResponseTest extends TestCase
+{
+    public function testGetBroadcastFromRaw(): void
