@@ -31,3 +31,8 @@ use PHPUnit\Framework\TestCase;
 class GetBroadcastResponseTest extends TestCase
 {
     public function testGetBroadcastFromRaw(): void
+    {
+        $response = new GetBroadcastResponse($this->getRawData());
+        $time = new DateTime();
+        $time->setTimestamp(1532351072);
+        $this->assertEquals($time, $response->getCurrentBlo
