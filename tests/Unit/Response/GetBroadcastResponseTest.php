@@ -35,4 +35,8 @@ class GetBroadcastResponseTest extends TestCase
         $response = new GetBroadcastResponse($this->getRawData());
         $time = new DateTime();
         $time->setTimestamp(1532351072);
-        $this->assertEquals($time, $response->getCurrentBlo
+        $this->assertEquals($time, $response->getCurrentBlockTime());
+        $time->setTimestamp(1532351040);
+        $this->assertEquals($time, $response->getPreviousBlockTime());
+        $this->assertEquals('5B55D240', $response->getBlockId());
+        $th
