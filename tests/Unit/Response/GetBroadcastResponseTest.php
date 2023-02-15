@@ -39,4 +39,8 @@ class GetBroadcastResponseTest extends TestCase
         $time->setTimestamp(1532351040);
         $this->assertEquals($time, $response->getPreviousBlockTime());
         $this->assertEquals('5B55D240', $response->getBlockId());
-        $th
+        $this->assertContains($response->getLogFile(), ['archive', 'new']);
+
+        $this->assertInstanceOf(Tx::class, $response->getTx());
+        $broadcasts = $response->getBroadcast();
+        $this->assertCount(1, $broadcasts
