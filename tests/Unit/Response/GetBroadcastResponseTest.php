@@ -43,4 +43,12 @@ class GetBroadcastResponseTest extends TestCase
 
         $this->assertInstanceOf(Tx::class, $response->getTx());
         $broadcasts = $response->getBroadcast();
-        $this->assertCount(1, $broadcasts
+        $this->assertCount(1, $broadcasts);
+        foreach ($broadcasts as $broadcast) {
+            $this->assertInstanceOf(Broadcast::class, $broadcast);
+        }
+        $this->assertEquals(1, $response->getBroadcastCount());
+    }
+
+    /**
+     * @ret
