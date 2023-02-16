@@ -51,4 +51,10 @@ class GetBroadcastResponseTest extends TestCase
     }
 
     /**
-     * @ret
+     * @return string[][][]
+     */
+    private function getRawData(): array
+    {
+        return json_decode(Raw::getBroadcast(), true);
+    }
+}
