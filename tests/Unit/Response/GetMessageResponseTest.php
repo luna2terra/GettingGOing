@@ -26,4 +26,12 @@ use Adshares\Ads\Entity\Transaction\AbstractTransaction;
 use Adshares\Ads\Entity\Tx;
 use Adshares\Ads\Response\GetMessageResponse;
 use Adshares\Ads\Tests\Unit\Raw;
-use DateTime
+use DateTime;
+use PHPUnit\Framework\TestCase;
+
+class GetMessageResponseTest extends TestCase
+{
+    public function testGetMessageIdsFromRaw(): void
+    {
+        $response = new GetMessageResponse($this->getRawData());
+ 
