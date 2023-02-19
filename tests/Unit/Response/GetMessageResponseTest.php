@@ -21,4 +21,9 @@
 
 namespace Adshares\Ads\Tests\Unit\Response;
 
-use Adshares\Ads\
+use Adshares\Ads\Entity\Message;
+use Adshares\Ads\Entity\Transaction\AbstractTransaction;
+use Adshares\Ads\Entity\Tx;
+use Adshares\Ads\Response\GetMessageResponse;
+use Adshares\Ads\Tests\Unit\Raw;
+use DateTime
