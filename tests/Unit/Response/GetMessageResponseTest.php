@@ -34,4 +34,8 @@ class GetMessageResponseTest extends TestCase
     public function testGetMessageIdsFromRaw(): void
     {
         $response = new GetMessageResponse($this->getRawData());
- 
+        $time = new DateTime();
+        $time->setTimestamp(1532012352);
+        $this->assertEquals($time, $response->getCurrentBlockTime());
+        $time->setTimestamp(1532012320);
+        $this->assertEquals($
