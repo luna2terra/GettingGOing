@@ -38,4 +38,8 @@ class GetMessageResponseTest extends TestCase
         $time->setTimestamp(1532012352);
         $this->assertEquals($time, $response->getCurrentBlockTime());
         $time->setTimestamp(1532012320);
-        $this->assertEquals($
+        $this->assertEquals($time, $response->getPreviousBlockTime());
+
+        $this->assertInstanceOf(Tx::class, $response->getTx());
+        $this->assertInstanceOf(Message::class, $response->getMessage());
+        $transactions = $response-
