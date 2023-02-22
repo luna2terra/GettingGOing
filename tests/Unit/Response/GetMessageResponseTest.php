@@ -42,4 +42,12 @@ class GetMessageResponseTest extends TestCase
 
         $this->assertInstanceOf(Tx::class, $response->getTx());
         $this->assertInstanceOf(Message::class, $response->getMessage());
-        $transactions = $response-
+        $transactions = $response->getTransactions();
+        $this->assertCount(2, $transactions);
+        foreach ($transactions as $transaction) {
+            $this->assertInstanceOf(AbstractTransaction::class, $transaction);
+        }
+    }
+
+    /**
+     * @return st
