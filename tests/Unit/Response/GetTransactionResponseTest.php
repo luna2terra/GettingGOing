@@ -1,3 +1,4 @@
+
 <?php
 
 /**
@@ -21,39 +22,43 @@
 
 namespace Adshares\Ads\Tests\Unit\Response;
 
-use Adshares\Ads\Entity\Message;
+use Adshares\Ads\Entity\NetworkTx;
 use Adshares\Ads\Entity\Transaction\AbstractTransaction;
 use Adshares\Ads\Entity\Tx;
-use Adshares\Ads\Response\GetMessageResponse;
+use Adshares\Ads\Response\GetTransactionResponse;
 use Adshares\Ads\Tests\Unit\Raw;
 use DateTime;
 use PHPUnit\Framework\TestCase;
 
-class GetMessageResponseTest extends TestCase
+class GetTransactionResponseTest extends TestCase
 {
-    public function testGetMessageIdsFromRaw(): void
+    public function testGetTransactionFromRaw(): void
     {
-        $response = new GetMessageResponse($this->getRawData());
+        $response = new GetTransactionResponse($this->getRawData());
         $time = new DateTime();
-        $time->setTimestamp(1532012352);
+        $time->setTimestamp(1532347520);
         $this->assertEquals($time, $response->getCurrentBlockTime());
-        $time->setTimestamp(1532012320);
+        $time->setTimestamp(1532347488);
         $this->assertEquals($time, $response->getPreviousBlockTime());
 
         $this->assertInstanceOf(Tx::class, $response->getTx());
-        $this->assertInstanceOf(Message::class, $response->getMessage());
-        $transactions = $response->getTransactions();
-        $this->assertCount(2, $transactions);
-        foreach ($transactions as $transaction) {
-            $this->assertInstanceOf(AbstractTransaction::class, $transaction);
-        }
+        $this->assertInstanceOf(NetworkTx::class, $response->getNetworkTx());
+        $transaction = $response->getTxn();
+        $this->assertInstanceOf(AbstractTransaction::class, $transaction);
+
+        $this->assertEquals('send_one', $transaction->getType());
+        $this->assertEquals('5B55C460', $transaction->getBlockId());
+        $this->assertEquals('0001:00000003:0001', $transaction->getId());
+        $this->assertEquals(125, $transaction->getSize());
+        $this->assertEquals('0001', $transaction->getNodeId());
+        $this->assertEquals('0001:00000003', $transaction->getMessageId());
     }
 
     /**
-     * @return string[][][][]
+     * @return string[][][]
      */
     private function getRawData(): array
     {
-        return json_decode(Raw::getMessage(), true);
+        return json_decode(Raw::getTransactionSendOne(), true);
     }
 }
