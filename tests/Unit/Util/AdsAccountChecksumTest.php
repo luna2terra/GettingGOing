@@ -18,3 +18,21 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with ADS PHP Client. If not, see <https://www.gnu.org/licenses/>
+ */
+
+namespace Adshares\Ads\Tests\Unit\Util;
+
+use Adshares\Ads\Util\AdsChecksumGenerator;
+use PHPUnit\Framework\TestCase;
+
+class AdsAccountChecksumTest extends TestCase
+{
+    public function testAccountChecksum(): void
+    {
+        $this->assertEquals('9B6F', AdsChecksumGenerator::getAccountChecksum(1, 0));
+        $this->assertEquals('AB0C', AdsChecksumGenerator::getAccountChecksum(1, 3));
+        $this->assertEquals('2755', AdsChecksumGenerator::getAccountChecksum(16, 16));
+
+        $this->assertNotEquals('8888', AdsChecksumGenerator::getAccountChecksum(2, 0));
+    }
+}
