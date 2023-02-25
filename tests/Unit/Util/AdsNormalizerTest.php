@@ -21,4 +21,13 @@
 
 namespace Adshares\Ads\Tests\Unit\Util;
 
-use Adshares\Ads\Util\AdsNo
+use Adshares\Ads\Util\AdsNormalizer;
+use PHPUnit\Framework\TestCase;
+use RuntimeException;
+
+class AdsNormalizerTest extends TestCase
+{
+    public function testNormalizeAddressValid(): void
+    {
+        $address = '0001000000001234';
+ 
