@@ -36,4 +36,11 @@ class AdsNormalizerTest extends TestCase
 
     public function testNormalizeAddressWithoutChecksum(): void
     {
-        $address = '000100000000X
+        $address = '000100000000XXXX';
+        $address = AdsNormalizer::normalizeAddress($address);
+        $this->assertEquals('0001-00000000-9B6F', $address);
+    }
+
+    public function testNormalizeAddressInvalid(): void
+    {
+        
