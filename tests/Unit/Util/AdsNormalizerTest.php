@@ -50,4 +50,11 @@ class AdsNormalizerTest extends TestCase
 
     public function testNormalizeTxidValid(): void
     {
-        $txid = '00010
+        $txid = '0001000000010001';
+        $txid = AdsNormalizer::normalizeTxid($txid);
+        $this->assertEquals('0001:00000001:0001', $txid);
+    }
+
+    public function testNormalizeTxidInvalid(): void
+    {
+        $address = '000100000000XXXX'
