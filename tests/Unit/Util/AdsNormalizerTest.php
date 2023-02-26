@@ -43,4 +43,11 @@ class AdsNormalizerTest extends TestCase
 
     public function testNormalizeAddressInvalid(): void
     {
-        
+        $address = 'XXXXXXXX';
+        $this->expectException(RuntimeException::class);
+        AdsNormalizer::normalizeAddress($address);
+    }
+
+    public function testNormalizeTxidValid(): void
+    {
+        $txid = '00010
